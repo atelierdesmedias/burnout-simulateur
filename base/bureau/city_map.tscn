@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://yiaf2qmdiucy"]
+
+[ext_resource type="Texture2D" uid="uid://dsu6oem2p6w34" path="res://base/bureau/textures/T_Office_.background_temp.jpg" id="1_t41hu"]
+[ext_resource type="PackedScene" uid="uid://dqake3y851rhw" path="res://base/bureau/player_office.tscn" id="2_mq4xc"]
+
+[node name="city_map" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(159.26, 207.82233)
+scale = Vector2(0.4038694, 0.4038694)
+texture = ExtResource("1_t41hu")
+
+[node name="Player_Office" parent="." instance=ExtResource("2_mq4xc")]
+position = Vector2(112, 72)
