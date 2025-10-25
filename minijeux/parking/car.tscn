@@ -17,4 +17,6 @@ texture = ExtResource("1_7822p")
 position = Vector2(1.5, -2.5)
 shape = SubResource("RectangleShape2D_uoj53")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="MotorPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="HandBrakePlayer" type="AudioStreamPlayer" parent="."]
