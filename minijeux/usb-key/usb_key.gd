@@ -13,10 +13,8 @@ func _ready() -> void:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
-	printt(sprite_2d.animation, sprite_2d.frame, sprite_2d.is_playing())
-	if is_dragging:
-		global_position = get_global_mouse_position() + drag_offset
+		if is_dragging:
+			global_position = get_global_mouse_position() + drag_offset
 
 func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT :

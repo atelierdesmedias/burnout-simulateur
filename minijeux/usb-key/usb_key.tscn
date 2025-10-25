@@ -73,9 +73,9 @@ polygon = PackedVector2Array(-257.42688, 28.755463, -257.42688, -10.456543, -184
 stream = ExtResource("4_g27m4")
 
 [node name="usbPort" parent="." instance=ExtResource("4_wvv4m")]
-position = Vector2(699, 266)
+position = Vector2(689, 263)
 
 [node name="usbPort2" parent="." instance=ExtResource("4_wvv4m")]
-position = Vector2(699, 307)
+position = Vector2(689, 306)
 
 [connection signal="area_entered" from="usbanchor/UsbKey/Embout" to="usbanchor/UsbKey" method="_on_embout_area_entered"]
