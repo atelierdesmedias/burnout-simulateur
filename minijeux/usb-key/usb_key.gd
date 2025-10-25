@@ -1,4 +1,4 @@
-extends Area2D
+extends "res://minijeux/minijeu.gd"
 
 @onready var embout: Area2D = $Embout
 @onready var erreur: AudioStreamPlayer = $Erreur
@@ -31,8 +31,7 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 				# On vérifie si l'embout est sur le port usb
 				if embout.get_overlapping_areas():
 					if randf()> 0.67:
-						get_tree().current_scene.process_mode = Node.PROCESS_MODE_INHERIT
-						queue_free()
+						minijeu_finished()
 					else :
 						erreur.play(0.5)
 				
