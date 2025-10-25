@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=4 uid="uid://bjlvwo8xxqhl0"]
+[gd_scene load_steps=10 format=4 uid="uid://bjlvwo8xxqhl0"]
 
 [ext_resource type="Texture2D" uid="uid://ccr6ds74pnrh7" path="res://base/bureau/textures/Map_Bureau_v1 Valeriya.png" id="1_uu5ly"]
 [ext_resource type="PackedScene" uid="uid://dqake3y851rhw" path="res://base/bureau/player_office.tscn" id="2_54lem"]
+[ext_resource type="PackedScene" uid="uid://bt17d6xw6csxu" path="res://base/bureau/collegue.tscn" id="2_mqodo"]
 [ext_resource type="PackedScene" uid="uid://hjd2h1lxsj8m" path="res://base/hud.tscn" id="3_wx7p8"]
 [ext_resource type="Texture2D" uid="uid://cfn1hwfbhcsas" path="res://base/Texture/T_WhiteSquare.png" id="4_54lem"]
 [ext_resource type="Texture2D" uid="uid://b13bu8kklo86" path="res://base/Texture/T_TransparentSquare.png" id="5_wx7p8"]
@@ -28,6 +29,15 @@ texture_filter = 1
 position = Vector2(5, 0)
 texture = ExtResource("1_uu5ly")
 centered = false
+
+[node name="Collegue2" parent="Background" instance=ExtResource("2_mqodo")]
+position = Vector2(67, 152)
+
+[node name="Collegue3" parent="Background" instance=ExtResource("2_mqodo")]
+position = Vector2(67, 208)
+
+[node name="Collegue" parent="Background" instance=ExtResource("2_mqodo")]
+position = Vector2(67, 88)
 
 [node name="Player_Office" parent="." instance=ExtResource("2_54lem")]
 position = Vector2(272, 80)
