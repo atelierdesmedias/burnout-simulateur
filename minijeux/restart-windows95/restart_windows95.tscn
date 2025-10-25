@@ -125,6 +125,7 @@ animations = [{
 }]
 
 [node name="DidYouTryToTurnItOffAndOnAgain" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_r8gdb")
 
 [node name="Win95Panel" type="Panel" parent="."]

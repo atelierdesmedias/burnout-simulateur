@@ -34,6 +34,8 @@ func _on_start_button_pressed() -> void:
 
 
 func _on_power_off_button_pressed() -> void:
+	get_tree().current_scene.process_mode = Node.PROCESS_MODE_INHERIT
+	queue_free()
 	if is_computer_on:
 		if error_dialogs.is_empty():
 			start_menu.hide()
@@ -62,7 +64,8 @@ func _on_power_off_button_pressed() -> void:
 		$AudioStreamPlayer.stream = startStream
 		$AudioStreamPlayer.play()
 		await $AudioStreamPlayer.finished
-		hide()
+		get_tree().current_scene.process_mode = Node.PROCESS_MODE_ALWAYS
+		queue_free()
 
 
 func _on_win_95_panel_gui_input(event: InputEvent) -> void:

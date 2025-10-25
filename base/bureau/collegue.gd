@@ -3,8 +3,7 @@ extends StaticBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	await get_tree().create_timer(randf()*10).timeout
-	_popQuest()
+	
 	
 	pass # Replace with function body.
 
@@ -15,6 +14,12 @@ func _process(delta: float) -> void:
 
 
 func _popQuest():
-	$Exclamation.visible = true;
+	$Exclamation.visible = true
+	$Exclamation.play("Green")
 	
 	pass
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	
+	pass # Replace with function body.

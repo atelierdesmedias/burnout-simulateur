@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_mini_jeu_1_body_entered(body: Node2D) -> void:
-	get_tree().paused = true
+	get_tree().current_scene.process_mode = PROCESS_MODE_DISABLED
 	var myNode = preload("res://minijeux/restart-windows95/restart_windows95.tscn")
 	var myNode_instance = myNode.instantiate()
 	myNode_instance.z_index = 11
