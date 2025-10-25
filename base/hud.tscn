@@ -1,11 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://hjd2h1lxsj8m"]
+[gd_scene load_steps=7 format=3 uid="uid://hjd2h1lxsj8m"]
 
+[ext_resource type="Script" uid="uid://1qk5iwecjxc1" path="res://base/hud.gd" id="1_0m6iy"]
+[ext_resource type="Texture2D" uid="uid://da31j1hb8rxeh" path="res://base/bureau/textures/T_dollar.png" id="1_l6hix"]
 [ext_resource type="Texture2D" uid="uid://bkj51u5tixo5v" path="res://base/bureau/textures/progress bar most rounded over.png" id="1_linc4"]
 [ext_resource type="Texture2D" uid="uid://7qsj4q5ucvap" path="res://base/bureau/textures/progress bar most rounded progress green.png" id="2_l6hix"]
+[ext_resource type="Texture2D" uid="uid://b3bsfumr2k4dc" path="res://base/bureau/textures/progress bar most rounded progress red.png" id="5_kdgut"]
+[ext_resource type="Texture2D" uid="uid://ckxpucpsx8bgn" path="res://base/bureau/textures/T_Brain_Explode.png" id="5_y7im6"]
 
 [node name="Hud" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_0m6iy")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
@@ -13,14 +18,48 @@ offset_right = 256.0
 offset_bottom = 192.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_direction = 2
 layout_mode = 2
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="VBoxContainer/HBoxContainer"]
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(10.355, 0)
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/HBoxContainer/Control"]
+modulate = Color(0.6490057, 0.6856821, 0.8919819, 1)
+position = Vector2(-8.999998, -10.999998)
+scale = Vector2(0.015, 0.015)
+texture = ExtResource("1_l6hix")
+centered = false
+
+[node name="ProgressBarMoney" type="TextureProgressBar" parent="VBoxContainer/HBoxContainer"]
 texture_filter = 1
 custom_minimum_size = Vector2(32, 8)
 layout_mode = 2
 max_value = 1.0
 step = 0.01
-value = 0.5
 texture_under = ExtResource("1_linc4")
 texture_progress = ExtResource("2_l6hix")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_direction = 2
+layout_mode = 2
+
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(10.355, 0)
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/HBoxContainer2/Control"]
+position = Vector2(3, -2)
+scale = Vector2(0.54, 0.54)
+texture = ExtResource("5_y7im6")
+centered = false
+
+[node name="ProgressBarBrain" type="TextureProgressBar" parent="VBoxContainer/HBoxContainer2"]
+texture_filter = 1
+custom_minimum_size = Vector2(32, 8)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+texture_under = ExtResource("1_linc4")
+texture_progress = ExtResource("5_kdgut")
