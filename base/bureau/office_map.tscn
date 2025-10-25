@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://bjlvwo8xxqhl0"]
+[gd_scene load_steps=15 format=4 uid="uid://bjlvwo8xxqhl0"]
 
 [ext_resource type="Script" uid="uid://ca1e6qvcuqsey" path="res://base/bureau/office_map.gd" id="1_4hjjf"]
 [ext_resource type="Texture2D" uid="uid://csoq3if53byan" path="res://base/bureau/textures/T_Map_Bureau.png" id="1_mqodo"]
@@ -11,91 +11,12 @@
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2vjsf"]
 texture = ExtResource("4_0esrf")
-23:0/next_alternative_id = 2
-23:0/0 = 0
-24:0/next_alternative_id = 2
-24:0/0 = 0
-25:0/0 = 0
-26:0/0 = 0
-27:0/0 = 0
-28:0/0 = 0
-29:0/0 = 0
-23:1/next_alternative_id = 2
-23:1/0 = 0
-24:1/next_alternative_id = 2
-24:1/0 = 0
-25:1/0 = 0
-26:1/0 = 0
-27:1/0 = 0
-28:1/0 = 0
-29:1/0 = 0
-30:1/0 = 0
-31:1/0 = 0
-23:2/next_alternative_id = 2
-23:2/0 = 0
-24:2/next_alternative_id = 2
-24:2/0 = 0
-25:2/0 = 0
-25:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
-26:2/0 = 0
-26:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
-27:2/0 = 0
-28:2/0 = 0
-29:2/0 = 0
-30:2/0 = 0
-31:2/0 = 0
-23:3/next_alternative_id = 2
-23:3/0 = 0
-23:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-24:3/next_alternative_id = 2
-24:3/0 = 0
-24:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-25:3/0 = 0
-25:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-26:3/0 = 0
-26:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-27:3/0 = 0
-27:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-28:3/0 = 0
-28:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-29:3/0 = 0
-29:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-30:3/0 = 0
-30:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-31:3/0 = 0
-26:4/0 = 0
-27:4/0 = 0
-28:4/0 = 0
-29:4/0 = 0
-30:4/0 = 0
-31:4/0 = 0
-25:6/0 = 0
-26:6/0 = 0
-27:6/0 = 0
-28:6/0 = 0
-29:6/0 = 0
-30:6/0 = 0
-25:7/0 = 0
-25:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-26:7/0 = 0
-26:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-27:7/0 = 0
-27:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-28:7/0 = 0
-28:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-29:7/0 = 0
-29:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-30:7/0 = 0
-26:8/0 = 0
-27:8/0 = 0
-29:8/0 = 0
-30:8/0 = 0
-30:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-29:9/0 = 0
-30:9/0 = 0
-30:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-29:10/0 = 0
-30:10/0 = 0
+0:0/size_in_atlas = Vector2i(5, 4)
+0:0/0 = 0
+5:3/0 = 0
+6:1/size_in_atlas = Vector2i(3, 3)
+6:1/0 = 0
+9:3/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_65870"]
 physics_layer_0/collision_layer = 1
@@ -118,6 +39,8 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_wx7p8")
 sources/1 = SubResource("TileSetAtlasSource_mqodo")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0esrf"]
+
 [node name="OfficeMap" type="Node2D"]
 script = ExtResource("1_4hjjf")
 
@@ -135,24 +58,21 @@ position = Vector2(67, 152)
 [node name="Collegue3" parent="Background" instance=ExtResource("2_mqodo")]
 position = Vector2(67, 208)
 
-[node name="CanvasGroup" type="CanvasGroup" parent="."]
-y_sort_enabled = true
-
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 y_sort_enabled = true
 texture_filter = 1
-tile_map_data = PackedByteArray("AAAZAAAAAQAXAAAAAAAZAAEAAQAXAAEAAAAZAAIAAQAXAAIAAAAZAAMAAQAXAAMAAAAaAAAAAQAYAAAAAAAaAAEAAQAYAAEAAAAaAAIAAQAYAAIAAAAaAAMAAQAYAAMAAAAbAAAAAQAXAAAAAAAbAAEAAQAXAAEAAAAbAAIAAQAXAAIAAAAbAAMAAQAXAAMAAAAcAAAAAQAYAAAAAAAcAAEAAQAYAAEAAAAcAAIAAQAYAAIAAAAcAAMAAQAYAAMAAAAZAAUAAQAXAAAAAAAZAAYAAQAXAAEAAAAZAAcAAQAXAAIAAAAZAAgAAQAXAAMAAAAaAAUAAQAYAAAAAAAaAAYAAQAYAAEAAAAaAAcAAQAYAAIAAAAaAAgAAQAYAAMAAAA=")
+tile_map_data = PackedByteArray("AAAZAAEAAQAXAAAAAAAcAAgAAQAXAAAAAAAYAAcAAQAXAAAAAAAdAAIAAQAXAAAAAAA=")
 tile_set = SubResource("TileSet_65870")
 
-[node name="Player_Office" parent="." instance=ExtResource("2_54lem")]
-position = Vector2(412, 94)
+[node name="Player_Office" parent="TileMapLayer" instance=ExtResource("2_54lem")]
+position = Vector2(296, 440)
 speed = 50.0
 
-[node name="Camera2D" type="Camera2D" parent="Player_Office"]
+[node name="Camera2D" type="Camera2D" parent="TileMapLayer/Player_Office"]
 position = Vector2(1.8030615, 1.8030701)
 limit_smoothed = true
 
-[node name="Hud" parent="Player_Office/Camera2D" instance=ExtResource("3_wx7p8")]
+[node name="Hud" parent="TileMapLayer/Player_Office/Camera2D" instance=ExtResource("3_wx7p8")]
 offset_left = -182.80307
 offset_top = -99.80307
 offset_right = 137.19693
@@ -164,3 +84,18 @@ tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAA
 tile_set = SubResource("TileSet_uu5ly")
 rendering_quadrant_size = 8
 physics_quadrant_size = 8
+
+[node name="Mini-Jeu_1" type="Area2D" parent="."]
+position = Vector2(384, 432)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mini-Jeu_1"]
+shape = SubResource("RectangleShape2D_0esrf")
+
+[node name="Mini-Jeu_2" type="Area2D" parent="."]
+position = Vector2(384, 472)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mini-Jeu_2"]
+shape = SubResource("RectangleShape2D_0esrf")
+
+[connection signal="body_entered" from="Mini-Jeu_1" to="." method="_on_mini_jeu_1_body_entered"]
+[connection signal="body_entered" from="Mini-Jeu_2" to="." method="_on_mini_jeu_2_body_entered"]

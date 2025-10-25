@@ -125,6 +125,7 @@ animations = [{
 }]
 
 [node name="DidYouTryToTurnItOffAndOnAgain" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_r8gdb")
 
 [node name="Win95Panel" type="Panel" parent="."]
@@ -200,6 +201,8 @@ scale = Vector2(0.23959015, 0.29488853)
 texture = ExtResource("5_sc7ep")
 polygon = PackedVector2Array(93.70969, 80.73136, 493.93927, 77.110306, 510.9945, 309.89008, 108.490875, 330.06433)
 uv = PackedVector2Array(2, 4.5, 635.5, 1.5, 638.3401, 398.86365, 5.8928223, 398.86365)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [connection signal="gui_input" from="Win95Panel" to="." method="_on_win_95_panel_gui_input"]
 [connection signal="pressed" from="Win95Panel/Ordinateur/ComputerButton" to="." method="_on_power_off_button_pressed"]

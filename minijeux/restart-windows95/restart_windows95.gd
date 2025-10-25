@@ -6,6 +6,10 @@ extends Node2D
 @onready var computer_off_screen: Polygon2D = $Win95Panel/Ordinateur/ComputerOffPolygon2D
 @onready var computer_starting_animation: AnimatedSprite2D = $Win95Panel/Ordinateur/DosStarting
 @onready var win95_starting: Polygon2D  = $Win95Panel/Ordinateur/Win95StartingPolygon2D
+@onready var startStream = preload("res://minijeux/restart-windows95/start.ogg")
+@onready var quitStream = preload("res://minijeux/restart-windows95/quit.ogg")
+@onready var errorStream = preload("res://minijeux/restart-windows95/error.ogg")
+
 
 const ErrorDialogScene = preload("res://minijeux/restart-windows95/error_dialog.tscn")
 
@@ -30,9 +34,13 @@ func _on_start_button_pressed() -> void:
 
 
 func _on_power_off_button_pressed() -> void:
+	get_tree().current_scene.process_mode = Node.PROCESS_MODE_INHERIT
+	queue_free()
 	if is_computer_on:
 		if error_dialogs.is_empty():
 			start_menu.hide()
+			$AudioStreamPlayer.stream = quitStream
+			$AudioStreamPlayer.play()
 			await get_tree().create_timer(0.5).timeout
 			win95_desktop.hide()
 			win95_switching_off.show()
@@ -50,11 +58,14 @@ func _on_power_off_button_pressed() -> void:
 		await computer_starting_animation.animation_finished
 		computer_starting_animation.hide()
 		win95_starting.show()
-		await get_tree().create_timer(2.0).timeout
+		await get_tree().create_timer(1.0).timeout
 		win95_starting.hide()
 		win95_desktop.show()
-		await get_tree().create_timer(2.0).timeout
-		hide()
+		$AudioStreamPlayer.stream = startStream
+		$AudioStreamPlayer.play()
+		await $AudioStreamPlayer.finished
+		get_tree().current_scene.process_mode = Node.PROCESS_MODE_ALWAYS
+		queue_free()
 
 
 func _on_win_95_panel_gui_input(event: InputEvent) -> void:
@@ -70,6 +81,8 @@ func _add_error_dialog() -> void:
 	error_dialog.connect(
 		"dialog_closed", Callable(self, "_on_error_dialog_closed").bind(error_dialog)
 	)
+	$AudioStreamPlayer.stream = errorStream
+	$AudioStreamPlayer.play()
 
 
 func _on_error_dialog_closed(error_dialog):
