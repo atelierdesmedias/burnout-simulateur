@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://bjlvwo8xxqhl0"]
+[gd_scene load_steps=15 format=4 uid="uid://bjlvwo8xxqhl0"]
 
 [ext_resource type="Script" uid="uid://ca1e6qvcuqsey" path="res://base/bureau/office_manager.gd" id="1_4hjjf"]
 [ext_resource type="Texture2D" uid="uid://csoq3if53byan" path="res://base/bureau/textures/T_Map_Bureau.png" id="1_mqodo"]
@@ -139,8 +139,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_wx7p8")
 sources/1 = SubResource("TileSetAtlasSource_mqodo")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0esrf"]
-
 [node name="OfficeMap" type="Node2D"]
 script = ExtResource("1_4hjjf")
 
@@ -185,22 +183,7 @@ tile_set = SubResource("TileSet_uu5ly")
 rendering_quadrant_size = 8
 physics_quadrant_size = 8
 
-[node name="Mini-Jeu_1" type="Area2D" parent="."]
-position = Vector2(397, 301)
-
-[node name="Mini-jeu_1_Col" type="CollisionShape2D" parent="Mini-Jeu_1"]
-shape = SubResource("RectangleShape2D_0esrf")
-
-[node name="Mini-Jeu_2" type="Area2D" parent="."]
-position = Vector2(400, 354)
-
-[node name="Mini-jeu_2_Col" type="CollisionShape2D" parent="Mini-Jeu_2"]
-shape = SubResource("RectangleShape2D_0esrf")
-
 [node name="TheOfficeCursed" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_2vjsf")
 autoplay = true
 parameters/looping = true
-
-[connection signal="body_entered" from="Mini-Jeu_1" to="." method="_on_mini_jeu_1_body_entered"]
-[connection signal="body_entered" from="Mini-Jeu_2" to="." method="_on_mini_jeu_2_body_entered"]
