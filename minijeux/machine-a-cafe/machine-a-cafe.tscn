@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://3frf1oqfj7nv" path="res://minijeux/machine-a-cafe/jet eau 3.png" id="6_lusrn"]
 [ext_resource type="Texture2D" uid="uid://c8lvynnyiygdc" path="res://minijeux/machine-a-cafe/Tasse.png" id="7_8ah5u"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1o1g5"]
+size = Vector2(100, 400)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_scwy2"]
 animations = [{
 "frames": [{
@@ -25,9 +28,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1o1g5"]
-size = Vector2(100, 400)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nnwd3"]
 size = Vector2(59, 97)
 
@@ -40,18 +40,20 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_1o1g5")
 
 [node name="Robinet" type="Sprite2D" parent="Machine"]
+z_index = 1
 position = Vector2(-411.99976, 12.000244)
 texture = ExtResource("3_nnwd3")
 
-[node name="cafe" type="AnimatedSprite2D" parent="Machine/Robinet"]
+[node name="Area2D" type="Area2D" parent="Machine/Robinet"]
 position = Vector2(20, -120)
-sprite_frames = SubResource("SpriteFrames_scwy2")
 
-[node name="Area2D" type="Area2D" parent="Machine/Robinet/cafe"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Machine/Robinet/cafe/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Machine/Robinet/Area2D"]
 position = Vector2(424, 612)
 shape = SubResource("RectangleShape2D_1o1g5")
+
+[node name="cafe" type="AnimatedSprite2D" parent="Machine/Robinet"]
+position = Vector2(24, -112)
+sprite_frames = SubResource("SpriteFrames_scwy2")
 
 [node name="Tasse" type="Sprite2D" parent="."]
 position = Vector2(599, 356)

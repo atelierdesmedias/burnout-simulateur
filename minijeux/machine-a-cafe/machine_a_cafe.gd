@@ -13,6 +13,7 @@ var direction_change_timer = 0.0
 var direction_change_interval = 0.5 # seconds
 
 func  _ready() -> void:
+	$Machine/Robinet/cafe.play("default")
 	_pick_new_velocity()
 	$AudioStreamPlayer.stream = load("res://minijeux/machine-a-cafe/coffee.ogg")
 	$AudioStreamPlayer.play()
