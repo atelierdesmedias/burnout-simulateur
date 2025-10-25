@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjxu7urv6qsih"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i2eu4"]
+size = Vector2(19, 20)
+
+[node name="usbPort" type="Node2D"]
+
+[node name="port_usb" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="port_usb"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_i2eu4")

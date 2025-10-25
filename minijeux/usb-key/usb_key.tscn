@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://45lbmsbed7pa"]
+
+[ext_resource type="Script" uid="uid://bsslywlfhqkcw" path="res://minijeux/usb-key/usb_key.gd" id="1_scrg4"]
+[ext_resource type="Texture2D" uid="uid://cry16syrswjcn" path="res://minijeux/usb-key/laptop.jpeg" id="2_g27m4"]
+[ext_resource type="Texture2D" uid="uid://ikbtun6da3ve" path="res://minijeux/usb-key/usb_key.png" id="3_pujia"]
+[ext_resource type="AudioStream" uid="uid://4if6ushltgv" path="res://minijeux/usb-key/erreur.mp3" id="4_g27m4"]
+[ext_resource type="PackedScene" uid="uid://bjxu7urv6qsih" path="res://minijeux/usb-key/usb_port.tscn" id="4_wvv4m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5q2r"]
+size = Vector2(62.5, 61.878326)
+
+[node name="usb-key" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_g27m4")
+expand_mode = 3
+
+[node name="usbanchor" type="Node2D" parent="."]
+position = Vector2(960, 353)
+
+[node name="UsbKey" type="Area2D" parent="usbanchor"]
+position = Vector2(-144, -169)
+scale = Vector2(0.4, 0.378)
+script = ExtResource("1_scrg4")
+
+[node name="Sprite2D" type="Sprite2D" parent="usbanchor/UsbKey"]
+texture = ExtResource("3_pujia")
+flip_h = true
+
+[node name="polygone_usb" type="CollisionPolygon2D" parent="usbanchor/UsbKey"]
+scale = Vector2(1.0118438, 1.075419)
+polygon = PackedVector2Array(162.5, -26.455017, 145, -37.03705, 110, -44.97357, 75, -52.910034, -127.5, -52.910034, -127.5, -26.455017, -190, -26.455017, -190, 34.39154, -130, 34.39154, -130, 58.20105, 82.5, 58.20105, 142.5, 44.97357, 155, 37.03705, 167.5, 21.164001, 167.5, -13.227539)
+
+[node name="Embout" type="Area2D" parent="usbanchor/UsbKey"]
+scale = Vector2(0.89345795, 1.012)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="usbanchor/UsbKey/Embout"]
+position = Vector2(-161.25, 3.4523926)
+shape = SubResource("RectangleShape2D_p5q2r")
+
+[node name="Erreur" type="AudioStreamPlayer" parent="usbanchor/UsbKey"]
+stream = ExtResource("4_g27m4")
+
+[node name="usbPort" parent="." instance=ExtResource("4_wvv4m")]
+position = Vector2(699, 266)
+
+[node name="usbPort2" parent="." instance=ExtResource("4_wvv4m")]
+position = Vector2(699, 307)
+
+[connection signal="area_entered" from="usbanchor/UsbKey/Embout" to="usbanchor/UsbKey" method="_on_embout_area_entered"]
