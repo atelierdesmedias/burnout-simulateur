@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://yiaf2qmdiucy"]
+[gd_scene load_steps=4 format=3 uid="uid://yiaf2qmdiucy"]
 
+[ext_resource type="PackedScene" uid="uid://hjd2h1lxsj8m" path="res://base/hud.tscn" id="1_fh8l2"]
 [ext_resource type="Texture2D" uid="uid://dsu6oem2p6w34" path="res://base/bureau/textures/T_Office_.background_temp.jpg" id="1_t41hu"]
 [ext_resource type="PackedScene" uid="uid://dqake3y851rhw" path="res://base/bureau/player_office.tscn" id="2_mq4xc"]
 
@@ -13,7 +14,6 @@ centered = false
 
 [node name="Player_Office" parent="." instance=ExtResource("2_mq4xc")]
 position = Vector2(1432, 368.00003)
-scale = Vector2(4.4368806, 4.4368806)
 speed = 400.0
 
 [node name="Camera2D" type="Camera2D" parent="Player_Office"]
@@ -22,3 +22,9 @@ drag_left_margin = 0.0
 drag_top_margin = 0.0
 drag_right_margin = 0.0
 drag_bottom_margin = 0.0
+
+[node name="Hud" parent="Player_Office/Camera2D" instance=ExtResource("1_fh8l2")]
+offset_left = -553.8031
+offset_top = -305.8031
+offset_right = -241.8031
+offset_bottom = -129.8031
