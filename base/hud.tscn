@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://hjd2h1lxsj8m"]
+[gd_scene load_steps=3 format=3 uid="uid://hjd2h1lxsj8m"]
+
+[ext_resource type="Texture2D" uid="uid://bkj51u5tixo5v" path="res://base/bureau/textures/progress bar most rounded over.png" id="1_linc4"]
+[ext_resource type="Texture2D" uid="uid://7qsj4q5ucvap" path="res://base/bureau/textures/progress bar most rounded progress green.png" id="2_l6hix"]
 
 [node name="Hud" type="Control"]
 layout_mode = 3
@@ -12,9 +15,12 @@ offset_bottom = 192.0
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(200, 15)
+[node name="TextureProgressBar" type="TextureProgressBar" parent="VBoxContainer/HBoxContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(32, 8)
 layout_mode = 2
 max_value = 1.0
+step = 0.01
 value = 0.5
-show_percentage = false
+texture_under = ExtResource("1_linc4")
+texture_progress = ExtResource("2_l6hix")
