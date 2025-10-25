@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://b14fghhi8ujl4"]
+
+[ext_resource type="PackedScene" uid="uid://ygpcl6tiytpv" path="res://minijeux/parking/car.tscn" id="1_8v8vh"]
+[ext_resource type="PackedScene" uid="uid://bh3g5lkf1y4qc" path="res://minijeux/parking/other_car.tscn" id="2_sqjgm"]
+
+[node name="Parking" type="Node2D"]
+
+[node name="Car" parent="." instance=ExtResource("1_8v8vh")]
+position = Vector2(159, 437)
+gravity_scale = 0.0
+
+[node name="OtherCar" parent="." instance=ExtResource("2_sqjgm")]
+position = Vector2(435, 183)
+
+[node name="OtherCar6" parent="." instance=ExtResource("2_sqjgm")]
+position = Vector2(334, 185)
+
+[node name="OtherCar7" parent="." instance=ExtResource("2_sqjgm")]
+position = Vector2(235, 183)
+
+[node name="OtherCar8" parent="." instance=ExtResource("2_sqjgm")]
+position = Vector2(122, 188)
+
+[node name="OtherCar2" parent="." instance=ExtResource("2_sqjgm")]
+position = Vector2(522, 183)
+
+[node name="OtherCar3" parent="." instance=ExtResource("2_sqjgm")]
+position = Vector2(700, 183)
+
+[node name="OtherCar4" parent="." instance=ExtResource("2_sqjgm")]
+position = Vector2(818, 187)
+
+[node name="OtherCar5" parent="." instance=ExtResource("2_sqjgm")]
+position = Vector2(922, 192)
