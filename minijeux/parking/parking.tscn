@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b14fghhi8ujl4"]
+[gd_scene load_steps=5 format=3 uid="uid://b14fghhi8ujl4"]
 
 [ext_resource type="PackedScene" uid="uid://ygpcl6tiytpv" path="res://minijeux/parking/car.tscn" id="1_8v8vh"]
 [ext_resource type="Script" path="res://minijeux/parking/parking.gd" id="1_hh03x"]
 [ext_resource type="PackedScene" uid="uid://bh3g5lkf1y4qc" path="res://minijeux/parking/other_car.tscn" id="2_sqjgm"]
+[ext_resource type="PackedScene" uid="uid://hjd2h1lxsj8m" path="res://base/hud.tscn" id="4_wbgxk"]
 
 [node name="Parking" type="Node2D"]
 script = ExtResource("1_hh03x")
@@ -13,36 +14,6 @@ gravity_scale = 0.0
 
 [node name="OtherCar" parent="." instance=ExtResource("2_sqjgm")]
 position = Vector2(582, 185)
-
-[node name="OtherCar" parent="OtherCar" instance=ExtResource("2_sqjgm")]
-position = Vector2(404, 294)
-
-[node name="OtherCar6" parent="OtherCar" instance=ExtResource("2_sqjgm")]
-position = Vector2(303, 296)
-
-[node name="OtherCar" parent="OtherCar/OtherCar6" instance=ExtResource("2_sqjgm")]
-position = Vector2(-382, 5)
-
-[node name="OtherCar6" parent="OtherCar/OtherCar6" instance=ExtResource("2_sqjgm")]
-position = Vector2(-483, 7)
-
-[node name="OtherCar7" parent="OtherCar/OtherCar6" instance=ExtResource("2_sqjgm")]
-position = Vector2(-582, 5)
-
-[node name="OtherCar8" parent="OtherCar/OtherCar6" instance=ExtResource("2_sqjgm")]
-position = Vector2(-724, -291)
-
-[node name="OtherCar2" parent="OtherCar/OtherCar6" instance=ExtResource("2_sqjgm")]
-position = Vector2(-295, 5)
-
-[node name="OtherCar7" parent="OtherCar" instance=ExtResource("2_sqjgm")]
-position = Vector2(204, 294)
-
-[node name="OtherCar8" parent="OtherCar" instance=ExtResource("2_sqjgm")]
-position = Vector2(91, 299)
-
-[node name="OtherCar2" parent="OtherCar" instance=ExtResource("2_sqjgm")]
-position = Vector2(491, 294)
 
 [node name="OtherCar6" parent="." instance=ExtResource("2_sqjgm")]
 position = Vector2(481, 187)
@@ -64,3 +35,36 @@ position = Vector2(965, 189)
 
 [node name="OtherCar5" parent="." instance=ExtResource("2_sqjgm")]
 position = Vector2(1069, 194)
+
+[node name="Hud" parent="." instance=ExtResource("4_wbgxk")]
+scale = Vector2(3.03, 3.03)
+
+[node name="OtherCar9" parent="." instance=ExtResource("2_sqjgm")]
+position = Vector2(986, 479)
+
+[node name="OtherCar10" parent="." instance=ExtResource("2_sqjgm")]
+position = Vector2(503, 486)
+
+[node name="OtherCar11" parent="." instance=ExtResource("2_sqjgm")]
+position = Vector2(402, 488)
+
+[node name="OtherCar12" parent="." instance=ExtResource("2_sqjgm")]
+position = Vector2(303, 486)
+
+[node name="OtherCar13" parent="." instance=ExtResource("2_sqjgm")]
+position = Vector2(161, 190)
+
+[node name="OtherCar14" parent="." instance=ExtResource("2_sqjgm")]
+position = Vector2(590, 486)
+
+[node name="OtherCar15" parent="." instance=ExtResource("2_sqjgm")]
+position = Vector2(885, 481)
+
+[node name="OtherCar16" parent="." instance=ExtResource("2_sqjgm")]
+position = Vector2(786, 479)
+
+[node name="OtherCar17" parent="." instance=ExtResource("2_sqjgm")]
+position = Vector2(673, 484)
+
+[node name="OtherCar18" parent="." instance=ExtResource("2_sqjgm")]
+position = Vector2(1073, 479)

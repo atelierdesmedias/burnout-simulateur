@@ -1,6 +1,7 @@
 extends Control
 
-@onready var bar: TextureProgressBar = $VBoxContainer/HBoxContainer/ProgressBarMoney
+@onready var moneyBar: TextureProgressBar = $VBoxContainer/HBoxContainer/ProgressBarMoney
+@onready var lifeBar: TextureProgressBar = $VBoxContainer/HBoxContainer2/ProgressBarBrain
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -9,9 +10,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	bar.value = Globals.money;
-	
-	pass
+	moneyBar.value = Globals.money
+	lifeBar.value = Globals.life
 
 func _input(event):
 	if event is InputEventKey:
