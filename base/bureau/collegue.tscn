@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bt17d6xw6csxu"]
+[gd_scene load_steps=34 format=3 uid="uid://bt17d6xw6csxu"]
 
 [ext_resource type="Script" uid="uid://bcsf4v0oahnkg" path="res://base/bureau/collegue.gd" id="1_eq1r0"]
 [ext_resource type="Texture2D" uid="uid://b00033dkuuqme" path="res://base/bureau/textures/Speech/T_Exclamation.png" id="2_ffl16"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b13iuknv6y43r" path="res://base/bureau/textures/Speech/T_Speech_USB.png" id="6_li2sx"]
 [ext_resource type="Texture2D" uid="uid://d2p8co5jfunto" path="res://base/bureau/textures/Speech/T_Speech_Car.png" id="6_llh8h"]
 [ext_resource type="Texture2D" uid="uid://bs5iqed58dulp" path="res://base/bureau/textures/Speech/T_Speech_Windows.png" id="7_llh8h"]
+[ext_resource type="Texture2D" uid="uid://cedq5xfi62ldt" path="res://base/bureau/textures/Speech/T_Speech_Can.png" id="8_cfvql"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rj8xc"]
 atlas = ExtResource("2_ffl16")
@@ -84,6 +85,10 @@ region = Rect2(0, 0, 135, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dfjda"]
 atlas = ExtResource("6_li2sx")
+region = Rect2(0, 0, 135, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wr2g"]
+atlas = ExtResource("8_cfvql")
 region = Rect2(0, 0, 135, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ke7hs"]
@@ -185,6 +190,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 3.0,
+"texture": SubResource("AtlasTexture_4wr2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rj8xc")
+}],
+"loop": true,
+"name": &"vending",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 3.0,
 "texture": SubResource("AtlasTexture_ke7hs")
 }, {
 "duration": 1.0,
@@ -207,7 +223,7 @@ z_index = 1
 position = Vector2(23, -13)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_ans6l")
-animation = &"car"
+animation = &"vending"
 script = ExtResource("5_fr1tm")
 
 [node name="Declenche_MiniJeu" type="CollisionShape2D" parent="."]
