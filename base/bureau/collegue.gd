@@ -40,6 +40,7 @@ func _popQuest():
 func _dePopQuest():
 	hasQuest = false
 	$Exclamation.visible = false
+	await get_tree().create_timer(2.0).timeout
 	add_to_group("collegues")	
 	
 func _on_body_entered(body: Node2D) -> void:

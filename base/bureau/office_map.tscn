@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://bjlvwo8xxqhl0"]
+[gd_scene load_steps=16 format=4 uid="uid://bjlvwo8xxqhl0"]
 
 [ext_resource type="Script" uid="uid://ca1e6qvcuqsey" path="res://base/bureau/office_manager.gd" id="1_4hjjf"]
 [ext_resource type="Texture2D" uid="uid://csoq3if53byan" path="res://base/bureau/textures/T_Map_Bureau.png" id="1_mqodo"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://hjd2h1lxsj8m" path="res://base/hud.tscn" id="3_wx7p8"]
 [ext_resource type="Texture2D" uid="uid://ju57y40pt5j" path="res://base/bureau/textures/T_Props.png" id="4_0esrf"]
 [ext_resource type="Texture2D" uid="uid://cfn1hwfbhcsas" path="res://base/Texture/T_WhiteSquare.png" id="4_54lem"]
+[ext_resource type="PackedScene" uid="uid://cwqoj8hnn6y76" path="res://base/bureau/quest.tscn" id="4_65870"]
 [ext_resource type="Texture2D" uid="uid://b13bu8kklo86" path="res://base/Texture/T_TransparentSquare.png" id="5_wx7p8"]
 [ext_resource type="AudioStream" uid="uid://dkva7y5ugxle6" path="res://base/bureau/the_office_cursed.ogg" id="9_2vjsf"]
 
@@ -155,6 +156,10 @@ position = Vector2(60, 135)
 
 [node name="Collegue3" parent="Background" instance=ExtResource("2_mqodo")]
 position = Vector2(61, 199)
+
+[node name="Quest" parent="Background" instance=ExtResource("4_65870")]
+z_index = 1
+position = Vector2(352, 55)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 y_sort_enabled = true
