@@ -13,28 +13,29 @@
 texture = ExtResource("4_0esrf")
 0:0/size_in_atlas = Vector2i(5, 4)
 0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 16)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-36, 20, 40, 20, 40, 32, -36, 32)
 5:3/0 = 0
 6:1/size_in_atlas = Vector2i(2, 3)
 6:1/0 = 0
+6:1/0/texture_origin = Vector2i(8, 8)
 6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, 8, 12, 8, 12, 24, -12, 24)
 8:2/size_in_atlas = Vector2i(2, 2)
 8:2/0 = 0
 8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4, 12, 4, 12, 16, -8, 16)
-10:2/size_in_atlas = Vector2i(2, 2)
-10:2/0 = 0
-10:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, 4, 12, 4, 12, 16, -12, 16)
 12:2/size_in_atlas = Vector2i(2, 2)
 12:2/0 = 0
 12:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4, 12, 4, 12, 16, -8, 16)
 15:1/size_in_atlas = Vector2i(3, 3)
 15:1/0 = 0
+15:1/0/texture_origin = Vector2i(0, 8)
 15:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, 8, 24, 8, 24, 24, -24, 24)
 14:2/size_in_atlas = Vector2i(1, 2)
 14:2/0 = 0
 14:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4, 8, 4, 8, 16, -8, 16)
 18:0/size_in_atlas = Vector2i(3, 4)
 18:0/0 = 0
+18:0/0/texture_origin = Vector2i(-2, 16)
 18:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, 16, 24, 16, 24, 32, -12, 32)
 0:5/size_in_atlas = Vector2i(4, 2)
 0:5/0 = 0
@@ -44,14 +45,17 @@ texture = ExtResource("4_0esrf")
 4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-28, 0, 16, 0, 16, 16, -28, 16)
 8:5/size_in_atlas = Vector2i(2, 4)
 8:5/0 = 0
+8:5/0/texture_origin = Vector2i(8, 0)
 8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -12, 16, -12, 16, 32, -4, 32)
 0:7/size_in_atlas = Vector2i(2, 2)
 0:7/0 = 0
 10:5/size_in_atlas = Vector2i(2, 4)
 10:5/0 = 0
+10:5/0/texture_origin = Vector2i(8, 0)
 10:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -12, 16, -12, 16, 32, -4, 32)
 13:5/size_in_atlas = Vector2i(9, 4)
 13:5/0 = 0
+13:5/0/y_sort_origin = -34
 3:9/size_in_atlas = Vector2i(2, 2)
 3:9/0 = 0
 15:10/size_in_atlas = Vector2i(5, 3)
@@ -63,6 +67,7 @@ texture = ExtResource("4_0esrf")
 0:13/0 = 0
 4:12/size_in_atlas = Vector2i(4, 3)
 4:12/0 = 0
+4:12/0/y_sort_origin = -30
 0:16/size_in_atlas = Vector2i(4, 2)
 0:16/0 = 0
 0:16/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 0, 24, 0, 24, 16, -32, 16)
@@ -100,6 +105,11 @@ texture = ExtResource("4_0esrf")
 15:16/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, 12, 32, 12, 32, 32, -40, 32)
 9:21/size_in_atlas = Vector2i(5, 2)
 9:21/0 = 0
+9:21/0/texture_origin = Vector2i(4, 4)
+10:1/size_in_atlas = Vector2i(2, 3)
+10:1/0 = 0
+10:1/0/texture_origin = Vector2i(0, 8)
+10:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, 4, 12, 4, 12, 16, -12, 16)
 
 [sub_resource type="TileSet" id="TileSet_65870"]
 physics_layer_0/collision_layer = 1
@@ -133,18 +143,18 @@ texture = ExtResource("1_mqodo")
 centered = false
 
 [node name="Collegue" parent="Background" instance=ExtResource("2_mqodo")]
-position = Vector2(67, 88)
+position = Vector2(60, 70)
 
 [node name="Collegue2" parent="Background" instance=ExtResource("2_mqodo")]
-position = Vector2(67, 152)
+position = Vector2(60, 135)
 
 [node name="Collegue3" parent="Background" instance=ExtResource("2_mqodo")]
-position = Vector2(67, 208)
+position = Vector2(61, 199)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 y_sort_enabled = true
 texture_filter = 1
-tile_map_data = PackedByteArray("AAAdAAEAAQAAAAAAAAAXAAEAAQAGAAEAAAA=")
+tile_map_data = PackedByteArray("AAAdAAIAAQAAAAAAAAAVAAIAAQASAAAAAAAYAAIAAQAGAAEAAAAaAAUAAQAAAAUAAAAdAAcAAQAKAAUAAAAYAAwAAQAAABAAAAAaAAcAAQAAABAAAAAQAAIAAQAMAAkAAAASAAIAAQADAAkAAAAEAAwAAQAKAA4AAAAEAAgAAQAPAAoAAAAEAAQAAQAPAA0AAAABAAQAAQAEAA8AAAABAAgAAQAEAA8AAAABAAwAAQAEAA8AAAACABEAAQAPAAEAAAAFABEAAQAPAAEAAAAHABYAAQANAAUAAAAHABQAAQAPABAAAAANABEAAQAMAAkAAAAKABEAAQAEAAUAAAAGABcAAQADABMAAAAXABkAAQAEAAUAAAAbABkAAQAAAAUAAAAcABYAAQAJABUAAAAcABUAAQAAABMAAAAcABMAAQAAABMAAAAcABQAAQAJABUAAAAcABIAAQAJABUAAAALAAsAAQAEAAwAAAAbABwAAQAEAAwAAAAWABwAAQAEAAwAAAARAAoAAQANAAUAAGATAAgAAQAIAAUAAAATAAwAAQAKAAUAAAA=")
 tile_set = SubResource("TileSet_65870")
 
 [node name="Player_Office" parent="TileMapLayer" instance=ExtResource("2_54lem")]
@@ -169,13 +179,13 @@ rendering_quadrant_size = 8
 physics_quadrant_size = 8
 
 [node name="Mini-Jeu_1" type="Area2D" parent="."]
-position = Vector2(384, 432)
+position = Vector2(397, 301)
 
 [node name="Mini-jeu_1_Col" type="CollisionShape2D" parent="Mini-Jeu_1"]
 shape = SubResource("RectangleShape2D_0esrf")
 
 [node name="Mini-Jeu_2" type="Area2D" parent="."]
-position = Vector2(384, 472)
+position = Vector2(400, 354)
 
 [node name="Mini-jeu_2_Col" type="CollisionShape2D" parent="Mini-Jeu_2"]
 shape = SubResource("RectangleShape2D_0esrf")

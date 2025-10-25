@@ -1,20 +1,8 @@
-[gd_scene load_steps=24 format=3 uid="uid://bt17d6xw6csxu"]
+[gd_scene load_steps=22 format=3 uid="uid://bt17d6xw6csxu"]
 
-[ext_resource type="Texture2D" uid="uid://brx2ulisfybny" path="res://base/bureau/textures/boss.png" id="1_carb6"]
 [ext_resource type="Script" uid="uid://bcsf4v0oahnkg" path="res://base/bureau/collegue.gd" id="1_eq1r0"]
 [ext_resource type="Texture2D" uid="uid://b00033dkuuqme" path="res://base/bureau/textures/T_Exclamation.png" id="2_ffl16"]
 [ext_resource type="Texture2D" uid="uid://xexpilcu20hk" path="res://base/bureau/textures/T_Exclamation_Red.png" id="4_rj8xc"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ffl16"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_carb6")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eq1r0"]
 atlas = ExtResource("2_ffl16")
@@ -144,15 +132,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rj8xc"]
 size = Vector2(82, 62)
 
-[node name="Collegue" type="StaticBody2D"]
+[node name="Collegue" type="Area2D"]
 script = ExtResource("1_eq1r0")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_ffl16")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(-41, -17)
-polygon = PackedVector2Array(24, 8, 24, 32, 32, 48, 48, 48, 56, 32, 72, 32, 72, 8, 56, 0)
 
 [node name="Exclamation" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -161,10 +142,7 @@ scale = Vector2(0.017578127, 0.017578127)
 sprite_frames = SubResource("SpriteFrames_ans6l")
 animation = &"Green"
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="Declenche_MiniJeu" type="CollisionShape2D" parent="Area2D"]
+[node name="Declenche_MiniJeu" type="CollisionShape2D" parent="."]
 position = Vector2(9, 7)
 shape = SubResource("RectangleShape2D_rj8xc")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+disabled = true
