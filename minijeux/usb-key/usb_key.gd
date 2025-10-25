@@ -22,7 +22,7 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 			else :
 				is_dragging = false
 				if embout.get_overlapping_areas():
-					if randf()> 0.5:
+					if randf()> 0.67:
 						return
 					else :
 						erreur.play(0.5)
