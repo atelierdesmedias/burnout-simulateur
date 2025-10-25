@@ -1,13 +1,14 @@
+@tool
+class_name Collegue
+
 extends StaticBody2D
 
-
+var hasQuest = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
-	
+	add_to_group("collegues")	
 	pass # Replace with function body.
-
-
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
@@ -16,7 +17,7 @@ func _process(delta: float) -> void:
 func _popQuest():
 	$Exclamation.visible = true
 	$Exclamation.play("Green")
-	
+	remove_from_group("collegues")
 	pass
 
 
