@@ -163,7 +163,7 @@ animation = &"Green"
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="Declenche_MiniJeu" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(9, 7)
 shape = SubResource("RectangleShape2D_rj8xc")
 

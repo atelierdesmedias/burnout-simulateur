@@ -32,7 +32,7 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 				if embout.get_overlapping_areas():
 					if randf()> 0.67:
 						get_tree().current_scene.process_mode = Node.PROCESS_MODE_INHERIT
-						queue_free()
+						get_parent().get_parent().queue_free()
 					else :
 						erreur.play(0.5)
 				
