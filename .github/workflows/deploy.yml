@@ -1,4 +1,8 @@
-name: Deploy Godot project to GitHub Pages
+name: Deploy Godot project to GitHub Pages and Itch.io
+
+env:
+  ITCH_USERNAME: martindelille
+  ITCH_GAME_ID: burnout-simulateur
 
 on:
   push:
@@ -47,3 +51,11 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - uses: KikimoraGames/itch-publish@v0.0.3
+        with:
+          butlerApiKey: ${{secrets.BUTLER_API_KEY}}
+          gameData: ./build/html
+          itchUsername: ${{env.ITCH_USERNAME}}
+          itchGameId: ${{ env.ITCH_GAME_ID }}
+          buildChannel: html
+          buildNumber: ${{ needs.version.outputs.version_hash }}
