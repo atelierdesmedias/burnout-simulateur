@@ -1,13 +1,28 @@
-[gd_scene load_steps=7 format=3 uid="uid://45lbmsbed7pa"]
+[gd_scene load_steps=8 format=3 uid="uid://45lbmsbed7pa"]
 
 [ext_resource type="Script" uid="uid://bsslywlfhqkcw" path="res://minijeux/usb-key/usb_key.gd" id="1_scrg4"]
 [ext_resource type="Texture2D" uid="uid://cry16syrswjcn" path="res://minijeux/usb-key/laptop.jpeg" id="2_g27m4"]
-[ext_resource type="Texture2D" uid="uid://ikbtun6da3ve" path="res://minijeux/usb-key/usb_key.png" id="3_pujia"]
+[ext_resource type="Texture2D" uid="uid://bunno8mu17d68" path="res://minijeux/usb-key/usb_key_animation/usb_key_1.png" id="3_g27m4"]
 [ext_resource type="AudioStream" uid="uid://4if6ushltgv" path="res://minijeux/usb-key/erreur.mp3" id="4_g27m4"]
+[ext_resource type="Texture2D" uid="uid://cu5aucjg1enk7" path="res://minijeux/usb-key/usb_key_animation/usb_key_2.png" id="4_pujia"]
 [ext_resource type="PackedScene" uid="uid://bjxu7urv6qsih" path="res://minijeux/usb-key/usb_port.tscn" id="4_wvv4m"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5q2r"]
-size = Vector2(62.5, 61.878326)
+[sub_resource type="SpriteFrames" id="SpriteFrames_wvv4m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_g27m4")
+}, {
+"duration": 2.0,
+"texture": ExtResource("4_pujia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_g27m4")
+}],
+"loop": false,
+"name": &"rotation",
+"speed": 3.0
+}]
 
 [node name="usb-key" type="Control"]
 layout_mode = 3
@@ -33,26 +48,25 @@ expand_mode = 3
 position = Vector2(960, 353)
 
 [node name="UsbKey" type="Area2D" parent="usbanchor"]
-position = Vector2(-144, -169)
 scale = Vector2(0.4, 0.378)
 script = ExtResource("1_scrg4")
 
-[node name="Sprite2D" type="Sprite2D" parent="usbanchor/UsbKey"]
-texture = ExtResource("3_pujia")
-flip_h = true
+[node name="Sprite2D" type="AnimatedSprite2D" parent="usbanchor/UsbKey"]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_wvv4m")
+animation = &"rotation"
 
-[node name="polygone_usb" type="CollisionPolygon2D" parent="usbanchor/UsbKey"]
-scale = Vector2(1.0118438, 1.075419)
-polygon = PackedVector2Array(162.5, -26.455017, 145, -37.03705, 110, -44.97357, 75, -52.910034, -127.5, -52.910034, -127.5, -26.455017, -190, -26.455017, -190, 34.39154, -130, 34.39154, -130, 58.20105, 82.5, 58.20105, 142.5, 44.97357, 155, 37.03705, 167.5, 21.164001, 167.5, -13.227539)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="usbanchor/UsbKey"]
+polygon = PackedVector2Array(-227.5, 29.100525, -225, -10.582031, -165, -63.492065, -120, -52.910065, -82.5, -82.01059, 230, -39.682556, 227.5, 21.164001, 137.5, 87.301575, -160, 47.61902)
 
 [node name="Embout" type="Area2D" parent="usbanchor/UsbKey"]
 scale = Vector2(0.89345795, 1.012)
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="usbanchor/UsbKey/Embout"]
-position = Vector2(-161.25, 3.4523926)
-shape = SubResource("RectangleShape2D_p5q2r")
+[node name="Embout_collision" type="CollisionPolygon2D" parent="usbanchor/UsbKey/Embout"]
+build_mode = 1
+polygon = PackedVector2Array(-257.42688, 28.755463, -257.42688, -10.456543, -184.67578, -65.35333, -134.30957, -54.89682, -187.47388, 2.6141357, -187.47388, 39.211975)
 
 [node name="Erreur" type="AudioStreamPlayer" parent="usbanchor/UsbKey"]
 stream = ExtResource("4_g27m4")
