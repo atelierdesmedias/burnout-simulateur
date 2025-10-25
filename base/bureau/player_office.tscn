@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://dqake3y851rhw"]
 
-[ext_resource type="Texture2D" uid="uid://bxqdgp8gb6ahl" path="res://base/bureau/textures/Prof_Walk_1.png" id="1_cdsl3"]
+[ext_resource type="Texture2D" uid="uid://bxqdgp8gb6ahl" path="res://base/bureau/textures/Characters/Prof_Walk_1.png" id="1_cdsl3"]
 [ext_resource type="Script" uid="uid://shr2qm7m4svy" path="res://base/bureau/player_office.gd" id="1_kd7p7"]
-[ext_resource type="Texture2D" uid="uid://diwlc01i327ee" path="res://base/bureau/textures/Prof_Walk_2.png" id="2_lhh74"]
-[ext_resource type="Texture2D" uid="uid://dna8mp2e4c5if" path="res://base/bureau/textures/Prof_side_1.png" id="3_cnpni"]
-[ext_resource type="Texture2D" uid="uid://16anq13vi461" path="res://base/bureau/textures/Prof_side_2.png" id="4_qam77"]
-[ext_resource type="Texture2D" uid="uid://ddgyqdnop6512" path="res://base/bureau/textures/Prof_back_1.png" id="5_sdtx6"]
-[ext_resource type="Texture2D" uid="uid://cdabu2dpnklk" path="res://base/bureau/textures/Prof_back_2.png" id="6_42vyb"]
+[ext_resource type="Texture2D" uid="uid://diwlc01i327ee" path="res://base/bureau/textures/Characters/Prof_Walk_2.png" id="2_lhh74"]
+[ext_resource type="Texture2D" uid="uid://dna8mp2e4c5if" path="res://base/bureau/textures/Characters/Prof_side_1.png" id="3_cnpni"]
+[ext_resource type="Texture2D" uid="uid://16anq13vi461" path="res://base/bureau/textures/Characters/Prof_side_2.png" id="4_qam77"]
+[ext_resource type="Texture2D" uid="uid://ddgyqdnop6512" path="res://base/bureau/textures/Characters/Prof_back_1.png" id="5_sdtx6"]
+[ext_resource type="Texture2D" uid="uid://cdabu2dpnklk" path="res://base/bureau/textures/Characters/Prof_back_2.png" id="6_42vyb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_26may"]
 animations = [{

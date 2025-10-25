@@ -1,13 +1,14 @@
-[gd_scene load_steps=30 format=3 uid="uid://bt17d6xw6csxu"]
+[gd_scene load_steps=32 format=3 uid="uid://bt17d6xw6csxu"]
 
 [ext_resource type="Script" uid="uid://bcsf4v0oahnkg" path="res://base/bureau/collegue.gd" id="1_eq1r0"]
-[ext_resource type="Texture2D" uid="uid://b00033dkuuqme" path="res://base/bureau/textures/T_Exclamation.png" id="2_ffl16"]
-[ext_resource type="Texture2D" uid="uid://bv3hfa7e44jo0" path="res://base/bureau/textures/T_Speech.png" id="2_rj8xc"]
-[ext_resource type="Texture2D" uid="uid://xexpilcu20hk" path="res://base/bureau/textures/T_Exclamation_Red.png" id="4_rj8xc"]
+[ext_resource type="Texture2D" uid="uid://b00033dkuuqme" path="res://base/bureau/textures/Speech/T_Exclamation.png" id="2_ffl16"]
+[ext_resource type="Texture2D" uid="uid://bv3hfa7e44jo0" path="res://base/bureau/textures/Speech/T_Speech.png" id="2_rj8xc"]
+[ext_resource type="Texture2D" uid="uid://xexpilcu20hk" path="res://base/bureau/textures/Speech/T_Exclamation_Red.png" id="4_rj8xc"]
 [ext_resource type="Script" uid="uid://igejuwoishbx" path="res://base/bureau/exclamation.gd" id="5_fr1tm"]
-[ext_resource type="Texture2D" uid="uid://dadpg61rsm35p" path="res://base/bureau/textures/T_Speech_Coffee.png" id="5_mbljp"]
-[ext_resource type="Texture2D" uid="uid://b13iuknv6y43r" path="res://base/bureau/textures/T_Speech_USB.png" id="6_li2sx"]
-[ext_resource type="Texture2D" uid="uid://bs5iqed58dulp" path="res://base/bureau/textures/T_Speech_Windows.png" id="7_llh8h"]
+[ext_resource type="Texture2D" uid="uid://dadpg61rsm35p" path="res://base/bureau/textures/Speech/T_Speech_Coffee.png" id="5_mbljp"]
+[ext_resource type="Texture2D" uid="uid://b13iuknv6y43r" path="res://base/bureau/textures/Speech/T_Speech_USB.png" id="6_li2sx"]
+[ext_resource type="Texture2D" uid="uid://d2p8co5jfunto" path="res://base/bureau/textures/Speech/T_Speech_Car.png" id="6_llh8h"]
+[ext_resource type="Texture2D" uid="uid://bs5iqed58dulp" path="res://base/bureau/textures/Speech/T_Speech_Windows.png" id="7_llh8h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rj8xc"]
 atlas = ExtResource("2_ffl16")
@@ -75,6 +76,10 @@ region = Rect2(896, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8xvct"]
 atlas = ExtResource("5_mbljp")
+region = Rect2(0, 0, 135, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6roy"]
+atlas = ExtResource("6_llh8h")
 region = Rect2(0, 0, 135, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dfjda"]
@@ -158,6 +163,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 3.0,
+"texture": SubResource("AtlasTexture_u6roy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rj8xc")
+}],
+"loop": true,
+"name": &"car",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 3.0,
 "texture": SubResource("AtlasTexture_dfjda")
 }, {
 "duration": 1.0,
@@ -191,7 +207,7 @@ z_index = 1
 position = Vector2(23, -13)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_ans6l")
-animation = &"windows"
+animation = &"car"
 script = ExtResource("5_fr1tm")
 
 [node name="Declenche_MiniJeu" type="CollisionShape2D" parent="."]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bv3hfa7e44jo0"
-path="res://.godot/imported/T_Speech.png-be11467f699f3da50aeb25a4fa35a7f2.ctex"
+uid="uid://d2p8co5jfunto"
+path="res://.godot/imported/T_Speech_Car.png-cc6778536127399440aaf623d2f69854.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://base/bureau/textures/T_Speech.png"
-dest_files=["res://.godot/imported/T_Speech.png-be11467f699f3da50aeb25a4fa35a7f2.ctex"]
+source_file="res://base/bureau/textures/Speech/T_Speech_Car.png"
+dest_files=["res://.godot/imported/T_Speech_Car.png-cc6778536127399440aaf623d2f69854.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dadpg61rsm35p"
-path="res://.godot/imported/T_Speech_Coffee.png-4adbf86d5eba607baf0a27b2cd7e7208.ctex"
+uid="uid://b13iuknv6y43r"
+path="res://.godot/imported/T_Speech_USB.png-96347158fade67ca0964f960d7a3b3ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://base/bureau/textures/T_Speech_Coffee.png"
-dest_files=["res://.godot/imported/T_Speech_Coffee.png-4adbf86d5eba607baf0a27b2cd7e7208.ctex"]
+source_file="res://base/bureau/textures/Speech/T_Speech_USB.png"
+dest_files=["res://.godot/imported/T_Speech_USB.png-96347158fade67ca0964f960d7a3b3ef.ctex"]
 
 [params]
 

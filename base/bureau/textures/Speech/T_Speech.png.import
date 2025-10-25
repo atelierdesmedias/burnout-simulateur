@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddgyqdnop6512"
-path="res://.godot/imported/Prof_back_1.png-75d2e7f3c226a1c7a5fcaceaa95f0de0.ctex"
+uid="uid://bv3hfa7e44jo0"
+path="res://.godot/imported/T_Speech.png-e1d675824aff0710039d1b7d83d4ffdc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://base/bureau/textures/Prof_back_1.png"
-dest_files=["res://.godot/imported/Prof_back_1.png-75d2e7f3c226a1c7a5fcaceaa95f0de0.ctex"]
+source_file="res://base/bureau/textures/Speech/T_Speech.png"
+dest_files=["res://.godot/imported/T_Speech.png-e1d675824aff0710039d1b7d83d4ffdc.ctex"]
 
 [params]
 

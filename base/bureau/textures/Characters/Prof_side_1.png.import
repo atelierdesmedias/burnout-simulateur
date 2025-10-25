@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://diwlc01i327ee"
-path="res://.godot/imported/Prof_Walk_2.png-e4ae3dc868af06c94fd74da888b47f21.ctex"
+uid="uid://dna8mp2e4c5if"
+path="res://.godot/imported/Prof_side_1.png-df1939853d7643c4d7dd3cb9b94c8496.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://base/bureau/textures/Prof_Walk_2.png"
-dest_files=["res://.godot/imported/Prof_Walk_2.png-e4ae3dc868af06c94fd74da888b47f21.ctex"]
+source_file="res://base/bureau/textures/Characters/Prof_side_1.png"
+dest_files=["res://.godot/imported/Prof_side_1.png-df1939853d7643c4d7dd3cb9b94c8496.ctex"]
 
 [params]
 

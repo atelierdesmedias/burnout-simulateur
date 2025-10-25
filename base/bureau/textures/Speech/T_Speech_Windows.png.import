@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b00033dkuuqme"
-path="res://.godot/imported/T_Exclamation.png-4fe6f890c85295d92578410084713c0f.ctex"
+uid="uid://bs5iqed58dulp"
+path="res://.godot/imported/T_Speech_Windows.png-c5e1cce80382486889e6d2c967e9e106.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://base/bureau/textures/T_Exclamation.png"
-dest_files=["res://.godot/imported/T_Exclamation.png-4fe6f890c85295d92578410084713c0f.ctex"]
+source_file="res://base/bureau/textures/Speech/T_Speech_Windows.png"
+dest_files=["res://.godot/imported/T_Speech_Windows.png-c5e1cce80382486889e6d2c967e9e106.ctex"]
 
 [params]
 
