@@ -56,6 +56,7 @@ position = Vector2(24, -112)
 sprite_frames = SubResource("SpriteFrames_scwy2")
 
 [node name="Tasse" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(599, 356)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("7_8ah5u")
