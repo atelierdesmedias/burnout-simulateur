@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgf2ydgoo70l0"]
+
+[ext_resource type="Texture2D" uid="uid://brhllyd2qrl35" path="res://minijeux/restart-windows95/error.png" id="1_cpy31"]
+[ext_resource type="Script" uid="uid://csm6cf24qkvnt" path="res://minijeux/restart-windows95/error_dialog.gd" id="1_s6jcw"]
+
+[node name="ErrorDialog" type="Node2D"]
+script = ExtResource("1_s6jcw")
+
+[node name="Error" type="Sprite2D" parent="."]
+position = Vector2(265, 165)
+texture = ExtResource("1_cpy31")
+
+[node name="OkButton" type="Button" parent="."]
+offset_left = 94.0
+offset_top = 215.0
+offset_right = 259.0
+offset_bottom = 283.0
+
+[connection signal="pressed" from="OkButton" to="." method="_on_ok_button_pressed"]
