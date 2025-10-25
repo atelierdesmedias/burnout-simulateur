@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bs5iqed58dulp"
-path="res://.godot/imported/T_Speech_Windows.png-2834db965aa407198a8b4e183196f38f.ctex"
+uid="uid://bxqdgp8gb6ahl"
+path="res://.godot/imported/Prof_Walk_1.png-ef41856bc726019e6059e0ad019cf1f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://base/bureau/textures/T_Speech_Windows.png"
-dest_files=["res://.godot/imported/T_Speech_Windows.png-2834db965aa407198a8b4e183196f38f.ctex"]
+source_file="res://base/bureau/textures/Characters/Prof_Walk_1.png"
+dest_files=["res://.godot/imported/Prof_Walk_1.png-ef41856bc726019e6059e0ad019cf1f4.ctex"]
 
 [params]
 

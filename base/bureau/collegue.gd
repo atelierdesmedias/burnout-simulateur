@@ -8,7 +8,8 @@ var mQuest:QueteData
 var quetes_table = [
 	QueteData.new("usb","res://minijeux/usb-key/usb_key.tscn","T_Speech_USB",true,""),
 	QueteData.new("windows","res://minijeux/restart-windows95/restart_windows95.tscn","T_Speech_Windows",true,""),
-	QueteData.new("cafe","res://minijeux/machine-a-cafe/machine-a-cafe.tscn","T_Speech_Coffee",false,"")
+	QueteData.new("cafe","res://minijeux/machine-a-cafe/machine-a-cafe.tscn","T_Speech_Coffee",false,""),
+	QueteData.new("car","res://minijeux/parking/parking.tscn","T_Speech_Car",false,"")
 ]
 
 # Called when the node enters the scene tree for the first time.
@@ -24,7 +25,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _popQuest():
-	var lRandQuete = randi_range(0,2)
+	var lRandQuete = randi_range(0,quetes_table.size()-1)
 	mQuest = quetes_table[lRandQuete]		
 	
 	$Exclamation.visible = true

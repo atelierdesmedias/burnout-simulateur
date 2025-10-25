@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdabu2dpnklk"
-path="res://.godot/imported/Prof_back_2.png-91c7de35f78a2402ebda0477bcf70060.ctex"
+uid="uid://xexpilcu20hk"
+path="res://.godot/imported/T_Exclamation_Red.png-16b6aa9fce8761c9d03cb0e4a9358b28.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://base/bureau/textures/Prof_back_2.png"
-dest_files=["res://.godot/imported/Prof_back_2.png-91c7de35f78a2402ebda0477bcf70060.ctex"]
+source_file="res://base/bureau/textures/Speech/T_Exclamation_Red.png"
+dest_files=["res://.godot/imported/T_Exclamation_Red.png-16b6aa9fce8761c9d03cb0e4a9358b28.ctex"]
 
 [params]
 
