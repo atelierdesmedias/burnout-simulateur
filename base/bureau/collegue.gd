@@ -14,7 +14,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
 func _popQuest():
 	$Exclamation.visible = true
 	$Exclamation.play("Green")
@@ -23,8 +22,10 @@ func _popQuest():
 	$Declenche_MiniJeu.disabled = false	
 	pass
 
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func _on_body_entered(body: Node2D) -> void:
+	if !(body is Player):
+		return	
+	
 	print("quête")
 	$Declenche_MiniJeu.disabled = true	
 	pass # Replace with function body.

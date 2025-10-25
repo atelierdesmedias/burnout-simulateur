@@ -22,9 +22,11 @@ texture = ExtResource("4_0esrf")
 6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, 8, 12, 8, 12, 24, -12, 24)
 8:2/size_in_atlas = Vector2i(2, 2)
 8:2/0 = 0
+8:2/0/texture_origin = Vector2i(8, 8)
 8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4, 12, 4, 12, 16, -8, 16)
 12:2/size_in_atlas = Vector2i(2, 2)
 12:2/0 = 0
+12:2/0/texture_origin = Vector2i(8, 8)
 12:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4, 12, 4, 12, 16, -8, 16)
 15:1/size_in_atlas = Vector2i(3, 3)
 15:1/0 = 0
@@ -55,6 +57,7 @@ texture = ExtResource("4_0esrf")
 10:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -12, 16, -12, 16, 32, -4, 32)
 13:5/size_in_atlas = Vector2i(9, 4)
 13:5/0 = 0
+13:5/0/texture_origin = Vector2i(4, 0)
 13:5/0/y_sort_origin = -34
 3:9/size_in_atlas = Vector2i(2, 2)
 3:9/0 = 0
@@ -65,6 +68,7 @@ texture = ExtResource("4_0esrf")
 1:11/0 = 0
 0:13/size_in_atlas = Vector2i(4, 2)
 0:13/0 = 0
+0:13/0/y_sort_origin = -20
 4:12/size_in_atlas = Vector2i(4, 3)
 4:12/0 = 0
 4:12/0/y_sort_origin = -30
@@ -82,6 +86,7 @@ texture = ExtResource("4_0esrf")
 15:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, 4, 24, 4, 24, 24, -40, 24)
 10:19/size_in_atlas = Vector2i(3, 2)
 10:19/0 = 0
+10:19/0/texture_origin = Vector2i(0, 10)
 6:19/size_in_atlas = Vector2i(2, 2)
 6:19/0 = 0
 6:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0, 8, 0, 8, 16, -8, 16)
@@ -99,6 +104,7 @@ texture = ExtResource("4_0esrf")
 10:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -12, 4, -12, 4, 32, -16, 32)
 12:9/size_in_atlas = Vector2i(2, 4)
 12:9/0 = 0
+12:9/0/z_index = 1
 12:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, 16, 12, 16, 8, 32, -8, 32)
 15:16/size_in_atlas = Vector2i(5, 4)
 15:16/0 = 0
@@ -108,7 +114,7 @@ texture = ExtResource("4_0esrf")
 9:21/0/texture_origin = Vector2i(4, 4)
 10:1/size_in_atlas = Vector2i(2, 3)
 10:1/0 = 0
-10:1/0/texture_origin = Vector2i(0, 8)
+10:1/0/texture_origin = Vector2i(8, 0)
 10:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, 4, 12, 4, 12, 16, -12, 16)
 
 [sub_resource type="TileSet" id="TileSet_65870"]
@@ -154,11 +160,11 @@ position = Vector2(61, 199)
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 y_sort_enabled = true
 texture_filter = 1
-tile_map_data = PackedByteArray("AAAdAAIAAQAAAAAAAAAVAAIAAQASAAAAAAAYAAIAAQAGAAEAAAAaAAUAAQAAAAUAAAAdAAcAAQAKAAUAAAAYAAwAAQAAABAAAAAaAAcAAQAAABAAAAAQAAIAAQAMAAkAAAASAAIAAQADAAkAAAAEAAwAAQAKAA4AAAAEAAgAAQAPAAoAAAAEAAQAAQAPAA0AAAABAAQAAQAEAA8AAAABAAgAAQAEAA8AAAABAAwAAQAEAA8AAAACABEAAQAPAAEAAAAFABEAAQAPAAEAAAAHABYAAQANAAUAAAAHABQAAQAPABAAAAANABEAAQAMAAkAAAAKABEAAQAEAAUAAAAGABcAAQADABMAAAAXABkAAQAEAAUAAAAbABkAAQAAAAUAAAAcABYAAQAJABUAAAAcABUAAQAAABMAAAAcABMAAQAAABMAAAAcABQAAQAJABUAAAAcABIAAQAJABUAAAALAAsAAQAEAAwAAAAbABwAAQAEAAwAAAAWABwAAQAEAAwAAAARAAoAAQANAAUAAGATAAgAAQAIAAUAAAATAAwAAQAKAAUAAAA=")
+tile_map_data = PackedByteArray("AAAdAAIAAQAAAAAAAAAVAAIAAQASAAAAAAAYAAIAAQAGAAEAAAAYAAwAAQAAABAAAAAQAAIAAQAMAAkAAAASAAIAAQADAAkAAAAEAAwAAQAKAA4AAAAEAAgAAQAPAAoAAAAEAAQAAQAPAA0AAAABAAQAAQAEAA8AAAABAAgAAQAEAA8AAAABAAwAAQAEAA8AAAACABEAAQAPAAEAAAAFABEAAQAPAAEAAAAHABYAAQANAAUAAAAHABQAAQAPABAAAAANABEAAQAMAAkAAAAKABEAAQAKAAEAAAAGABcAAQADABMAAAAcABYAAQAJABUAAAAcABUAAQAAABMAAAAcABMAAQAAABMAAAAcABQAAQAJABUAAAAcABIAAQAJABUAAAALAAsAAQAEAAwAAAAbABwAAQAEAAwAAAAWABwAAQAEAAwAAAATAAgAAQAIAAUAAAATAAwAAQAKAAUAAAAbAAgAAQANAAUAAAAaAAgAAQAAABAAAAAaAAYAAQAAAAUAAAAdAAgAAQAKAAUAAAAeAAwAAQAAAAcAAAAMAAIAAQAKABMAAAAKAAIAAQADAAkAAAAIAAIAAQAAAAcAAAANAAUAAQAEAA8AAAAfAAQAAQAEAA8AAAACAAIAAQAPAAEAAAAFAAIAAQAPAAEAAAARAAIAAQAKABMAAAAJAAIAAQAKABMAAAAYABEAAQAKABMAAAANAAIAAQAKAAEAAAAEAAUAAQAAAA0AAAAEAAkAAQAAAA0AAAAEAA0AAQAAAA0AAAAcABkAAQASAAAAAAAZABkAAQAAAAUAAAAWABgAAQAMAAkAAAAZAAoAAQAMAAkAAAAaAAIAAQAMAAIAAAA=")
 tile_set = SubResource("TileSet_65870")
 
 [node name="Player_Office" parent="TileMapLayer" instance=ExtResource("2_54lem")]
-position = Vector2(296, 440)
+position = Vector2(191, 138)
 speed = 50.0
 
 [node name="Camera2D" type="Camera2D" parent="TileMapLayer/Player_Office"]
