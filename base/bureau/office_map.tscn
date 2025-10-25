@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=4 uid="uid://bjlvwo8xxqhl0"]
 
-[ext_resource type="Script" uid="uid://ca1e6qvcuqsey" path="res://base/bureau/office_map.gd" id="1_4hjjf"]
+[ext_resource type="Script" uid="uid://ca1e6qvcuqsey" path="res://base/bureau/office_manager.gd" id="1_4hjjf"]
 [ext_resource type="Texture2D" uid="uid://csoq3if53byan" path="res://base/bureau/textures/T_Map_Bureau.png" id="1_mqodo"]
 [ext_resource type="PackedScene" uid="uid://dqake3y851rhw" path="res://base/bureau/player_office.tscn" id="2_54lem"]
 [ext_resource type="PackedScene" uid="uid://bt17d6xw6csxu" path="res://base/bureau/collegue.tscn" id="2_mqodo"]
