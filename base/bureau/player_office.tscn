@@ -45,17 +45,19 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cdsl3"]
-size = Vector2(16, 29)
+size = Vector2(16, 7)
 
 [node name="Player_Office" type="CharacterBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_kd7p7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_26may")
 animation = &"walk_side"
-frame_progress = 0.28769478
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 0.5)
+y_sort_enabled = true
+position = Vector2(0, 8.5)
 shape = SubResource("RectangleShape2D_cdsl3")

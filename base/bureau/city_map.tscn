@@ -1,8 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://yiaf2qmdiucy"]
+[gd_scene load_steps=2 format=3 uid="uid://yiaf2qmdiucy"]
 
-[ext_resource type="PackedScene" uid="uid://hjd2h1lxsj8m" path="res://base/hud.tscn" id="1_fh8l2"]
-[ext_resource type="Texture2D" uid="uid://dsu6oem2p6w34" path="res://base/bureau/textures/T_Office_.background_temp.jpg" id="1_t41hu"]
-[ext_resource type="PackedScene" uid="uid://dqake3y851rhw" path="res://base/bureau/player_office.tscn" id="2_mq4xc"]
+[ext_resource type="PackedScene" uid="uid://bjlvwo8xxqhl0" path="res://base/bureau/office_map.tscn" id="1_rncah"]
 
 [node name="city_map" type="Node2D"]
 
@@ -19,23 +17,4 @@ size_2d_override = Vector2i(380, 214)
 size_2d_override_stretch = true
 render_target_update_mode = 4
 
-[node name="Background" type="Sprite2D" parent="SubViewportContainer/SubViewport"]
-texture_filter = 1
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_t41hu")
-centered = false
-
-[node name="Player_Office" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_mq4xc")]
-position = Vector2(272, 80)
-speed = 50.0
-
-[node name="Camera2D" type="Camera2D" parent="SubViewportContainer/SubViewport/Player_Office"]
-position = Vector2(1.8030615, 1.8030701)
-limit_smoothed = true
-
-[node name="Hud" parent="SubViewportContainer/SubViewport/Player_Office/Camera2D" instance=ExtResource("1_fh8l2")]
-offset_left = -182.80307
-offset_top = -99.80307
-offset_right = 137.19693
-offset_bottom = 76.19693
-metadata/_edit_use_anchors_ = true
+[node name="OfficeMap" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_rncah")]

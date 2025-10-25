@@ -1,54 +1,207 @@
-[gd_scene load_steps=6 format=3 uid="uid://c67rvw4cy36in"]
+[gd_scene load_steps=36 format=3 uid="uid://c67rvw4cy36in"]
 
 [ext_resource type="Script" uid="uid://c818xg4aneh5a" path="res://minijeux/restart-windows95/restart_windows95.gd" id="1_r8gdb"]
 [ext_resource type="Texture2D" uid="uid://blbfhe7kasuso" path="res://minijeux/restart-windows95/ordinateur.webp" id="2_5asav"]
 [ext_resource type="Texture2D" uid="uid://w42pinbubutg" path="res://minijeux/restart-windows95/win95.png" id="3_neua4"]
+[ext_resource type="Shader" uid="uid://b0epd88s8trso" path="res://minijeux/restart-windows95/resize.gdshader" id="4_ild60"]
 [ext_resource type="Texture2D" uid="uid://pu0v7cp3awfc" path="res://minijeux/restart-windows95/start-menu.png" id="4_ojadi"]
+[ext_resource type="Texture2D" uid="uid://dy3o0jrubrmeu" path="res://minijeux/restart-windows95/dos/frame_000.jpg" id="4_wojlb"]
+[ext_resource type="Texture2D" uid="uid://bnvs8v7fv2diw" path="res://minijeux/restart-windows95/dos/frame_001.jpg" id="5_ph85g"]
 [ext_resource type="Texture2D" uid="uid://b5qurhooji8gr" path="res://minijeux/restart-windows95/restart.png" id="5_sc7ep"]
+[ext_resource type="Texture2D" uid="uid://u825da82ckh7" path="res://minijeux/restart-windows95/computer-off.jpg" id="6_5asav"]
+[ext_resource type="Texture2D" uid="uid://d4g6tjdjpeqsj" path="res://minijeux/restart-windows95/dos/frame_002.jpg" id="6_rvfor"]
+[ext_resource type="Texture2D" uid="uid://cedkpi62ybdhy" path="res://minijeux/restart-windows95/dos/frame_004.jpg" id="8_0jywe"]
+[ext_resource type="Texture2D" uid="uid://bb7kev57dgsnd" path="res://minijeux/restart-windows95/dos/frame_006.jpg" id="10_xkbs8"]
+[ext_resource type="Texture2D" uid="uid://bmr4ouq477sve" path="res://minijeux/restart-windows95/dos/frame_008.jpg" id="12_iqg6y"]
+[ext_resource type="Texture2D" uid="uid://bqq8y4m3vcegk" path="res://minijeux/restart-windows95/dos/frame_010.jpg" id="14_72f2s"]
+[ext_resource type="Texture2D" uid="uid://hwr5hr4mb6dj" path="res://minijeux/restart-windows95/dos/frame_012.jpg" id="16_73gte"]
+[ext_resource type="Texture2D" uid="uid://baqgbq0ofv8pq" path="res://minijeux/restart-windows95/dos/frame_014.jpg" id="18_gb4e5"]
+[ext_resource type="Texture2D" uid="uid://il6k82wd3uc2" path="res://minijeux/restart-windows95/dos/frame_016.jpg" id="20_4bjfb"]
+[ext_resource type="Texture2D" uid="uid://coae0crb1kixx" path="res://minijeux/restart-windows95/dos/frame_018.jpg" id="22_4ch56"]
+[ext_resource type="Texture2D" uid="uid://ckco5uu7akl3t" path="res://minijeux/restart-windows95/dos/frame_020.jpg" id="24_me0su"]
+[ext_resource type="Texture2D" uid="uid://cps4u4wl2bccm" path="res://minijeux/restart-windows95/dos/frame_022.jpg" id="26_m3ofh"]
+[ext_resource type="Texture2D" uid="uid://bls6qoqolkv54" path="res://minijeux/restart-windows95/dos/frame_024.jpg" id="28_gd11j"]
+[ext_resource type="Texture2D" uid="uid://cn6r1qnamr8wx" path="res://minijeux/restart-windows95/dos/frame_026.jpg" id="30_v460q"]
+[ext_resource type="Texture2D" uid="uid://cvfoqmbwwy1bq" path="res://minijeux/restart-windows95/dos/frame_027.jpg" id="31_rhevs"]
+[ext_resource type="Texture2D" uid="uid://ds00fsclln5ks" path="res://minijeux/restart-windows95/dos/frame_029.jpg" id="33_pqsgp"]
+[ext_resource type="Texture2D" uid="uid://cef8qjqqkg1xg" path="res://minijeux/restart-windows95/dos/frame_031.jpg" id="35_nny4x"]
+[ext_resource type="Texture2D" uid="uid://mgut7a7n2eqq" path="res://minijeux/restart-windows95/dos/frame_033.jpg" id="37_ofb3h"]
+[ext_resource type="Texture2D" uid="uid://db8020ln1pndn" path="res://minijeux/restart-windows95/dos/frame_035.jpg" id="39_s1fty"]
+[ext_resource type="Texture2D" uid="uid://didhgn8bvf15i" path="res://minijeux/restart-windows95/dos/frame_037.jpg" id="41_kghl8"]
+[ext_resource type="Texture2D" uid="uid://6xp4420j1cbv" path="res://minijeux/restart-windows95/dos/frame_039.jpg" id="43_euo6h"]
+[ext_resource type="Texture2D" uid="uid://cnebula2l74cw" path="res://minijeux/restart-windows95/dos/frame_041.jpg" id="45_8kwbh"]
+[ext_resource type="Texture2D" uid="uid://bomsm56nh8k2v" path="res://minijeux/restart-windows95/dos/frame_043.jpg" id="47_7021k"]
+[ext_resource type="Texture2D" uid="uid://8b5hras32yjc" path="res://minijeux/restart-windows95/dos/frame_045.jpg" id="49_u44r2"]
+[ext_resource type="Texture2D" uid="uid://xdqrkt0106ro" path="res://minijeux/restart-windows95/windows-95-starting.webp" id="94_0aqmj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vnukj"]
+shader = ExtResource("4_ild60")
+shader_parameter/top_left = Vector2(-700, -438.67)
+shader_parameter/top_right = Vector2(660.29, -450.85)
+shader_parameter/bottom_right = Vector2(716.83, 445.17)
+shader_parameter/bottom_left = Vector2(-651.29, 505.96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6v2lh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_wojlb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_v460q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ph85g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rvfor")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0jywe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xkbs8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_iqg6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_72f2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_73gte")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_gb4e5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_4bjfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_4ch56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_me0su")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_m3ofh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_gd11j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_rhevs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_pqsgp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_nny4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_ofb3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_s1fty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_kghl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_euo6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_8kwbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_7021k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_u44r2")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="DidYouTryToTurnItOffAndOnAgain" type="Node2D"]
 script = ExtResource("1_r8gdb")
 
-[node name="Ordinateur" type="Sprite2D" parent="."]
-position = Vector2(616, 263)
-scale = Vector2(2.7302084, 2.659259)
+[node name="Win95Panel" type="Panel" parent="."]
+offset_left = -5.0
+offset_top = -0.99998474
+offset_right = 1166.0
+offset_bottom = 652.0
+
+[node name="Ordinateur" type="Sprite2D" parent="Win95Panel"]
+position = Vector2(733.00006, 275)
+scale = Vector2(3.6708333, 3.2777777)
 texture = ExtResource("2_5asav")
 
-[node name="Win95Panel" type="Panel" parent="Ordinateur"]
-offset_left = -124.16634
-offset_top = -26.32312
-offset_right = -20.511261
-offset_bottom = 46.62954
+[node name="ComputerButton" type="Button" parent="Win95Panel/Ordinateur"]
+offset_left = 63.200905
+offset_top = 38.593212
+offset_right = 71.200905
+offset_bottom = 46.593212
 
-[node name="Win95" type="Sprite2D" parent="Ordinateur/Win95Panel"]
-position = Vector2(48.714226, 36.85237)
-scale = Vector2(0.36627236, 0.3760446)
-texture = ExtResource("3_neua4")
+[node name="DosStarting" type="AnimatedSprite2D" parent="Win95Panel/Ordinateur"]
+material = SubResource("ShaderMaterial_vnukj")
+position = Vector2(-75.27826, 8.999994)
+scale = Vector2(0.06889181, 0.07438018)
+sprite_frames = SubResource("SpriteFrames_6v2lh")
+frame = 24
+frame_progress = 1.0
 
-[node name="StartButton" type="Button" parent="Ordinateur/Win95Panel"]
-layout_mode = 0
-offset_left = -4.7615433
-offset_top = 67.31199
-offset_right = 11.7206955
-offset_bottom = 79.34541
+[node name="ComputerOffPolygon2D" type="Polygon2D" parent="Win95Panel/Ordinateur"]
+position = Vector2(-145.18631, -43.779675)
+scale = Vector2(0.7428826, 1)
+texture = ExtResource("6_5asav")
+polygon = PackedVector2Array(26.752754, 19.372894, 155.4657, 17.84747, 162.43307, 87.10171, 32.62001, 91.37289)
+uv = PackedVector2Array(13.5, 10.5, 163, 9, 165, 101, 17, 100.5)
 
-[node name="StartMenu" type="Sprite2D" parent="Ordinateur/Win95Panel"]
-position = Vector2(14.284622, 54.15042)
-scale = Vector2(0.13699447, 0.11996214)
-texture = ExtResource("4_ojadi")
-
-[node name="PowerOffButton" type="Button" parent="Ordinateur/Win95Panel/StartMenu"]
-offset_left = -72.18797
-offset_top = 81.50207
-offset_right = 80.20888
-offset_bottom = 119.1184
-
-[node name="Restart" type="Sprite2D" parent="Ordinateur"]
+[node name="Win95Polygon2D" type="Polygon2D" parent="Win95Panel/Ordinateur"]
 visible = false
-position = Vector2(-76.7684, 8.978063)
-scale = Vector2(0.16002922, 0.19439992)
-texture = ExtResource("5_sc7ep")
+position = Vector2(-116.24164, -29.429247)
+scale = Vector2(0.3442992, 0.37694442)
+texture = ExtResource("3_neua4")
+polygon = PackedVector2Array(-29.509735, 13.728806, -16.05893, 204.7384, 265.61673, 189.3605, 251.3747, 10.491356)
+uv = PackedVector2Array(1.4341431, 2.041481, 1.1236572, 194.2167, 258.49567, 193.59576, 257.87476, 1.4205551)
 
-[connection signal="gui_input" from="Ordinateur/Win95Panel" to="." method="_on_win_95_panel_gui_input"]
-[connection signal="pressed" from="Ordinateur/Win95Panel/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="Ordinateur/Win95Panel/StartMenu/PowerOffButton" to="." method="_on_power_off_button_pressed"]
+[node name="StartButton" type="Button" parent="Win95Panel/Ordinateur/Win95Polygon2D"]
+offset_left = -15.267712
+offset_top = 194.21667
+offset_right = 6.8865547
+offset_bottom = 206.25009
+
+[node name="StartMenuPolygon2D" type="Polygon2D" parent="Win95Panel/Ordinateur/Win95Polygon2D"]
+position = Vector2(-3.399355, 3.207095)
+texture = ExtResource("4_ojadi")
+polygon = PackedVector2Array(-11.311584, 189.3605, -20.806274, 28.297333, 79.67914, 26.67862, 83.635254, 184.50433)
+uv = PackedVector2Array(1.7374268, 241.43326, 1.282898, 1.8878174, 166.28284, 1.8878174, 167.19202, 239.16052)
+
+[node name="PowerOffButton" type="Button" parent="Win95Panel/Ordinateur/Win95Polygon2D/StartMenuPolygon2D"]
+offset_left = -8.93792
+offset_top = 161.8422
+offset_right = 83.32592
+offset_bottom = 184.88998
+
+[node name="Win95StartingPolygon2D" type="Polygon2D" parent="Win95Panel/Ordinateur"]
+visible = false
+position = Vector2(-135.3916, -40.118656)
+scale = Vector2(0.17164007, 0.17584224)
+texture = ExtResource("94_0aqmj")
+polygon = PackedVector2Array(55.55005, 86.74956, 615.81226, 81.544586, 638.22595, 469.40906, 76.37656, 503.77567)
+uv = PackedVector2Array(5.8671875, 6.5886536, 636.2772, 1.7168579, 638.22595, 469.40906, 4.8928223, 474.28088)
+
+[node name="SwitchingOffPolygon2D" type="Polygon2D" parent="Win95Panel/Ordinateur"]
+visible = false
+position = Vector2(-148.0365, -48.8237)
+scale = Vector2(0.23959015, 0.29488853)
+texture = ExtResource("5_sc7ep")
+polygon = PackedVector2Array(93.70969, 80.73136, 493.93927, 77.110306, 510.9945, 309.89008, 108.490875, 330.06433)
+uv = PackedVector2Array(2, 4.5, 635.5, 1.5, 638.3401, 398.86365, 5.8928223, 398.86365)
+
+[connection signal="gui_input" from="Win95Panel" to="." method="_on_win_95_panel_gui_input"]
+[connection signal="pressed" from="Win95Panel/Ordinateur/ComputerButton" to="." method="_on_power_off_button_pressed"]
+[connection signal="pressed" from="Win95Panel/Ordinateur/Win95Polygon2D/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Win95Panel/Ordinateur/Win95Polygon2D/StartMenuPolygon2D/PowerOffButton" to="." method="_on_power_off_button_pressed"]
