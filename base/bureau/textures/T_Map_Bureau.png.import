@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccr6ds74pnrh7"
-path="res://.godot/imported/Map_Bureau_v1 Valeriya.png-e9aa3e7ed50f57b346b0b3b8ef45759f.ctex"
+uid="uid://csoq3if53byan"
+path="res://.godot/imported/T_Map_Bureau.png-9fdda59a4e5eaf3322d16fed396853d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://base/bureau/textures/Map_Bureau_v1 Valeriya.png"
-dest_files=["res://.godot/imported/Map_Bureau_v1 Valeriya.png-e9aa3e7ed50f57b346b0b3b8ef45759f.ctex"]
+source_file="res://base/bureau/textures/T_Map_Bureau.png"
+dest_files=["res://.godot/imported/T_Map_Bureau.png-9fdda59a4e5eaf3322d16fed396853d5.ctex"]
 
 [params]
 
