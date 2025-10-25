@@ -1,14 +1,13 @@
 extends Node2D
 
-@onready var start_menu: Sprite2D = $Win95Panel/Win95/StartMenu
-@onready var win95_desktop: Sprite2D = $Win95Panel/Win95
-@onready var win95_switching_off: Sprite2D = $Win95Panel/Ordinateur/SwitchingOff
-@onready var computer_off_screen: Sprite2D = $Win95Panel/ComputerOff
+@onready var start_menu: Polygon2D = $Win95Panel/Ordinateur/Win95Polygon2D/StartMenuPolygon2D
+@onready var win95_desktop: Polygon2D  = $Win95Panel/Ordinateur/Win95Polygon2D
+@onready var win95_switching_off: Polygon2D  = $Win95Panel/Ordinateur/SwitchingOffPolygon2D
+@onready var computer_off_screen: Polygon2D = $Win95Panel/Ordinateur/ComputerOffPolygon2D
 @onready var computer_starting_animation: AnimatedSprite2D = $Win95Panel/Ordinateur/DosStarting
-@onready var win95_starting: Sprite2D = $Win95Panel/Windows95Starting
+@onready var win95_starting: Polygon2D  = $Win95Panel/Ordinateur/Win95StartingPolygon2D
 
 const ErrorDialogScene = preload("res://minijeux/restart-windows95/error_dialog.tscn")
-#var error_dialog: ErrorDialog = null
 
 var next_error_position = Vector2(100, 100)
 var is_computer_on = true
@@ -34,8 +33,8 @@ func _on_power_off_button_pressed() -> void:
 	if is_computer_on:
 		if error_dialogs.is_empty():
 			start_menu.hide()
-			win95_desktop.hide()
 			await get_tree().create_timer(0.5).timeout
+			win95_desktop.hide()
 			win95_switching_off.show()
 			await get_tree().create_timer(2.0).timeout
 			win95_switching_off.hide()
