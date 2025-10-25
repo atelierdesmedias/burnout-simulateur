@@ -1,4 +1,4 @@
-extends Node2D
+extends "res://minijeux/minijeu.gd"
 
 @onready var robinet=$Machine/Robinet
 @onready var tasse=$Tasse
@@ -19,12 +19,8 @@ func  _ready() -> void:
 	$AudioStreamPlayer.play()
 	$AudioStreamPlayer.stream_paused = true
 	$AudioStreamPlayer.pitch_scale=0.5
-	$AudioStreamPlayer.connect("finished", _coffee_full)
+	$AudioStreamPlayer.connect("finished", minijeu_finished)
 	
-func _coffee_full():
-	get_tree().current_scene.process_mode = Node.PROCESS_MODE_INHERIT
-	queue_free()
-
 func _process(delta):
 	direction_change_timer += delta
 	if direction_change_timer >= direction_change_interval:
@@ -34,7 +30,6 @@ func _process(delta):
 	robinet.position.x += velocity * delta
 	robinet.position.x = clamp(robinet.position.x, min_x, max_x )
 
-	
 func _pick_new_velocity():
 	velocity = randf_range(-max_velocity, max_velocity) 
 

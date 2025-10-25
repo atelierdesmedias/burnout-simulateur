@@ -1,4 +1,4 @@
-extends Node2D
+extends "res://minijeux/minijeu.gd"
 
 @onready var start_menu: Polygon2D = $Win95Panel/Ordinateur/Win95Polygon2D/StartMenuPolygon2D
 @onready var win95_desktop: Polygon2D  = $Win95Panel/Ordinateur/Win95Polygon2D
@@ -61,10 +61,7 @@ func _on_power_off_button_pressed() -> void:
 		win95_desktop.show()
 		$AudioStreamPlayer.stream = startStream
 		$AudioStreamPlayer.play()
-		await $AudioStreamPlayer.finished
-		get_tree().current_scene.process_mode = Node.PROCESS_MODE_INHERIT
-		queue_free()
-
+		$AudioStreamPlayer.connect("finished", minijeu_finished)
 
 func _on_win_95_panel_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
