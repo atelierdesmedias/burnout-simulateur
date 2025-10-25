@@ -29,10 +29,11 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_button_value_pressed(value:int):
-	jouer_chiffre(value)
 	if code_tape < 10000 :
+		jouer_chiffre(value)
 		code_tape = code_tape*10 + value
-	pass
+	else :
+		erreur.play(0.5)
 
 
 func _on_button_no_pressed() -> void:
