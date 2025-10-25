@@ -11,91 +11,12 @@
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2vjsf"]
 texture = ExtResource("4_0esrf")
-23:0/next_alternative_id = 2
-23:0/0 = 0
-24:0/next_alternative_id = 2
-24:0/0 = 0
-25:0/0 = 0
-26:0/0 = 0
-27:0/0 = 0
-28:0/0 = 0
-29:0/0 = 0
-23:1/next_alternative_id = 2
-23:1/0 = 0
-24:1/next_alternative_id = 2
-24:1/0 = 0
-25:1/0 = 0
-26:1/0 = 0
-27:1/0 = 0
-28:1/0 = 0
-29:1/0 = 0
-30:1/0 = 0
-31:1/0 = 0
-23:2/next_alternative_id = 2
-23:2/0 = 0
-24:2/next_alternative_id = 2
-24:2/0 = 0
-25:2/0 = 0
-25:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
-26:2/0 = 0
-26:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
-27:2/0 = 0
-28:2/0 = 0
-29:2/0 = 0
-30:2/0 = 0
-31:2/0 = 0
-23:3/next_alternative_id = 2
-23:3/0 = 0
-23:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-24:3/next_alternative_id = 2
-24:3/0 = 0
-24:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-25:3/0 = 0
-25:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-26:3/0 = 0
-26:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-27:3/0 = 0
-27:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-28:3/0 = 0
-28:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-29:3/0 = 0
-29:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-30:3/0 = 0
-30:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-31:3/0 = 0
-26:4/0 = 0
-27:4/0 = 0
-28:4/0 = 0
-29:4/0 = 0
-30:4/0 = 0
-31:4/0 = 0
-25:6/0 = 0
-26:6/0 = 0
-27:6/0 = 0
-28:6/0 = 0
-29:6/0 = 0
-30:6/0 = 0
-25:7/0 = 0
-25:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-26:7/0 = 0
-26:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-27:7/0 = 0
-27:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-28:7/0 = 0
-28:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-29:7/0 = 0
-29:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-30:7/0 = 0
-26:8/0 = 0
-27:8/0 = 0
-29:8/0 = 0
-30:8/0 = 0
-30:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-29:9/0 = 0
-30:9/0 = 0
-30:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 29:10/0 = 0
 30:10/0 = 0
+23:0/size_in_atlas = Vector2i(2, 4)
+23:0/next_alternative_id = 4
+23:0/0 = 0
+23:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, 12, 16, 12, 16, 28, -12, 28)
 
 [sub_resource type="TileSet" id="TileSet_65870"]
 physics_layer_0/collision_layer = 1
@@ -141,18 +62,18 @@ y_sort_enabled = true
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 y_sort_enabled = true
 texture_filter = 1
-tile_map_data = PackedByteArray("AAAZAAAAAQAXAAAAAAAZAAEAAQAXAAEAAAAZAAIAAQAXAAIAAAAZAAMAAQAXAAMAAAAaAAAAAQAYAAAAAAAaAAEAAQAYAAEAAAAaAAIAAQAYAAIAAAAaAAMAAQAYAAMAAAAbAAAAAQAXAAAAAAAbAAEAAQAXAAEAAAAbAAIAAQAXAAIAAAAbAAMAAQAXAAMAAAAcAAAAAQAYAAAAAAAcAAEAAQAYAAEAAAAcAAIAAQAYAAIAAAAcAAMAAQAYAAMAAAAZAAUAAQAXAAAAAAAZAAYAAQAXAAEAAAAZAAcAAQAXAAIAAAAZAAgAAQAXAAMAAAAaAAUAAQAYAAAAAAAaAAYAAQAYAAEAAAAaAAcAAQAYAAIAAAAaAAgAAQAYAAMAAAA=")
+tile_map_data = PackedByteArray("AAAZAAEAAQAXAAAAAAAcAAgAAQAXAAAAAAAYAAcAAQAXAAAAAAAdAAIAAQAXAAAAAAA=")
 tile_set = SubResource("TileSet_65870")
 
-[node name="Player_Office" parent="." instance=ExtResource("2_54lem")]
+[node name="Player_Office" parent="TileMapLayer" instance=ExtResource("2_54lem")]
 position = Vector2(412, 94)
 speed = 50.0
 
-[node name="Camera2D" type="Camera2D" parent="Player_Office"]
+[node name="Camera2D" type="Camera2D" parent="TileMapLayer/Player_Office"]
 position = Vector2(1.8030615, 1.8030701)
 limit_smoothed = true
 
-[node name="Hud" parent="Player_Office/Camera2D" instance=ExtResource("3_wx7p8")]
+[node name="Hud" parent="TileMapLayer/Player_Office/Camera2D" instance=ExtResource("3_wx7p8")]
 offset_left = -182.80307
 offset_top = -99.80307
 offset_right = 137.19693
