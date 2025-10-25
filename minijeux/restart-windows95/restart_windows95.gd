@@ -15,6 +15,7 @@ const ErrorDialogScene = preload("res://minijeux/restart-windows95/error_dialog.
 
 var next_error_position = Vector2(100, 100)
 var is_computer_on = true
+var is_windows_started = true
 var error_dialogs = []
 
 
@@ -36,6 +37,7 @@ func _on_start_button_pressed() -> void:
 func _on_power_off_button_pressed() -> void:	
 	if is_computer_on:
 		if error_dialogs.is_empty():
+			is_windows_started = false
 			start_menu.hide()
 			$AudioStreamPlayer.stream = quitStream
 			$AudioStreamPlayer.play()
@@ -65,7 +67,8 @@ func _on_power_off_button_pressed() -> void:
 
 func _on_win_95_panel_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		_add_error_dialog()
+		if is_windows_started:
+			_add_error_dialog()
 
 func _add_error_dialog() -> void:
 	var error_dialog = ErrorDialogScene.instantiate()
