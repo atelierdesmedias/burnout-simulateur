@@ -11,7 +11,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var timeSinceLastQuest = Time.get_ticks_msec()-lastQuestTime	
-	if timeSinceLastQuest > 5000:
+	if timeSinceLastQuest > 5000 || get_tree().get_nodes_in_group("collegues").size() == 3:
 		lastQuestTime = Time.get_ticks_msec()
 		if randi_range(0,3) == 0:
 			_popQuest()	
@@ -28,23 +28,3 @@ func _popQuest():
 
 	random_collegue._popQuest()	
 	pass
-	
-func _on_mini_jeu_1_body_entered(body: Node2D) -> void:
-	$"Mini-Jeu_1/Mini-jeu_1_Col".disabled = true
-	get_tree().current_scene.process_mode = PROCESS_MODE_DISABLED
-	var myNode = preload("res://minijeux/restart-windows95/restart_windows95.tscn")
-	var myNode_instance = myNode.instantiate()
-	myNode_instance.z_index = 11
-	get_tree().get_root().add_child(myNode_instance)		
-	pass # Replace with function body.
-
-
-func _on_mini_jeu_2_body_entered(body: Node2D) -> void:
-	print("test")
-	$"Mini-Jeu_2/Mini-jeu_2_Col".disabled = true
-	get_tree().current_scene.process_mode = PROCESS_MODE_DISABLED
-	var myNode = preload("res://minijeux/usb-key/usb_key.tscn")
-	var myNode_instance = myNode.instantiate()
-	myNode_instance.z_index = 11
-	get_tree().get_root().add_child(myNode_instance)
-	pass # Replace with function body.
