@@ -5,6 +5,7 @@ extends Area2D
 @export var giveQuest := true
 var hasQuest = false
 var mQuest:QueteData
+var mQuestStartTime
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
@@ -17,13 +18,27 @@ func _ready() -> void:
 	pass # Replace with function body.
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(delta: float) -> void:	
+	if(hasQuest):
+		if (Time.get_ticks_msec()-mQuestStartTime)*0.001 > 20:
+			$Exclamation.play("Red")
+			Globals.stress += 0.02*delta
+			pass
+		elif (Time.get_ticks_msec()-mQuestStartTime)*0.001 > 10:
+			$Exclamation.play("Orange")
+			Globals.stress += 0.01*delta
+			pass
+		else:			
+			
+			pass	
 	pass
 
 func _popQuest():
 	var lRandQuete = randi_range(0,Globals.quetes_table.size()-1)
 	mQuest = Globals.quetes_table[lRandQuete]		
 	
+	hasQuest = true
+	mQuestStartTime = Time.get_ticks_msec()
 	$Exclamation.visible = true
 	$Exclamation.play(mQuest.name if mQuest.instant else "Green")
 	remove_from_group("collegues")	
@@ -41,7 +56,7 @@ func _activateExternalQuest():
 func _dePopQuest():
 	hasQuest = false
 	$Exclamation.visible = false
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(5.0).timeout
 	add_to_group("collegues")	
 	
 func _on_body_entered(body: Node2D) -> void:
@@ -57,6 +72,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if(mQuest.instant):
 		_StartQuest()
 	else:
+		mQuestStartTime = Time.get_ticks_msec()
 		_activateExternalQuest()
 		$Exclamation.play(mQuest.name)
 		pass

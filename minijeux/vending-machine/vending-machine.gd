@@ -36,6 +36,7 @@ func _on_button_value_pressed(value:int):
 
 
 func _on_button_no_pressed() -> void:
+	Globals.stress += 0.03
 	effacer.play()
 	code_tape = 0
 	pass # Replace with function body.
@@ -56,6 +57,7 @@ func _on_button_yes_pressed() -> void:
 		await drink.finished
 		queue_free()
 	else :
+		Globals.stress += 0.03
 		erreur.play(0.5)
 		code_tape = 0
 
