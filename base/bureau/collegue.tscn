@@ -232,10 +232,19 @@ animations = [{
 y_sort_enabled = true
 script = ExtResource("1_eq1r0")
 
-[node name="Exclamation" type="AnimatedSprite2D" parent="."]
+[node name="Quete" type="AnimatedSprite2D" parent="."]
 visible = false
 z_index = 1
-position = Vector2(24, -28)
+position = Vector2(0, -28)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_ans6l")
+animation = &"Red"
+script = ExtResource("5_fr1tm")
+
+[node name="Humeur" type="AnimatedSprite2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(27, -28)
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_ans6l")
 animation = &"Red"

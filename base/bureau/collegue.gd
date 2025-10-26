@@ -22,15 +22,17 @@ func _ready() -> void:
 func _process(delta: float) -> void:	
 	if(hasQuest):
 		if (Time.get_ticks_msec()-mQuestStartTime)*0.001 > 20:
-			$Exclamation.play("Red")
+			$Humeur.play("Red")
+			$Humeur.visible = true
 			Globals.stress += 0.02*delta
 			pass
 		elif (Time.get_ticks_msec()-mQuestStartTime)*0.001 > 10:
-			$Exclamation.play("Orange")
+			$Humeur.play("Orange")
+			$Humeur.visible = true
 			Globals.stress += 0.01*delta
 			pass
 		else:			
-			
+			$Humeur.visible = false
 			pass	
 	pass
 
@@ -40,8 +42,8 @@ func _popQuest():
 	
 	hasQuest = true
 	mQuestStartTime = Time.get_ticks_msec()
-	$Exclamation.visible = true
-	$Exclamation.play(mQuest.name if mQuest.instant else "Green")
+	$Quete.visible = true
+	$Quete.play(mQuest.name if mQuest.instant else "Green")
 	remove_from_group("collegues")	
 	monitoring = true
 	monitorable = true
@@ -56,7 +58,7 @@ func _activateExternalQuest():
 
 func _dePopQuest():
 	hasQuest = false
-	$Exclamation.visible = false
+	$Quete.visible = false
 	Globals.available_quests.append(mCurrentQuest)
 	await get_tree().create_timer(5.0).timeout
 	add_to_group("collegues")	
@@ -76,7 +78,7 @@ func _on_body_entered(body: Node2D) -> void:
 	else:
 		mQuestStartTime = Time.get_ticks_msec()
 		_activateExternalQuest()
-		$Exclamation.play(mQuest.name)
+		$Quete.play(mQuest.name)
 		pass
 	
 func _StartQuest():	
