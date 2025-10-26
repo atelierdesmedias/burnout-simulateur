@@ -4,6 +4,7 @@ extends Area2D
 
 @export var questName := "cafe"
 var questScene := ""
+var mCollegue: Collegue
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,7 +19,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _ActivateJeu(pScene: String):
+func _ActivateJeu(pScene: String, pCollegue: Collegue):
+	mCollegue = pCollegue
 	questScene = pScene
 	$Exclamation.visible = true
 	monitoring = true
@@ -35,8 +37,9 @@ func _StartMinijeu():
 
 func _on_body_entered(body: Node2D) -> void:
 	if !(body is Player):
-		return
+		return	
 
+	mCollegue._dePopQuest()
 	await get_tree().process_frame
 	monitoring = false
 	monitorable = false

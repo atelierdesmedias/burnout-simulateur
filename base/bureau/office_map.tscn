@@ -156,7 +156,7 @@ tile_map_data = PackedByteArray("AAAdAAIAAQAAAAAAAAAVAAIAAQASAAAAAAAYAAIAAQAGAAE
 tile_set = SubResource("TileSet_65870")
 
 [node name="Player_Office" parent="TileMapLayer" instance=ExtResource("2_54lem")]
-position = Vector2(191, 138)
+position = Vector2(191, 190)
 speed = 50.0
 
 [node name="Camera2D" type="Camera2D" parent="TileMapLayer/Player_Office"]
@@ -172,19 +172,15 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Collegue" parent="TileMapLayer" instance=ExtResource("2_mqodo")]
 position = Vector2(85, 93)
-giveQuest = null
 
 [node name="Collegue2" parent="TileMapLayer" instance=ExtResource("2_mqodo")]
 position = Vector2(87, 161)
-giveQuest = null
 
 [node name="Collegue3" parent="TileMapLayer" instance=ExtResource("2_mqodo")]
 position = Vector2(91, 221)
-giveQuest = null
 
 [node name="Collegue4" parent="TileMapLayer" instance=ExtResource("2_mqodo")]
 position = Vector2(143, 320)
-giveQuest = null
 
 [node name="Collegue5" parent="TileMapLayer" instance=ExtResource("2_mqodo")]
 position = Vector2(419, 109)
@@ -198,6 +194,7 @@ questName = "vending"
 [node name="Quest2" parent="TileMapLayer" instance=ExtResource("4_65870")]
 z_index = 1
 position = Vector2(494, 48)
+questName = null
 
 [node name="Quest3" parent="TileMapLayer" instance=ExtResource("4_65870")]
 z_index = 1

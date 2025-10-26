@@ -33,14 +33,10 @@ func _popQuest():
 	pass
 
 func _activateExternalQuest():
-	var quests = get_tree().get_nodes_in_group("quests")
-	
+	var quests = get_tree().get_nodes_in_group("quests")	
 	for pQuest:Quest in quests:
 		if pQuest.questName == mQuest.name:
-			pQuest._ActivateJeu(mQuest.scene)
-			pass
-		pass		
-	pass
+			pQuest._ActivateJeu(mQuest.scene, self)
 
 func _dePopQuest():
 	hasQuest = false
