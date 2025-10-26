@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b14fghhi8ujl4"]
+[gd_scene load_steps=3 format=3 uid="uid://b14fghhi8ujl4"]
 
 [ext_resource type="PackedScene" uid="uid://ygpcl6tiytpv" path="res://minijeux/parking/car.tscn" id="1_8v8vh"]
 [ext_resource type="Script" uid="uid://dydpwkh4use5l" path="res://minijeux/parking/parking.gd" id="1_hh03x"]
-[ext_resource type="PackedScene" uid="uid://hjd2h1lxsj8m" path="res://base/hud.tscn" id="4_wbgxk"]
 
 [node name="Parking" type="Node2D"]
 script = ExtResource("1_hh03x")
@@ -10,6 +9,3 @@ script = ExtResource("1_hh03x")
 [node name="Car" parent="." instance=ExtResource("1_8v8vh")]
 position = Vector2(165, 563)
 gravity_scale = 0.0
-
-[node name="Hud" parent="." instance=ExtResource("4_wbgxk")]
-scale = Vector2(3.03, 3.03)

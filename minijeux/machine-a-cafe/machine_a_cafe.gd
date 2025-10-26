@@ -3,8 +3,8 @@ extends "res://minijeux/minijeu.gd"
 @onready var robinet=$Machine/Robinet
 @onready var tasse=$Tasse
 
-const min_x = -1100
-const max_x = 300
+const min_x = -140
+const max_x = 0
 const offset = 10
 const max_velocity=1000
 
