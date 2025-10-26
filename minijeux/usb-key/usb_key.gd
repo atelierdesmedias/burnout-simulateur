@@ -40,6 +40,7 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 						await  connecting.finished
 						queue_free()
 					else :
+						Globals.stress += 0.03
 						connecting.play(0.4)
 						await connecting.finished
 						disconnecting.play(1)
