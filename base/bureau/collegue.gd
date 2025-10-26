@@ -86,5 +86,4 @@ func _StartQuest():
 	var myNode = load(mQuest.scene)
 	var myNode_instance = myNode.instantiate()
 	myNode_instance.z_index = 11
-	get_tree().get_root().add_child(myNode_instance)
-	_dePopQuest()
+	get_tree().get_root().add_child(myNode_instance)	

@@ -1,3 +1,5 @@
+class_name MiniJeu
+
 extends Node2D
 
 func minijeu_finished():
