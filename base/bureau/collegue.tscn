@@ -238,7 +238,7 @@ z_index = 1
 position = Vector2(24, -28)
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_ans6l")
-animation = &"Green"
+animation = &"Red"
 script = ExtResource("5_fr1tm")
 
 [node name="Declenche_MiniJeu" type="CollisionShape2D" parent="."]
