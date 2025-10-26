@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://fkq6tsaf5guk"]
+
+[ext_resource type="Script" uid="uid://xxr5fvhbxhqg" path="res://menus/start_menu/start_menu.gd" id="1_vx1b8"]
+[ext_resource type="Texture2D" uid="uid://be586y3r07vu3" path="res://menus/start_menu/menu_start_wip.jpg" id="2_ct3sm"]
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vx1b8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0052084
+anchor_bottom = 1.0
+offset_right = -2.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ct3sm")
+expand_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="start_button" type="Button" parent="."]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 0
+offset_left = 353.0
+offset_top = 242.0
+offset_right = 791.0
+offset_bottom = 342.0
+size_flags_vertical = 4
+
+[node name="quit_button" type="Button" parent="."]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 0
+offset_left = 354.0
+offset_top = 362.0
+offset_right = 792.0
+offset_bottom = 458.0
+
+[connection signal="pressed" from="start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]
