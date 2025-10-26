@@ -4,6 +4,7 @@ extends Area2D
 @onready var erreur: AudioStreamPlayer = $Erreur
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
 @onready var connecting: AudioStreamPlayer = $"../../connecting"
+@onready var disconnecting: AudioStreamPlayer = $"../../disconnecting"
 
 var position_click
 var is_dragging : bool
@@ -38,7 +39,8 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 						await  connecting.finished
 						queue_free()
 					else :
-						erreur.play(0.5)
-				
+						connecting.play(0.4)
+						await connecting.finished
+						disconnecting.play(1)
 				# On remet la position a zero
 				position = Vector2.ZERO
