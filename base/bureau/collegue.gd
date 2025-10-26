@@ -6,6 +6,7 @@ extends Area2D
 var hasQuest = false
 var mQuest:QueteData
 var mQuestStartTime
+var mCurrentQuest
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
@@ -34,8 +35,8 @@ func _process(delta: float) -> void:
 	pass
 
 func _popQuest():
-	var lRandQuete = randi_range(0,Globals.quetes_table.size()-1)
-	mQuest = Globals.quetes_table[lRandQuete]		
+	mCurrentQuest = Globals.take_random_quest()
+	mQuest = Globals.quetes_table[mCurrentQuest]	
 	
 	hasQuest = true
 	mQuestStartTime = Time.get_ticks_msec()
@@ -56,6 +57,7 @@ func _activateExternalQuest():
 func _dePopQuest():
 	hasQuest = false
 	$Exclamation.visible = false
+	Globals.available_quests.append(mCurrentQuest)
 	await get_tree().create_timer(5.0).timeout
 	add_to_group("collegues")	
 	
