@@ -335,5 +335,5 @@ stream = ExtResource("16_yylxx")
 [node name="Valider" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("17_trghe")
 
-[connection signal="pressed" from="Control/ButtonNO" to="." method="_on_button_no_pressed"]
-[connection signal="pressed" from="Control/ButtonYES" to="." method="_on_button_yes_pressed"]
+[connection signal="pressed" from="Control/ButtonNO" to="Control" method="_on_button_no_pressed"]
+[connection signal="pressed" from="Control/ButtonYES" to="Control" method="_on_button_yes_pressed"]

@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://e6emdru8k5rx"]
+
+[ext_resource type="Texture2D" uid="uid://byjnup782q3sa" path="res://base/Texture/T_Home_Vide.png" id="1_un7yg"]
+[ext_resource type="Texture2D" uid="uid://odkllmfaf1pu" path="res://base/Texture/T_Home_btn1_1.png" id="2_un7yg"]
+[ext_resource type="Texture2D" uid="uid://dk1qwd2dgl8qh" path="res://base/Texture/T_Home_btn1_2.png" id="3_bcmng"]
+[ext_resource type="Texture2D" uid="uid://bpu62565iphc3" path="res://base/Texture/T_Home_btn3.png" id="4_5drsu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4j1v"]
+atlas = ExtResource("2_un7yg")
+region = Rect2(0, 0, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uahvv"]
+atlas = ExtResource("3_bcmng")
+region = Rect2(0, 0, 1152, 648)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uahvv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4j1v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uahvv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Gameover" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0052084
+anchor_bottom = 1.0
+offset_right = -2.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_un7yg")
+expand_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control"]
+sprite_frames = SubResource("SpriteFrames_uahvv")
+frame_progress = 0.9654086
+centered = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+texture = ExtResource("4_5drsu")
+centered = false
