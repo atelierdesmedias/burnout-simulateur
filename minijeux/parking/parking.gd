@@ -21,9 +21,9 @@ func _ready() -> void:
 			places.append(place)
 			add_child(place)
 			var to_car_vector = car.position - v;
-			if randi() % 10 == 0 and to_car_vector.length() > 400:
+			if randi() % 7 == 0 and to_car_vector.length() > 400:
 				continue
-			place.busy = true
+			place.statusColor = Color(1., 0., 0.)
 			var other_car = OtherCarScene.instantiate()
 			other_car.position = v
 			add_child(other_car)
@@ -31,9 +31,6 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	t += delta
-	if car.linear_velocity.length() < 0.001:
-		if car.position.x < 1100:
-			print("good " , t, car.rotation, car.linear_velocity)
-			if abs(car.position.y- 190)< 10 and car.position.x > 150 and abs(car.rotation)< 0.1:
-				print("parked")
-				minijeu_finished()
+	for place in places:
+		if place.check(car) == Color(1., 0., 0.):
+			minijeu_finished()

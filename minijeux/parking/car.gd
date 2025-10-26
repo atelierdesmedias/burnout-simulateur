@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 		if motorPlayer.get_playback_position() > 9:
 			motorPlayer.seek(6)
 	if Input.is_action_just_pressed("brake"):
-		if linear_damp<10.0:
+		if linear_damp < 10.0:
 			linear_damp = 20.0
 			handBrakePlayer.play()
 		else:
@@ -36,13 +36,13 @@ func _process(delta: float) -> void:
 			
 func _physics_process(delta):
 	input_forward = 0.0
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("move_up"):
 		if !motorPlayer.playing:
 			motorPlayer.play()
 			motorPlayer.seek(1)
 		if motorPlayer.get_playback_position()>1.7:
 			input_forward += 1
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("move_down"):
 		input_forward -= 1
 
 	var speed = linear_velocity.length()
@@ -52,9 +52,9 @@ func _physics_process(delta):
 		var steer_strength = steering * (speed / max_speed)
 		if moving_backward:
 			steer_strength = -steer_strength
-		if Input.is_action_pressed("ui_left"):
+		if Input.is_action_pressed("move_left"):
 			angular_velocity = -steer_strength
-		elif Input.is_action_pressed("ui_right"):
+		elif Input.is_action_pressed("move_right"):
 			angular_velocity = steer_strength
 	else:
 		# No steering input; let angular_damp slow rotation naturally
