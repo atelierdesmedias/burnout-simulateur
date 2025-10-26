@@ -2,23 +2,15 @@ class_name Collegue
 
 extends Area2D
 
-@export var perso := 0
+@export var giveQuest := true
 var hasQuest = false
 var mQuest:QueteData
-
-var quetes_table = [
-	QueteData.new("usb","res://minijeux/usb-key/usb_key.tscn","T_Speech_USB",true,""),
-	QueteData.new("windows","res://minijeux/restart-windows95/restart_windows95.tscn","T_Speech_Windows",true,""),
-	QueteData.new("cafe","res://minijeux/machine-a-cafe/machine-a-cafe.tscn","T_Speech_Coffee",false,""),
-	QueteData.new("car","res://minijeux/parking/parking.tscn","T_Speech_Car",false,""),
-	QueteData.new("vending","res://minijeux/vending-machine/control.tscn","T_Speech_Vending",false,"")
-]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
 	
 	$AnimatedSprite2D.play(Globals.take_random_animation())
-	add_to_group("collegues")	
+	if giveQuest : add_to_group("collegues")	
 	monitoring = false
 	monitorable = false
 	$Declenche_MiniJeu.disabled = true
@@ -29,8 +21,8 @@ func _process(delta: float) -> void:
 	pass
 
 func _popQuest():
-	var lRandQuete = randi_range(0,quetes_table.size()-1)
-	mQuest = quetes_table[lRandQuete]		
+	var lRandQuete = randi_range(0,Globals.quetes_table.size()-1)
+	mQuest = Globals.quetes_table[lRandQuete]		
 	
 	$Exclamation.visible = true
 	$Exclamation.play(mQuest.name if mQuest.instant else "Green")

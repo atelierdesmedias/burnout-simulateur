@@ -11,6 +11,14 @@ var animations: Array[String] = [
     "perso_5"
 ]
 
+var quetes_table = [
+	QueteData.new("usb","res://minijeux/usb-key/usb_key.tscn","T_Speech_USB",true,""),
+	QueteData.new("windows","res://minijeux/restart-windows95/restart_windows95.tscn","T_Speech_Windows",true,""),
+	QueteData.new("cafe","res://minijeux/machine-a-cafe/machine-a-cafe.tscn","T_Speech_Coffee",false,""),
+	QueteData.new("car","res://minijeux/parking/parking.tscn","T_Speech_Car",false,""),
+	QueteData.new("vending","res://minijeux/vending-machine/control.tscn","T_Speech_Vending",false,"")
+]
+
 # Tire une animation aléatoire et la retire de la liste
 func take_random_animation() -> String:
 	if animations.is_empty():

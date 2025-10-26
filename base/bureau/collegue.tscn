@@ -313,7 +313,7 @@ animations = [{
 "speed": 1.0
 }]
 
-[node name="Collegue" type="Area2D"]
+[node name="quest" type="Area2D"]
 y_sort_enabled = true
 script = ExtResource("1_eq1r0")
 
