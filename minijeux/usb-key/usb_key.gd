@@ -30,7 +30,10 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 				# On checke si la position est proche de zero pour retourner la clef usb avec un click simple
 				var position_delta = get_global_mouse_position().distance_to(position_click)
 				if position_delta < 5.0 :
-					sprite_2d.play()
+					if sprite_2d.frame == 0:
+						sprite_2d.play()
+					else :
+						sprite_2d.play("rotation",-1.0,true)
 				# On vérifie si l'embout est sur le port usb
 				if embout.get_overlapping_areas():
 					if randf()> 0.67:
