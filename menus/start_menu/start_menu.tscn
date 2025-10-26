@@ -1,8 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://fkq6tsaf5guk"]
+[gd_scene load_steps=9 format=3 uid="uid://fkq6tsaf5guk"]
 
 [ext_resource type="Script" uid="uid://xxr5fvhbxhqg" path="res://menus/start_menu/start_menu.gd" id="1_vx1b8"]
-[ext_resource type="Texture2D" uid="uid://dxl6at0msi653" path="res://menus/start_menu/menu_start_maquette_wip.png" id="2_vx1b8"]
+[ext_resource type="Texture2D" uid="uid://73uuy3j4sy73" path="res://menus/start_menu/start_menu.png" id="2_y17qs"]
 [ext_resource type="AudioStream" uid="uid://dn0e45lbqlisa" path="res://menus/start_menu/Accueil_burnout_simulator.ogg" id="3_ct3sm"]
+[ext_resource type="Texture2D" uid="uid://crkjkvbyopxgg" path="res://menus/start_menu/animation play quit/Illustration49 (3).png" id="3_g3ifd"]
+[ext_resource type="Texture2D" uid="uid://dwfry42pdgm0g" path="res://menus/start_menu/animation play quit/Illustration49 (4).png" id="4_w37o8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2fv6y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_g3ifd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_w37o8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y17qs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g3ifd"]
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3
@@ -22,26 +42,33 @@ offset_right = -2.0
 offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_vx1b8")
+texture = ExtResource("2_y17qs")
 expand_mode = 3
 metadata/_edit_use_anchors_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TextureRect"]
+position = Vector2(626, 353)
+sprite_frames = SubResource("SpriteFrames_2fv6y")
+autoplay = "default"
 
 [node name="start_button" type="Button" parent="."]
 custom_minimum_size = Vector2(0, 90)
 layout_mode = 0
-offset_left = 838.0
-offset_top = 237.0
-offset_right = 1128.0
-offset_bottom = 348.0
+offset_left = 802.0
+offset_top = 354.0
+offset_right = 1124.0
+offset_bottom = 463.0
 size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxEmpty_y17qs")
 
 [node name="quit_button" type="Button" parent="."]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 0
-offset_left = 839.0
-offset_top = 375.0
-offset_right = 1130.0
-offset_bottom = 486.0
+offset_left = 806.0
+offset_top = 492.0
+offset_right = 1123.0
+offset_bottom = 603.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g3ifd")
 
 [node name="Musique" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ct3sm")
