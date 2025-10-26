@@ -4,9 +4,10 @@ extends Area2D
 
 func _process(delta: float) -> void:
 	for body in get_overlapping_bodies():
-		$ColorRect.color = check(body)
-		return
-	$ColorRect.color = Color(0., 1., 0.)
+		if body is RigidBody2D:
+			$ColorRect.color = check(body)
+			return
+		$ColorRect.color = Color(0., 1., 0.)
 		
 
 func check(body:RigidBody2D):

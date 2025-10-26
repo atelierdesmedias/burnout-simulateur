@@ -1,11 +1,35 @@
-[gd_scene load_steps=3 format=3 uid="uid://b14fghhi8ujl4"]
+[gd_scene load_steps=6 format=3 uid="uid://b14fghhi8ujl4"]
 
 [ext_resource type="PackedScene" uid="uid://ygpcl6tiytpv" path="res://minijeux/parking/car.tscn" id="1_8v8vh"]
 [ext_resource type="Script" uid="uid://dydpwkh4use5l" path="res://minijeux/parking/parking.gd" id="1_hh03x"]
+[ext_resource type="Texture2D" uid="uid://s5kfrtbdi7dj" path="res://minijeux/parking/parking.png" id="2_hh03x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sqjgm"]
+size = Vector2(962.75, 13.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wbgxk"]
+size = Vector2(9, 147)
 
 [node name="Parking" type="Node2D"]
 script = ExtResource("1_hh03x")
 
+[node name="Parking" type="Sprite2D" parent="."]
+position = Vector2(576.83795, 325.5)
+scale = Vector2(2.5959997, 2.596)
+texture = ExtResource("2_hh03x")
+
 [node name="Car" parent="." instance=ExtResource("1_8v8vh")]
 position = Vector2(165, 563)
 gravity_scale = 0.0
+
+[node name="Walls" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
+position = Vector2(514.625, 308.75)
+shape = SubResource("RectangleShape2D_sqjgm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
+position = Vector2(1012, 308)
+shape = SubResource("RectangleShape2D_wbgxk")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

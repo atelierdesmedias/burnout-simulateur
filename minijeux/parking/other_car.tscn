@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bh3g5lkf1y4qc"]
 
 [ext_resource type="Script" uid="uid://bkkmp5vjijl5g" path="res://minijeux/parking/other_car.gd" id="1_0aa77"]
-[ext_resource type="Texture2D" uid="uid://c5ncxcsfufllc" path="res://minijeux/parking/compact_blue.png" id="2_6tm5k"]
+[ext_resource type="Texture2D" uid="uid://be18jfsgmcpxr" path="res://minijeux/parking/compact_blue.png" id="2_6tm5k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i7sy8"]
 size = Vector2(26, 59)
@@ -15,8 +15,6 @@ script = ExtResource("1_0aa77")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2.5)
 shape = SubResource("RectangleShape2D_i7sy8")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -2)

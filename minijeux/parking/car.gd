@@ -1,5 +1,7 @@
 extends RigidBody2D
 
+signal crash()
+
 @export var acceleration = 800.0
 @export var max_speed = 400.0
 @export var steering = 3.0
@@ -75,3 +77,7 @@ func _physics_process(delta):
 	# Clamp speed
 	if speed > max_speed:
 		linear_velocity = linear_velocity.normalized() * max_speed
+
+
+func _on_body_entered(body: Node) -> void:
+	emit_signal("crash")
