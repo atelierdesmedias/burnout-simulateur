@@ -39,6 +39,7 @@ func _on_button_no_pressed() -> void:
 	Globals.stress += 0.03
 	effacer.play()
 	code_tape = 0
+	print("test")
 	pass # Replace with function body.
 
 func update_label():
