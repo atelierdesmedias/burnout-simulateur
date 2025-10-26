@@ -19,6 +19,18 @@ var quetes_table = [
 	QueteData.new("vending","res://minijeux/vending-machine/control.tscn","T_Speech_Vending",false,"")
 ]
 
+# Liste des index des quêtes déjà lancées
+var available_quests: Array[int] = [0,1,2,3,4]
+
+func take_random_quest() -> Variant:
+	if available_quests.is_empty():
+		push_warning("Le pool est vide !")
+		return null
+	var index = randi() % available_quests.size()
+	var value = available_quests[index]
+	available_quests.remove_at(index)
+	return value # retire et renvoie la valeur
+	
 # Tire une animation aléatoire et la retire de la liste
 func take_random_animation() -> String:
 	if animations.is_empty():
