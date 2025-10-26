@@ -1,7 +1,7 @@
 extends Node
 
 var money = 0.0
-var life = 1.0
+var stress = 0.0
 var day = 0
 var animations: Array[String] = [
 	"perso_1",
@@ -31,5 +31,5 @@ func take_random_animation() -> String:
 	
 func reset():
 	money = 0.0
-	life = 1.0
+	stress = 0.0
 	day = 0

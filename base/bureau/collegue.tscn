@@ -217,43 +217,43 @@ size = Vector2(57, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iac7f"]
 atlas = ExtResource("11_ans6l")
-region = Rect2(0, 368, 32, 32)
+region = Rect2(0, 368, 32, 34)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i4sje"]
 atlas = ExtResource("11_ans6l")
-region = Rect2(0, 416, 32, 32)
+region = Rect2(0, 416, 32, 34)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nb3j4"]
 atlas = ExtResource("11_ans6l")
-region = Rect2(32, 368, 32, 32)
+region = Rect2(32, 368, 32, 34)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kw5pj"]
 atlas = ExtResource("11_ans6l")
-region = Rect2(32, 416, 32, 32)
+region = Rect2(32, 416, 32, 34)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3cvdw"]
 atlas = ExtResource("11_ans6l")
-region = Rect2(64, 368, 32, 32)
+region = Rect2(64, 368, 32, 34)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d3fbe"]
 atlas = ExtResource("11_ans6l")
-region = Rect2(64, 416, 32, 32)
+region = Rect2(64, 416, 32, 34)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t5xli"]
 atlas = ExtResource("11_ans6l")
-region = Rect2(96, 368, 32, 32)
+region = Rect2(96, 368, 32, 34)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rgkc6"]
 atlas = ExtResource("11_ans6l")
-region = Rect2(96, 416, 32, 32)
+region = Rect2(96, 416, 32, 34)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b5md5"]
 atlas = ExtResource("11_ans6l")
-region = Rect2(128, 368, 32, 32)
+region = Rect2(128, 368, 32, 34)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v14h5"]
 atlas = ExtResource("11_ans6l")
-region = Rect2(128, 416, 32, 32)
+region = Rect2(128, 416, 32, 34)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0wv5n"]
 animations = [{
@@ -333,7 +333,7 @@ shape = SubResource("RectangleShape2D_rj8xc")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_0wv5n")
-animation = &"perso_2"
+animation = &"perso_5"
 autoplay = "perso_1"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

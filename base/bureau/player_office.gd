@@ -13,7 +13,7 @@ func _physics_process(delta):
 		input_vector = input_vector.normalized()
 
 	velocity = input_vector * speed
-	move_and_slide()  # gère les collisions automatiquement
+	move_and_slide()  # gère les collisions automatiquement	
 	
 	# Animations
 	if velocity.length() > 0:

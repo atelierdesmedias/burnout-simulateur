@@ -11,7 +11,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	moneyBar.value = Globals.money
-	lifeBar.value = Globals.life
+	lifeBar.value = Globals.stress
 
 func _input(event):
 	if event is InputEventKey:
