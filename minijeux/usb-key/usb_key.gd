@@ -3,6 +3,7 @@ extends Area2D
 @onready var embout: Area2D = $Embout
 @onready var erreur: AudioStreamPlayer = $Erreur
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
+@onready var connecting: AudioStreamPlayer = $"../../connecting"
 
 var position_click
 var is_dragging : bool
@@ -26,12 +27,16 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 				is_dragging = false
 				# On checke si la position est proche de zero pour retourner la clef usb avec un click simple
 				var position_delta = get_global_mouse_position().distance_to(position_click)
-				if position_delta < 10.0 :
+				if position_delta < 5.0 :
 					sprite_2d.play()
 				# On vérifie si l'embout est sur le port usb
 				if embout.get_overlapping_areas():
 					if randf()> 0.67:
-						$"../..".minijeu_finished()
+						connecting.play()
+						get_parent().get_parent().hide()
+						get_tree().current_scene.process_mode = Node.PROCESS_MODE_INHERIT
+						await  connecting.finished
+						queue_free()
 					else :
 						erreur.play(0.5)
 				

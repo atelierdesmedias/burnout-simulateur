@@ -1,12 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://45lbmsbed7pa"]
+[gd_scene load_steps=10 format=3 uid="uid://45lbmsbed7pa"]
 
 [ext_resource type="Script" uid="uid://bsslywlfhqkcw" path="res://minijeux/usb-key/usb_key.gd" id="1_scrg4"]
-[ext_resource type="Script" uid="uid://b07emnsfploq2" path="res://minijeux/usb-key/usb_keybase.gd" id="1_wvv4m"]
+[ext_resource type="Script" path="res://minijeux/usb-key/usb_keybase.gd" id="1_wvv4m"]
 [ext_resource type="Texture2D" uid="uid://cry16syrswjcn" path="res://minijeux/usb-key/laptop.jpeg" id="2_g27m4"]
 [ext_resource type="Texture2D" uid="uid://bunno8mu17d68" path="res://minijeux/usb-key/usb_key_animation/usb_key_1.png" id="3_g27m4"]
-[ext_resource type="AudioStream" uid="uid://4if6ushltgv" path="res://minijeux/usb-key/erreur.mp3" id="4_g27m4"]
+[ext_resource type="AudioStream" uid="uid://4if6ushltgv" path="res://minijeux/vending-machine/erreur.mp3" id="4_g27m4"]
 [ext_resource type="Texture2D" uid="uid://cu5aucjg1enk7" path="res://minijeux/usb-key/usb_key_animation/usb_key_2.png" id="4_pujia"]
 [ext_resource type="PackedScene" uid="uid://bjxu7urv6qsih" path="res://minijeux/usb-key/usb_port.tscn" id="4_wvv4m"]
+[ext_resource type="AudioStream" uid="uid://b6trqevrgyi1u" path="res://minijeux/usb-key/usb connecting.mp3" id="8_p5q2r"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wvv4m"]
 animations = [{
@@ -79,5 +80,8 @@ position = Vector2(689, 263)
 
 [node name="usbPort2" parent="." instance=ExtResource("4_wvv4m")]
 position = Vector2(689, 306)
+
+[node name="connecting" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_p5q2r")
 
 [connection signal="area_entered" from="usbanchor/UsbKey/Embout" to="usbanchor/UsbKey" method="_on_embout_area_entered"]
