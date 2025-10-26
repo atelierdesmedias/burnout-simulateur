@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b14fghhi8ujl4"]
+[gd_scene load_steps=11 format=3 uid="uid://b14fghhi8ujl4"]
 
 [ext_resource type="PackedScene" uid="uid://ygpcl6tiytpv" path="res://minijeux/parking/car.tscn" id="1_8v8vh"]
 [ext_resource type="Script" uid="uid://dydpwkh4use5l" path="res://minijeux/parking/parking.gd" id="1_hh03x"]
@@ -10,16 +10,32 @@ size = Vector2(962.75, 13.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wbgxk"]
 size = Vector2(9, 147)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hh03x"]
+size = Vector2(1172, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4v0fk"]
+size = Vector2(39, 680)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bauov"]
+size = Vector2(54, 681)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lcu1o"]
+size = Vector2(1052.5, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_whxl3"]
+size = Vector2(5, 73)
+
 [node name="Parking" type="Node2D"]
 script = ExtResource("1_hh03x")
 
 [node name="Parking" type="Sprite2D" parent="."]
+z_index = -2
 position = Vector2(576.83795, 325.5)
 scale = Vector2(2.5959997, 2.596)
 texture = ExtResource("2_hh03x")
 
 [node name="Car" parent="." instance=ExtResource("1_8v8vh")]
-position = Vector2(165, 563)
+position = Vector2(150.32, 604.04)
 gravity_scale = 0.0
 
 [node name="Walls" type="StaticBody2D" parent="."]
@@ -31,5 +47,27 @@ shape = SubResource("RectangleShape2D_sqjgm")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
 position = Vector2(1012, 308)
 shape = SubResource("RectangleShape2D_wbgxk")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
+position = Vector2(576, 13)
+shape = SubResource("RectangleShape2D_hh03x")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls"]
+position = Vector2(9.5, 330)
+shape = SubResource("RectangleShape2D_4v0fk")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Walls"]
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Walls"]
+position = Vector2(1143, 330.5)
+shape = SubResource("RectangleShape2D_bauov")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Walls"]
+position = Vector2(720.75, 643)
+shape = SubResource("RectangleShape2D_lcu1o")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Walls"]
+position = Vector2(188.5, 559.5)
+shape = SubResource("RectangleShape2D_whxl3")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

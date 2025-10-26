@@ -1,9 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwyw0rip6cp24"]
+[gd_scene load_steps=7 format=3 uid="uid://cwyw0rip6cp24"]
 
 [ext_resource type="Script" uid="uid://cle6hyhktajrp" path="res://minijeux/parking/place.gd" id="1_eo61y"]
+[ext_resource type="Texture2D" uid="uid://cu7n216p0qw7c" path="res://minijeux/parking/place.png" id="2_uivaa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lbohn"]
 size = Vector2(46, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uivaa"]
+atlas = ExtResource("2_uivaa")
+region = Rect2(0, 0, 9, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75qu8"]
+atlas = ExtResource("2_uivaa")
+region = Rect2(9, 0, 9, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pqkks"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uivaa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75qu8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_eo61y")
@@ -12,9 +35,8 @@ script = ExtResource("1_eo61y")
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_lbohn")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = -1
-offset_left = -4.0
-offset_top = -49.0
-offset_right = 6.0
-offset_bottom = -39.0
+position = Vector2(-1.1920929e-06, -7.1525574e-07)
+scale = Vector2(1.8666667, 1.8399999)
+sprite_frames = SubResource("SpriteFrames_pqkks")
