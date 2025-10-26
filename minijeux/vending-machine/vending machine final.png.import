@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fmyqxoj7ejv3"
-path="res://.godot/imported/vending machine avec zéro .png-4aa8f95def87743ff9be3d50eccfd645.ctex"
+uid="uid://bp71xvkqvde8d"
+path="res://.godot/imported/vending machine final.png-b98090ff874487c6efeb5a1977edf5ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minijeux/vending-machine/vending machine avec zéro .png"
-dest_files=["res://.godot/imported/vending machine avec zéro .png-4aa8f95def87743ff9be3d50eccfd645.ctex"]
+source_file="res://minijeux/vending-machine/vending machine final.png"
+dest_files=["res://.godot/imported/vending machine final.png-b98090ff874487c6efeb5a1977edf5ff.ctex"]
 
 [params]
 
