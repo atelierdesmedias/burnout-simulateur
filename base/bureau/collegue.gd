@@ -2,6 +2,7 @@ class_name Collegue
 
 extends Area2D
 
+@export var perso := 0
 var hasQuest = false
 var mQuest:QueteData
 
@@ -14,7 +15,9 @@ var quetes_table = [
 ]
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func _ready() -> void:	
+	
+	$AnimatedSprite2D.play(Globals.take_random_animation())
 	add_to_group("collegues")	
 	monitoring = false
 	monitorable = false

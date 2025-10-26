@@ -11,7 +11,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var timeSinceLastQuest = Time.get_ticks_msec()-lastQuestTime	
-	if timeSinceLastQuest > 5000 || get_tree().get_nodes_in_group("collegues").size() == 3:
+	if timeSinceLastQuest > 5000 || get_tree().get_nodes_in_group("collegues").size() == 4:
 		lastQuestTime = Time.get_ticks_msec()
 		if randi_range(0,3) == 0:
 			_popQuest()	
