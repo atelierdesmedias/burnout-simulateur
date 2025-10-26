@@ -1,6 +1,7 @@
-[gd_scene load_steps=22 format=3 uid="uid://cu1hpj2tp7t07"]
+[gd_scene load_steps=23 format=3 uid="uid://cu1hpj2tp7t07"]
 
 [ext_resource type="Script" uid="uid://dbr8vemqcj8q5" path="res://minijeux/vending-machine/vending-machine.gd" id="1_5b50y"]
+[ext_resource type="Script" uid="uid://drgrgoiakjvts" path="res://minijeux/minijeu.gd" id="1_trghe"]
 [ext_resource type="Texture2D" uid="uid://fmyqxoj7ejv3" path="res://minijeux/vending-machine/vending machine avec zéro .png" id="2_lb8ce"]
 [ext_resource type="FontFile" uid="uid://cigeyuoqi8sct" path="res://minijeux/vending-machine/Galaxy_dingbats-Regular.ttf" id="3_4hr0v"]
 [ext_resource type="AudioStream" uid="uid://bftt8lqx3m5xf" path="res://minijeux/vending-machine/vending_machine.wav" id="3_5b50y"]
@@ -34,16 +35,17 @@ font_color = Color(0, 0, 0, 1)
 font_size = 22
 font_color = Color(0, 0, 0, 1)
 
-[node name="Vending-machine" type="Control"]
+[node name="Vending-machine" type="Node2D"]
+script = ExtResource("1_trghe")
+
+[node name="Control" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
 script = ExtResource("1_5b50y")
 
-[node name="VendingMachine" type="TextureRect" parent="."]
+[node name="VendingMachine" type="TextureRect" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -54,7 +56,7 @@ texture = ExtResource("2_lb8ce")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="Buttons_numbers" type="Control" parent="."]
+[node name="Buttons_numbers" type="Control" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -62,7 +64,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button1" type="Button" parent="Buttons_numbers"]
+[node name="Button1" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5954861
@@ -71,7 +73,7 @@ anchor_right = 0.6493056
 anchor_bottom = 0.39814815
 metadata/_edit_use_anchors_ = true
 
-[node name="Button2" type="Button" parent="Buttons_numbers"]
+[node name="Button2" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.65625
@@ -80,7 +82,7 @@ anchor_right = 0.7100694
 anchor_bottom = 0.39814815
 metadata/_edit_use_anchors_ = true
 
-[node name="Button3" type="Button" parent="Buttons_numbers"]
+[node name="Button3" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.7161458
@@ -89,7 +91,7 @@ anchor_right = 0.7699653
 anchor_bottom = 0.39814815
 metadata/_edit_use_anchors_ = true
 
-[node name="Button4" type="Button" parent="Buttons_numbers"]
+[node name="Button4" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5954861
@@ -98,7 +100,7 @@ anchor_right = 0.6493056
 anchor_bottom = 0.5138889
 metadata/_edit_use_anchors_ = true
 
-[node name="Button5" type="Button" parent="Buttons_numbers"]
+[node name="Button5" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.65625
@@ -107,7 +109,7 @@ anchor_right = 0.7100694
 anchor_bottom = 0.5138889
 metadata/_edit_use_anchors_ = true
 
-[node name="Button6" type="Button" parent="Buttons_numbers"]
+[node name="Button6" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.7161458
@@ -116,7 +118,7 @@ anchor_right = 0.7699653
 anchor_bottom = 0.5138889
 metadata/_edit_use_anchors_ = true
 
-[node name="Button7" type="Button" parent="Buttons_numbers"]
+[node name="Button7" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5954861
@@ -125,7 +127,7 @@ anchor_right = 0.6493056
 anchor_bottom = 0.63271606
 metadata/_edit_use_anchors_ = true
 
-[node name="Button8" type="Button" parent="Buttons_numbers"]
+[node name="Button8" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.65625
@@ -134,7 +136,7 @@ anchor_right = 0.7100694
 anchor_bottom = 0.63271606
 metadata/_edit_use_anchors_ = true
 
-[node name="Button9" type="Button" parent="Buttons_numbers"]
+[node name="Button9" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.7161458
@@ -143,7 +145,7 @@ anchor_right = 0.7699653
 anchor_bottom = 0.63271606
 metadata/_edit_use_anchors_ = true
 
-[node name="Button0" type="Button" parent="Buttons_numbers"]
+[node name="Button0" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.6571181
@@ -152,7 +154,7 @@ anchor_right = 0.7109375
 anchor_bottom = 0.74382716
 metadata/_edit_use_anchors_ = true
 
-[node name="affichage" type="Label" parent="."]
+[node name="affichage" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.6006944
@@ -166,7 +168,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="postit" type="Label" parent="."]
+[node name="postit" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.2411552
@@ -181,7 +183,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="alphabet" type="Label" parent="."]
+[node name="alphabet" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.470132
@@ -202,7 +204,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="alphabetcorresp" type="Label" parent="."]
+[node name="alphabetcorresp" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.501382
@@ -212,7 +214,7 @@ anchor_bottom = 0.29154325
 offset_left = 0.40795898
 offset_top = -0.30400467
 offset_right = -0.43200684
-offset_bottom = 0.07998657
+offset_bottom = 15.079971
 text = "0
 1
 2
@@ -223,7 +225,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="alphabet2" type="Label" parent="."]
+[node name="alphabet2" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.517875
@@ -244,7 +246,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="alphabet2corresp" type="Label" parent="."]
+[node name="alphabet2corresp" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5543334
@@ -265,7 +267,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="ButtonNO" type="Button" parent="."]
+[node name="ButtonNO" type="Button" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.7161458
@@ -274,7 +276,7 @@ anchor_right = 0.7699653
 anchor_bottom = 0.7438271
 metadata/_edit_use_anchors_ = true
 
-[node name="ButtonYES" type="Button" parent="."]
+[node name="ButtonYES" type="Button" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5963542
@@ -283,47 +285,47 @@ anchor_right = 0.6501736
 anchor_bottom = 0.74228394
 metadata/_edit_use_anchors_ = true
 
-[node name="drink" type="AudioStreamPlayer" parent="."]
+[node name="drink" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("3_5b50y")
 
-[node name="erreur" type="AudioStreamPlayer" parent="."]
+[node name="erreur" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("4_d3eid")
 
-[node name="Chiffres0" type="AudioStreamPlayer" parent="."]
+[node name="Chiffres0" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("6_wt08n")
 
-[node name="Chiffres1" type="AudioStreamPlayer" parent="."]
+[node name="Chiffres1" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("7_45jr6")
 
-[node name="Chiffres2" type="AudioStreamPlayer" parent="."]
+[node name="Chiffres2" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("8_yylxx")
 
-[node name="Chiffres3" type="AudioStreamPlayer" parent="."]
+[node name="Chiffres3" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("9_trghe")
 
-[node name="Chiffres4" type="AudioStreamPlayer" parent="."]
+[node name="Chiffres4" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("10_hkba5")
 
-[node name="Chiffres5" type="AudioStreamPlayer" parent="."]
+[node name="Chiffres5" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("11_623a3")
 
-[node name="Chiffres6" type="AudioStreamPlayer" parent="."]
+[node name="Chiffres6" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("12_awdpl")
 
-[node name="Chiffres7" type="AudioStreamPlayer" parent="."]
+[node name="Chiffres7" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("13_34ya7")
 
-[node name="Chiffres8" type="AudioStreamPlayer" parent="."]
+[node name="Chiffres8" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("14_6hfdp")
 
-[node name="Chiffres9" type="AudioStreamPlayer" parent="."]
+[node name="Chiffres9" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("15_xpyc2")
 
-[node name="Effacer" type="AudioStreamPlayer" parent="."]
+[node name="Effacer" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("16_yylxx")
 
-[node name="Valider" type="AudioStreamPlayer" parent="."]
+[node name="Valider" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("17_trghe")
 
-[connection signal="pressed" from="ButtonNO" to="." method="_on_button_no_pressed"]
-[connection signal="pressed" from="ButtonYES" to="." method="_on_button_yes_pressed"]
+[connection signal="pressed" from="Control/ButtonNO" to="." method="_on_button_no_pressed"]
+[connection signal="pressed" from="Control/ButtonYES" to="." method="_on_button_yes_pressed"]
