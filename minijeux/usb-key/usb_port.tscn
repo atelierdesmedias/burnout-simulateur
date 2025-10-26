@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://bjxu7urv6qsih"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i2eu4"]
-size = Vector2(29, 27)
+size = Vector2(32, 9)
 
 [node name="usbPort" type="Node2D"]
 
@@ -10,12 +10,12 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="port_usb"]
-position = Vector2(5.5, 3.5)
+position = Vector2(7, -0.5)
 shape = SubResource("RectangleShape2D_i2eu4")
 
 [node name="ColorRect" type="ColorRect" parent="port_usb"]
 offset_left = -9.0
-offset_top = -10.0
-offset_right = 20.0
-offset_bottom = 17.0
-color = Color(1, 0.95686275, 0, 0.6509804)
+offset_top = -5.0
+offset_right = 23.0
+offset_bottom = 4.0
+color = Color(0.88243353, 0.25902686, 0.99999994, 0.2784314)

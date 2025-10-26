@@ -9,6 +9,7 @@ extends Area2D
 var position_click
 var is_dragging : bool
 var drag_offset
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jyd7akyd8v35"
-path="res://.godot/imported/usb_key_2.png-4c8c986cb078a1c7564ae81be624d05f.ctex"
+uid="uid://cd0f4587b0chb"
+path="res://.godot/imported/usb_key_3.png-df89487684f537501addaadb73f24add.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minijeux/usb-key/usb_key_animation/usb_key_2.png"
-dest_files=["res://.godot/imported/usb_key_2.png-4c8c986cb078a1c7564ae81be624d05f.ctex"]
+source_file="res://minijeux/usb-key/usb_key_animation/usb_key_3.png"
+dest_files=["res://.godot/imported/usb_key_3.png-df89487684f537501addaadb73f24add.ctex"]
 
 [params]
 
