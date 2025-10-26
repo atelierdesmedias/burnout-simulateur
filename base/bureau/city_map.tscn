@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://yiaf2qmdiucy"]
 
 [ext_resource type="PackedScene" uid="uid://bjlvwo8xxqhl0" path="res://base/bureau/office_map.tscn" id="1_rncah"]
-[ext_resource type="PackedScene" uid="uid://bpfcmgcpnhpl7" path="res://utils/stress_effect.tscn" id="2_gd2uu"]
+[ext_resource type="PackedScene" uid="uid://byebouf5w4atg" path="res://utils/stress_effect.tscn" id="2_gd2uu"]
 [ext_resource type="PackedScene" uid="uid://hjd2h1lxsj8m" path="res://base/hud.tscn" id="3_fh8l2"]
 
 [node name="city_map" type="Node2D"]
@@ -24,3 +24,9 @@ render_target_update_mode = 4
 [node name="CanvasLayer" parent="." instance=ExtResource("2_gd2uu")]
 
 [node name="Hud" parent="." instance=ExtResource("3_fh8l2")]
+process_mode = 1
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 12.0
+offset_bottom = 12.0
+scale = Vector2(3, 3)

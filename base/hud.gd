@@ -10,6 +10,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	Globals.money += 0.01 * delta
 	moneyBar.value = Globals.money
 	lifeBar.value = Globals.stress
 

@@ -21,17 +21,6 @@ offset_bottom = 20.0
 layout_direction = 2
 layout_mode = 2
 
-[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(10.355, 0)
-layout_mode = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/HBoxContainer/Control"]
-modulate = Color(0.6490057, 0.6856821, 0.8919819, 1)
-position = Vector2(-8.999998, -10.999998)
-scale = Vector2(0.015, 0.015)
-texture = ExtResource("1_l6hix")
-centered = false
-
 [node name="ProgressBarMoney" type="TextureProgressBar" parent="VBoxContainer/HBoxContainer"]
 texture_filter = 1
 custom_minimum_size = Vector2(32, 8)
@@ -41,19 +30,20 @@ step = 0.01
 texture_under = ExtResource("1_linc4")
 texture_progress = ExtResource("2_l6hix")
 
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(10.16, 0)
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/HBoxContainer/Control"]
+modulate = Color(0.6490057, 0.6856821, 0.8919819, 1)
+position = Vector2(-12, -11)
+scale = Vector2(0.015, 0.015)
+texture = ExtResource("1_l6hix")
+centered = false
+
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
 layout_direction = 2
 layout_mode = 2
-
-[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer2"]
-custom_minimum_size = Vector2(10.355, 0)
-layout_mode = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/HBoxContainer2/Control"]
-position = Vector2(3, -2)
-scale = Vector2(0.54, 0.54)
-texture = ExtResource("5_y7im6")
-centered = false
 
 [node name="ProgressBarBrain" type="TextureProgressBar" parent="VBoxContainer/HBoxContainer2"]
 texture_filter = 1
@@ -63,3 +53,13 @@ max_value = 1.0
 step = 0.01
 texture_under = ExtResource("1_linc4")
 texture_progress = ExtResource("5_kdgut")
+
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(10.355, 0)
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/HBoxContainer2/Control"]
+position = Vector2(-0.28, -2)
+scale = Vector2(0.54, 0.54)
+texture = ExtResource("5_y7im6")
+centered = false

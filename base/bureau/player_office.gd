@@ -33,6 +33,5 @@ func _physics_process(delta):
 	elif velocity.y < 0 :
 		$AnimatedSprite2D.animation = "walk_up"	
 
-func _process(delta: float) -> void:
-	Globals.money += 0.01 * delta
+func _process(delta: float) -> void:	
 	pass
