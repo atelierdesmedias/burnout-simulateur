@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://fkq6tsaf5guk"]
+[gd_scene load_steps=9 format=3 uid="uid://fkq6tsaf5guk"]
 
 [ext_resource type="Script" uid="uid://xxr5fvhbxhqg" path="res://menus/start_menu/start_menu.gd" id="1_vx1b8"]
 [ext_resource type="Texture2D" uid="uid://73uuy3j4sy73" path="res://menus/start_menu/start_menu.png" id="2_y17qs"]
@@ -19,6 +19,10 @@ animations = [{
 "name": &"default",
 "speed": 3.0
 }]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y17qs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g3ifd"]
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3
@@ -55,6 +59,7 @@ offset_top = 354.0
 offset_right = 1124.0
 offset_bottom = 463.0
 size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxEmpty_y17qs")
 
 [node name="quit_button" type="Button" parent="."]
 custom_minimum_size = Vector2(0, 80)
@@ -63,6 +68,7 @@ offset_left = 806.0
 offset_top = 492.0
 offset_right = 1123.0
 offset_bottom = 603.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g3ifd")
 
 [node name="Musique" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ct3sm")
