@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bpfcmgcpnhpl7"]
+[gd_scene load_steps=4 format=3 uid="uid://byebouf5w4atg"]
 
-[ext_resource type="Shader" uid="uid://elhj2wd6myui" path="res://utils/stress_effect.gdshader" id="1_1lgj1"]
-[ext_resource type="Script" uid="uid://dnbin2p8daq0a" path="res://utils/stress_effect.gd" id="1_m8y1e"]
+[ext_resource type="Shader" path="res://utils/stress_effect.gdshader" id="1_1lgj1"]
+[ext_resource type="Script" path="res://utils/stress_effect.gd" id="1_m8y1e"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8uh7m"]
 shader = ExtResource("1_1lgj1")
@@ -18,3 +18,6 @@ material = SubResource("ShaderMaterial_8uh7m")
 offset_top = -2.0
 offset_right = 1159.0
 offset_bottom = 649.0
+focus_behavior_recursive = 1
+mouse_filter = 2
+mouse_behavior_recursive = 1

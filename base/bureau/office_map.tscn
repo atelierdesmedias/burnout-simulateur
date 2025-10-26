@@ -200,6 +200,7 @@ rendering_quadrant_size = 8
 physics_quadrant_size = 8
 
 [node name="TheOfficeCursed" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = ExtResource("9_2vjsf")
 autoplay = true
 parameters/looping = true

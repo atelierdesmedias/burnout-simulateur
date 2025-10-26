@@ -46,11 +46,12 @@ func _physics_process(delta):
 		input_forward -= 1
 
 	var speed = linear_velocity.length()
-	var moving_forward = linear_velocity.dot(Vector2.UP.rotated(rotation)) > 0
+	var moving_backward = linear_velocity.dot(Vector2.UP.rotated(rotation)) < 0
 
-	# Only steer when moving forward
-	if speed > 1 and moving_forward:
+	if speed > 1:
 		var steer_strength = steering * (speed / max_speed)
+		if moving_backward:
+			steer_strength = -steer_strength
 		if Input.is_action_pressed("ui_left"):
 			angular_velocity = -steer_strength
 		elif Input.is_action_pressed("ui_right"):
