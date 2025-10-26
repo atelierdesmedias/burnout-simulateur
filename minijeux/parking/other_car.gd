@@ -17,4 +17,4 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node) -> void:
 	$AudioStreamPlayer.play()
-	Globals.life -= 0.05
+	Globals.stress += 0.01
