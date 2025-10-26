@@ -44,7 +44,7 @@ func _on_power_off_button_pressed() -> void:
 			await get_tree().create_timer(0.5).timeout
 			win95_desktop.hide()
 			win95_switching_off.show()
-			await get_tree().create_timer(2.0).timeout
+			await get_tree().create_timer(1.0).timeout
 			win95_switching_off.hide()
 			computer_off_screen.show()
 			is_computer_on = false
@@ -58,11 +58,11 @@ func _on_power_off_button_pressed() -> void:
 		await computer_starting_animation.animation_finished
 		computer_starting_animation.hide()
 		win95_starting.show()
-		await get_tree().create_timer(1.0).timeout
-		win95_starting.hide()
-		win95_desktop.show()
 		$AudioStreamPlayer.stream = startStream
 		$AudioStreamPlayer.play()
+		await get_tree().create_timer(2.0).timeout
+		win95_starting.hide()
+		win95_desktop.show()
 		$AudioStreamPlayer.connect("finished", minijeu_finished)
 
 func _on_win_95_panel_gui_input(event: InputEvent) -> void:
