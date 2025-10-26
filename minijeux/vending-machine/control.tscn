@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dbr8vemqcj8q5" path="res://minijeux/vending-machine/vending-machine.gd" id="1_5b50y"]
 [ext_resource type="Script" uid="uid://drgrgoiakjvts" path="res://minijeux/minijeu.gd" id="1_trghe"]
-[ext_resource type="Texture2D" uid="uid://fmyqxoj7ejv3" path="res://minijeux/vending-machine/vending machine avec zéro .png" id="2_lb8ce"]
 [ext_resource type="FontFile" uid="uid://cigeyuoqi8sct" path="res://minijeux/vending-machine/Galaxy_dingbats-Regular.ttf" id="3_4hr0v"]
 [ext_resource type="AudioStream" uid="uid://bftt8lqx3m5xf" path="res://minijeux/vending-machine/vending_machine.wav" id="3_5b50y"]
+[ext_resource type="Texture2D" uid="uid://bp71xvkqvde8d" path="res://minijeux/vending-machine/vending machine final.png" id="3_hkba5"]
 [ext_resource type="AudioStream" uid="uid://4if6ushltgv" path="res://minijeux/vending-machine/erreur.mp3" id="4_d3eid"]
 [ext_resource type="AudioStream" uid="uid://3jx8hjbhvckh" path="res://minijeux/vending-machine/chiffres/Chiffres-0.wav" id="6_wt08n"]
 [ext_resource type="AudioStream" uid="uid://bisu4s6xmfreq" path="res://minijeux/vending-machine/chiffres/Chiffres-1.wav" id="7_45jr6"]
@@ -21,19 +21,23 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_5b50y"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_lb8ce"]
+[sub_resource type="LabelSettings" id="LabelSettings_hkba5"]
 font = ExtResource("3_4hr0v")
-font_size = 45
+font_size = 42
 font_color = Color(0, 0, 0, 1)
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_yylxx"]
 font = ExtResource("3_4hr0v")
 font_size = 30
 font_color = Color(0, 0, 0, 1)
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_trghe"]
 font_size = 22
 font_color = Color(0, 0, 0, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Vending-machine" type="Node2D"]
 script = ExtResource("1_trghe")
@@ -52,7 +56,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_lb8ce")
+texture = ExtResource("3_hkba5")
 expand_mode = 3
 stretch_mode = 5
 
@@ -67,91 +71,91 @@ grow_vertical = 2
 [node name="Button1" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5954861
-anchor_top = 0.3117284
-anchor_right = 0.6493056
-anchor_bottom = 0.39814815
+anchor_left = 0.5980903
+anchor_top = 0.3101852
+anchor_right = 0.6519097
+anchor_bottom = 0.39660493
 metadata/_edit_use_anchors_ = true
 
 [node name="Button2" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.65625
-anchor_top = 0.3117284
-anchor_right = 0.7100694
-anchor_bottom = 0.39814815
+anchor_left = 0.6588542
+anchor_top = 0.3101852
+anchor_right = 0.7126736
+anchor_bottom = 0.39660493
 metadata/_edit_use_anchors_ = true
 
 [node name="Button3" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.7161458
-anchor_top = 0.3117284
-anchor_right = 0.7699653
-anchor_bottom = 0.39814815
+anchor_left = 0.71875
+anchor_top = 0.3101852
+anchor_right = 0.7725694
+anchor_bottom = 0.39660493
 metadata/_edit_use_anchors_ = true
 
 [node name="Button4" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5954861
-anchor_top = 0.42746913
-anchor_right = 0.6493056
-anchor_bottom = 0.5138889
+anchor_left = 0.5998264
+anchor_top = 0.4382716
+anchor_right = 0.6536458
+anchor_bottom = 0.52469134
 metadata/_edit_use_anchors_ = true
 
 [node name="Button5" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.65625
-anchor_top = 0.42746913
-anchor_right = 0.7100694
-anchor_bottom = 0.5138889
+anchor_left = 0.6605903
+anchor_top = 0.4382716
+anchor_right = 0.7144097
+anchor_bottom = 0.52469134
 metadata/_edit_use_anchors_ = true
 
 [node name="Button6" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.7161458
-anchor_top = 0.42746913
-anchor_right = 0.7699653
-anchor_bottom = 0.5138889
+anchor_left = 0.7204861
+anchor_top = 0.4382716
+anchor_right = 0.7743056
+anchor_bottom = 0.52469134
 metadata/_edit_use_anchors_ = true
 
 [node name="Button7" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5954861
-anchor_top = 0.5462963
-anchor_right = 0.6493056
-anchor_bottom = 0.63271606
+anchor_left = 0.5980903
+anchor_top = 0.5493827
+anchor_right = 0.6519097
+anchor_bottom = 0.63580245
 metadata/_edit_use_anchors_ = true
 
 [node name="Button8" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.65625
-anchor_top = 0.5462963
-anchor_right = 0.7100694
-anchor_bottom = 0.63271606
+anchor_left = 0.6588542
+anchor_top = 0.5493827
+anchor_right = 0.7126736
+anchor_bottom = 0.63580245
 metadata/_edit_use_anchors_ = true
 
 [node name="Button9" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.7161458
-anchor_top = 0.5462963
-anchor_right = 0.7699653
-anchor_bottom = 0.63271606
+anchor_left = 0.71875
+anchor_top = 0.5493827
+anchor_right = 0.7725694
+anchor_bottom = 0.63580245
 metadata/_edit_use_anchors_ = true
 
 [node name="Button0" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.6571181
-anchor_top = 0.6574074
-anchor_right = 0.7109375
-anchor_bottom = 0.74382716
+anchor_left = 0.6588542
+anchor_top = 0.6558642
+anchor_right = 0.7126736
+anchor_bottom = 0.74228394
 metadata/_edit_use_anchors_ = true
 
 [node name="affichage" type="Label" parent="Control"]
@@ -171,14 +175,14 @@ metadata/_edit_use_anchors_ = true
 [node name="postit" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.2411552
-anchor_top = 0.63888335
-anchor_right = 0.37493727
-anchor_bottom = 0.7256986
+anchor_left = 0.30381948
+anchor_top = 0.60493827
+anchor_right = 0.4376015
+anchor_bottom = 0.6917535
 offset_right = 36.056152
 offset_bottom = 23.0
-rotation = -0.37699112
-label_settings = SubResource("LabelSettings_lb8ce")
+rotation = -0.4886922
+label_settings = SubResource("LabelSettings_hkba5")
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -186,14 +190,15 @@ metadata/_edit_use_anchors_ = true
 [node name="alphabet" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.470132
-anchor_top = 0.05293828
-anchor_right = 0.50818753
-anchor_bottom = 0.3177778
+anchor_left = 0.44148612
+anchor_top = 0.023617297
+anchor_right = 0.47954166
+anchor_bottom = 0.28845686
 offset_left = 0.40795898
 offset_top = -0.30400467
 offset_right = -0.43200684
 offset_bottom = 0.07998657
+rotation = 0.19198622
 text = "0
 1
 2
@@ -207,19 +212,20 @@ metadata/_edit_use_anchors_ = true
 [node name="alphabetcorresp" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.501382
-anchor_top = 0.05756791
-anchor_right = 0.52294445
-anchor_bottom = 0.29154325
+anchor_left = 0.4770764
+anchor_top = 0.014358035
+anchor_right = 0.4986389
+anchor_bottom = 0.29462966
 offset_left = 0.40795898
 offset_top = -0.30400467
 offset_right = -0.43200684
 offset_bottom = 15.079971
+rotation = 0.19198622
 text = "0
 1
 2
 3
-4"
+"
 label_settings = SubResource("LabelSettings_trghe")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -228,14 +234,15 @@ metadata/_edit_use_anchors_ = true
 [node name="alphabet2" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.517875
-anchor_top = 0.04213581
-anchor_right = 0.56547916
-anchor_bottom = 0.30697536
+anchor_left = 0.5317639
+anchor_top = 0.065283954
+anchor_right = 0.5793681
+anchor_bottom = 0.3301235
 offset_left = 0.40795898
 offset_top = -0.30400467
 offset_right = -0.43200684
 offset_bottom = 0.07998657
+rotation = 0.19198622
 text = "5
 6
 7
@@ -249,19 +256,20 @@ metadata/_edit_use_anchors_ = true
 [node name="alphabet2corresp" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5543334
-anchor_top = 0.04830865
-anchor_right = 0.57676387
-anchor_bottom = 0.3054321
+anchor_left = 0.56995845
+anchor_top = 0.073
+anchor_right = 0.5923889
+anchor_bottom = 0.3378395
 offset_left = 0.40795898
 offset_top = -0.30400467
 offset_right = -0.43200684
 offset_bottom = 0.07998657
+rotation = 0.19198622
 text = "5
 6
 7
 8
-9"
+"
 label_settings = SubResource("LabelSettings_trghe")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -270,19 +278,19 @@ metadata/_edit_use_anchors_ = true
 [node name="ButtonNO" type="Button" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.7161458
-anchor_top = 0.6574074
-anchor_right = 0.7699653
-anchor_bottom = 0.7438271
+anchor_left = 0.7178819
+anchor_top = 0.66049385
+anchor_right = 0.7717014
+anchor_bottom = 0.74691355
 metadata/_edit_use_anchors_ = true
 
 [node name="ButtonYES" type="Button" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5963542
-anchor_top = 0.6558642
-anchor_right = 0.6501736
-anchor_bottom = 0.74228394
+anchor_left = 0.5980903
+anchor_top = 0.6589506
+anchor_right = 0.6519097
+anchor_bottom = 0.7453704
 metadata/_edit_use_anchors_ = true
 
 [node name="drink" type="AudioStreamPlayer" parent="Control"]
