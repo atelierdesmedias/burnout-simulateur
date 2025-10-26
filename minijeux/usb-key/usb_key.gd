@@ -44,7 +44,7 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 						get_parent().get_parent().hide()
 						get_tree().current_scene.process_mode = Node.PROCESS_MODE_INHERIT
 						await  connecting.finished
-						queue_free()
+						$"../../..".minijeu_finished()
 					else :
 						Globals.stress += 0.03
 						connecting.play(0.3)

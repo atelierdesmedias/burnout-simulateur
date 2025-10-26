@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://45lbmsbed7pa"]
 
+[ext_resource type="Script" uid="uid://drgrgoiakjvts" path="res://minijeux/minijeu.gd" id="1_0u8aa"]
 [ext_resource type="Script" uid="uid://bsslywlfhqkcw" path="res://minijeux/usb-key/usb_key.gd" id="1_scrg4"]
-[ext_resource type="Script" path="res://minijeux/usb-key/usb_keybase.gd" id="1_wvv4m"]
 [ext_resource type="Texture2D" uid="uid://ctgqnyxlpwdi2" path="res://minijeux/usb-key/pc.png" id="2_0u8aa"]
 [ext_resource type="Texture2D" uid="uid://bvrkes7n38ctj" path="res://minijeux/usb-key/usb_key_animation/usb_key_1.png" id="3_g27m4"]
 [ext_resource type="AudioStream" uid="uid://4if6ushltgv" path="res://minijeux/vending-machine/erreur.mp3" id="4_g27m4"]
@@ -36,18 +36,19 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="usb-key" type="Control"]
+[node name="usb-key" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_0u8aa")
+
+[node name="Control" type="Control" parent="."]
 process_mode = 3
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
 mouse_filter = 2
-script = ExtResource("1_wvv4m")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -58,45 +59,45 @@ mouse_filter = 2
 texture = ExtResource("2_0u8aa")
 stretch_mode = 5
 
-[node name="usbanchor" type="Node2D" parent="."]
+[node name="usbanchor" type="Node2D" parent="Control"]
 position = Vector2(817, 350)
 
-[node name="UsbKey" type="Area2D" parent="usbanchor"]
+[node name="UsbKey" type="Area2D" parent="Control/usbanchor"]
 scale = Vector2(0.4, 0.378)
 script = ExtResource("1_scrg4")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="usbanchor/UsbKey"]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Control/usbanchor/UsbKey"]
 scale = Vector2(7, 7)
 sprite_frames = SubResource("SpriteFrames_wvv4m")
 animation = &"rotation"
 
-[node name="Embout" type="Area2D" parent="usbanchor/UsbKey"]
+[node name="Embout" type="Area2D" parent="Control/usbanchor/UsbKey"]
 scale = Vector2(0.89345795, 1.012)
 collision_layer = 2
 collision_mask = 2
 
-[node name="Embout_collision" type="CollisionPolygon2D" parent="usbanchor/UsbKey/Embout"]
+[node name="Embout_collision" type="CollisionPolygon2D" parent="Control/usbanchor/UsbKey/Embout"]
 build_mode = 1
 polygon = PackedVector2Array(-148.3003, 18.29895, -173.4834, 18.29895, -173.4834, -13.070618, -125.91528, -13.070618, -125.91528, 18.29895, -134.30957, 18.29895)
 
-[node name="Erreur" type="AudioStreamPlayer" parent="usbanchor/UsbKey"]
+[node name="Erreur" type="AudioStreamPlayer" parent="Control/usbanchor/UsbKey"]
 stream = ExtResource("4_g27m4")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="usbanchor/UsbKey"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control/usbanchor/UsbKey"]
 polygon = PackedVector2Array(-155, -10.58197, -155, 18.518555, -112.5, 18.518555, -112.5, 31.746033, 27.5, 31.746033, 147.5, 23.80957, 155, 13.227539, 147.5, -2.6455078, 112.5, -31.746033, -112.5, -31.746033, -112.5, -10.58197)
 
-[node name="usbPort" parent="." instance=ExtResource("4_wvv4m")]
+[node name="usbPort" parent="Control" instance=ExtResource("4_wvv4m")]
 position = Vector2(597, 132)
 
-[node name="usbPort2" parent="." instance=ExtResource("4_wvv4m")]
+[node name="usbPort2" parent="Control" instance=ExtResource("4_wvv4m")]
 position = Vector2(623, 132)
 
-[node name="connecting" type="AudioStreamPlayer" parent="."]
+[node name="connecting" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("8_p5q2r")
 volume_db = 15.0
 
-[node name="disconnecting" type="AudioStreamPlayer" parent="."]
+[node name="disconnecting" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("9_vtjah")
 volume_db = 15.0
 
-[connection signal="area_entered" from="usbanchor/UsbKey/Embout" to="usbanchor/UsbKey" method="_on_embout_area_entered"]
+[connection signal="area_entered" from="Control/usbanchor/UsbKey/Embout" to="Control/usbanchor/UsbKey" method="_on_embout_area_entered"]

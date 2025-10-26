@@ -59,9 +59,11 @@ func _activateExternalQuest():
 func _dePopQuest():
 	hasQuest = false
 	$Quete.visible = false
+	$Humeur.visible = false
 	Globals.available_quests.append(mCurrentQuest)
 	await get_tree().create_timer(5.0).timeout
 	add_to_group("collegues")	
+	print("depop")
 	
 func _on_body_entered(body: Node2D) -> void:
 	if !(body is Player):
@@ -84,6 +86,7 @@ func _on_body_entered(body: Node2D) -> void:
 func _StartQuest():	
 	get_tree().current_scene.process_mode = PROCESS_MODE_DISABLED
 	var myNode = load(mQuest.scene)
-	var myNode_instance = myNode.instantiate()
+	var myNode_instance:MiniJeu = myNode.instantiate()
 	myNode_instance.z_index = 11
+	myNode_instance.mCollegue = self
 	get_tree().get_root().add_child(myNode_instance)	
