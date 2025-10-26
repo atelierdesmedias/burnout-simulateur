@@ -6,7 +6,7 @@ extends "res://minijeux/minijeu.gd"
 const min_x = -140
 const max_x = 0
 const offset = 10
-const max_velocity=1000
+const max_velocity=500
 
 var velocity = 0.0
 var direction_change_timer = 0.0
@@ -18,7 +18,6 @@ func  _ready() -> void:
 	$AudioStreamPlayer.stream = load("res://minijeux/machine-a-cafe/coffee.ogg")
 	$AudioStreamPlayer.play()
 	$AudioStreamPlayer.stream_paused = true
-	$AudioStreamPlayer.pitch_scale=0.5
 	$AudioStreamPlayer.connect("finished", minijeu_finished)
 	
 func _process(delta):
