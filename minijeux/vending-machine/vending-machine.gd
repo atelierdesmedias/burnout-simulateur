@@ -9,7 +9,6 @@ extends Control
 @onready var valider: AudioStreamPlayer = $Valider
 
 
-
 var code = randi_range(10000, 99999)
 var code_tape : int :
 	set(value):

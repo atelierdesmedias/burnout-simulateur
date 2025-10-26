@@ -213,11 +213,11 @@ offset_left = 0.40795898
 offset_top = -0.30400467
 offset_right = -0.43200684
 offset_bottom = 0.07998657
-text = "- 0
-- 1
-- 2
-- 3
-- 4"
+text = "0
+1
+2
+3
+4"
 label_settings = SubResource("LabelSettings_trghe")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -255,11 +255,11 @@ offset_left = 0.40795898
 offset_top = -0.30400467
 offset_right = -0.43200684
 offset_bottom = 0.07998657
-text = "- 5
-- 6
-- 7
-- 8
-- 9"
+text = "5
+6
+7
+8
+9"
 label_settings = SubResource("LabelSettings_trghe")
 horizontal_alignment = 1
 vertical_alignment = 1
