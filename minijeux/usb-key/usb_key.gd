@@ -44,8 +44,8 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 						queue_free()
 					else :
 						Globals.stress += 0.03
-						connecting.play(0.4)
+						connecting.play(0.3)
 						await connecting.finished
-						disconnecting.play(1)
+						disconnecting.play(0.3)
 				# On remet la position a zero
 				position = Vector2.ZERO
