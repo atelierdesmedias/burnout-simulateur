@@ -20,6 +20,7 @@
 [ext_resource type="AudioStream" uid="uid://cc1f0g6vuj1mq" path="res://minijeux/vending-machine/chiffres/valider.wav" id="17_trghe"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5b50y"]
+font_size = 25
 
 [sub_resource type="LabelSettings" id="LabelSettings_hkba5"]
 font = ExtResource("3_4hr0v")
@@ -275,24 +276,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="ButtonNO" type="Button" parent="Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.7178819
-anchor_top = 0.66049385
-anchor_right = 0.7717014
-anchor_bottom = 0.74691355
-metadata/_edit_use_anchors_ = true
-
-[node name="ButtonYES" type="Button" parent="Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5980903
-anchor_top = 0.6589506
-anchor_right = 0.6519097
-anchor_bottom = 0.7453704
-metadata/_edit_use_anchors_ = true
-
 [node name="drink" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("3_5b50y")
 
@@ -335,5 +318,27 @@ stream = ExtResource("16_yylxx")
 [node name="Valider" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("17_trghe")
 
-[connection signal="pressed" from="Control/ButtonNO" to="Control" method="_on_button_no_pressed"]
-[connection signal="pressed" from="Control/ButtonYES" to="Control" method="_on_button_yes_pressed"]
+[node name="ButtonNO" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7178819
+anchor_top = 0.66049385
+anchor_right = 0.7717014
+anchor_bottom = 0.74691355
+offset_right = 8.0
+offset_bottom = 8.0000305
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonYES" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5980903
+anchor_top = 0.6589506
+anchor_right = 0.6519097
+anchor_bottom = 0.7453704
+offset_right = 8.0
+offset_bottom = 8.0
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Control/ButtonNO" to="." method="_on_button_no_pressed"]
+[connection signal="pressed" from="Control/ButtonYES" to="." method="_on_button_yes_pressed"]
