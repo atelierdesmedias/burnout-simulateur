@@ -340,5 +340,5 @@ offset_right = 8.0
 offset_bottom = 8.0
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="Control/ButtonNO" to="." method="_on_button_no_pressed"]
-[connection signal="pressed" from="Control/ButtonYES" to="." method="_on_button_yes_pressed"]
+[connection signal="pressed" from="Control/ButtonNO" to="Control" method="_on_button_no_pressed"]
+[connection signal="pressed" from="Control/ButtonYES" to="Control" method="_on_button_yes_pressed"]

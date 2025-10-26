@@ -53,4 +53,4 @@ func _process(delta: float) -> void:
 
 func _on_crash():
 	$AudioStreamPlayer.play()
-	Globals.stress += 0.01
+	Globals.stress += 0.03
