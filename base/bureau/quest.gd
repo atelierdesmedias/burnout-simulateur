@@ -1,10 +1,13 @@
+class_name Quest
+
 extends Area2D
 
 @export var questName := "cafe"
-@export var questScene := ""
+var questScene := ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	add_to_group("quests")
 	monitoring = false
 	monitorable = false
 	$Declenche_MiniJeu.disabled = true
@@ -15,7 +18,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _ActivateJeu():
+func _ActivateJeu(pScene: String):
+	questScene = pScene
 	$Exclamation.visible = true
 	monitoring = true
 	monitorable = true

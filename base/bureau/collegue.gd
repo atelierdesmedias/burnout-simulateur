@@ -31,7 +31,17 @@ func _popQuest():
 	monitorable = true
 	$Declenche_MiniJeu.disabled = false
 	pass
+
+func _activateExternalQuest():
+	var quests = get_tree().get_nodes_in_group("quests")
 	
+	for pQuest:Quest in quests:
+		if pQuest.questName == mQuest.name:
+			pQuest._ActivateJeu(mQuest.scene)
+			pass
+		pass		
+	pass
+
 func _dePopQuest():
 	hasQuest = false
 	$Exclamation.visible = false
@@ -51,6 +61,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if(mQuest.instant):
 		_StartQuest()
 	else:
+		_activateExternalQuest()
 		$Exclamation.play(mQuest.name)
 		pass
 	
