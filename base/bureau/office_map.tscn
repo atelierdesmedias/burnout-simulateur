@@ -170,18 +170,23 @@ position = Vector2(1.8030615, 1.8030701)
 limit_smoothed = true
 
 [node name="Collegue" parent="TileMapLayer" instance=ExtResource("2_mqodo")]
+process_mode = 1
 position = Vector2(85, 93)
 
 [node name="Collegue2" parent="TileMapLayer" instance=ExtResource("2_mqodo")]
+process_mode = 1
 position = Vector2(87, 161)
 
 [node name="Collegue3" parent="TileMapLayer" instance=ExtResource("2_mqodo")]
+process_mode = 1
 position = Vector2(91, 221)
 
 [node name="Collegue4" parent="TileMapLayer" instance=ExtResource("2_mqodo")]
+process_mode = 1
 position = Vector2(143, 320)
 
 [node name="Collegue5" parent="TileMapLayer" instance=ExtResource("2_mqodo")]
+process_mode = 1
 position = Vector2(419, 109)
 giveQuest = false
 
