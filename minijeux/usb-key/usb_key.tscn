@@ -56,17 +56,17 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("2_0u8aa")
-expand_mode = 3
+stretch_mode = 5
 
 [node name="usbanchor" type="Node2D" parent="."]
-position = Vector2(960, 353)
+position = Vector2(817, 350)
 
 [node name="UsbKey" type="Area2D" parent="usbanchor"]
 scale = Vector2(0.4, 0.378)
 script = ExtResource("1_scrg4")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="usbanchor/UsbKey"]
-scale = Vector2(5, 5)
+scale = Vector2(7, 7)
 sprite_frames = SubResource("SpriteFrames_wvv4m")
 animation = &"rotation"
 
@@ -77,19 +77,19 @@ collision_mask = 2
 
 [node name="Embout_collision" type="CollisionPolygon2D" parent="usbanchor/UsbKey/Embout"]
 build_mode = 1
-polygon = PackedVector2Array(-103.53027, 13.070679, -120.31885, 13.070679, -120.31885, -5.2282715, -103.53027, -7.842407, -89.53955, -5.2282715, -89.53955, 13.070679)
+polygon = PackedVector2Array(-148.3003, 18.29895, -173.4834, 18.29895, -173.4834, -13.070618, -125.91528, -13.070618, -125.91528, 18.29895, -134.30957, 18.29895)
 
 [node name="Erreur" type="AudioStreamPlayer" parent="usbanchor/UsbKey"]
 stream = ExtResource("4_g27m4")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="usbanchor/UsbKey"]
-polygon = PackedVector2Array(-107.5, -2.6455078, -107.5, 13.227539, -77.5, 13.227539, -77.5, 23.80951, 20, 23.80951, 20, 13.227539, 105, 15.873047, 105, 5.2910156, 80, -21.164001, -77.5, -21.164001, -77.5, -2.6455078)
+polygon = PackedVector2Array(-155, -10.58197, -155, 18.518555, -112.5, 18.518555, -112.5, 31.746033, 27.5, 31.746033, 147.5, 23.80957, 155, 13.227539, 147.5, -2.6455078, 112.5, -31.746033, -112.5, -31.746033, -112.5, -10.58197)
 
 [node name="usbPort" parent="." instance=ExtResource("4_wvv4m")]
-position = Vector2(608, 132)
+position = Vector2(597, 132)
 
 [node name="usbPort2" parent="." instance=ExtResource("4_wvv4m")]
-position = Vector2(654, 132)
+position = Vector2(623, 132)
 
 [node name="connecting" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_p5q2r")
