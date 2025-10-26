@@ -10,12 +10,6 @@ uniform float max_amplitude =
 uniform float frequency = 90.0; // Number of waves across the screen
 uniform float speed = 2.0;      // Speed of the wave
 
-// void vertex() {
-//  Offset Y position with a sine wave based on X and TIME
-// float wave = amplitude * sin(VERTEX.x / frequency + TIME * speed);
-// VERTEX.y += wave;
-//}
-
 void fragment() {
   // Calculate wave offset for the Y coordinate
   float amplitude = smoothstep(0.8, 1., stress) * max_amplitude;
@@ -34,13 +28,6 @@ void fragment() {
   c.b = mix(c.b, c.b * 0.5, fade);
 
   COLOR.rgb = c;
-  //COLOR.rgb = vec3(SCREEN_UV.x, 0., 0.);
 
   COLOR.a = 1.0;
 }
-
-// void light() {
-//	// Called for every pixel for every light affecting the CanvasItem.
-//	// Uncomment to replace the default light processing function with this
-// one.
-// }
