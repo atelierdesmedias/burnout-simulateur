@@ -42,7 +42,7 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 					if randf()< chance:
 						$"../../.."._depopQuest()
 						connecting.play()
-						get_parent().get_parent().hide()
+						$"../../..".hide()
 						get_tree().current_scene.process_mode = Node.PROCESS_MODE_INHERIT
 						await  connecting.finished
 						queue_free()

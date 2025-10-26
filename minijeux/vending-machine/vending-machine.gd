@@ -51,6 +51,7 @@ func _on_button_yes_pressed() -> void:
 	valider.play()
 	await valider.finished
 	if code == code_tape:
+		$".."._depopQuest()
 		drink.play()
 		hide()
 		get_tree().current_scene.process_mode = Node.PROCESS_MODE_INHERIT
