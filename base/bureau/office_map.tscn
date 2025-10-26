@@ -162,7 +162,7 @@ tile_map_data = PackedByteArray("AAAdAAIAAQAAAAAAAAAVAAIAAQASAAAAAAAYAAIAAQAGAAE
 tile_set = SubResource("TileSet_65870")
 
 [node name="Player_Office" parent="TileMapLayer" instance=ExtResource("2_54lem")]
-position = Vector2(191, 190)
+position = Vector2(421, 450)
 speed = 50.0
 
 [node name="Camera2D" type="Camera2D" parent="TileMapLayer/Player_Office"]
