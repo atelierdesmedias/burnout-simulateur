@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jyd7akyd8v35"
-path="res://.godot/imported/usb_key_2.png-4c8c986cb078a1c7564ae81be624d05f.ctex"
+uid="uid://btdcwn8rxoo8u"
+path="res://.godot/imported/Animation_KEY_MINIGAME Etienne Fustier.png-c04f63f182f853fcd4b2b2984aa15d4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minijeux/usb-key/usb_key_animation/usb_key_2.png"
-dest_files=["res://.godot/imported/usb_key_2.png-4c8c986cb078a1c7564ae81be624d05f.ctex"]
+source_file="res://minijeux/usb-key/usb_key_animation/Animation_KEY_MINIGAME Etienne Fustier.png"
+dest_files=["res://.godot/imported/Animation_KEY_MINIGAME Etienne Fustier.png-c04f63f182f853fcd4b2b2984aa15d4b.ctex"]
 
 [params]
 
