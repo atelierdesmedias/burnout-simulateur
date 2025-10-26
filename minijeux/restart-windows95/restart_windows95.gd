@@ -71,6 +71,7 @@ func _on_win_95_panel_gui_input(event: InputEvent) -> void:
 			_add_error_dialog()
 
 func _add_error_dialog() -> void:
+	Globals.stress += 0.03
 	var error_dialog = ErrorDialogScene.instantiate()
 	error_dialog.position = next_error_position
 	next_error_position += Vector2(20, 20)
