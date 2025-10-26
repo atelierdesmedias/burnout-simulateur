@@ -32,6 +32,8 @@ func _ready() -> void:
 				v.y  += 45
 			var place = PlaceScene.instantiate()
 			place.position = v
+			if y % 2 == 0:
+				place.rotation = PI
 			places.append(place)
 			add_child(place)
 			var to_car_vector = car.position - v;
