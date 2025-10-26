@@ -9,6 +9,7 @@ extends Area2D
 var position_click
 var is_dragging : bool
 var drag_offset
+var chance = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -30,13 +31,15 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 				# On checke si la position est proche de zero pour retourner la clef usb avec un click simple
 				var position_delta = get_global_mouse_position().distance_to(position_click)
 				if position_delta < 5.0 :
+					chance = randf_range(0,0.333)
 					if sprite_2d.frame == 0:
 						sprite_2d.play()
 					else :
 						sprite_2d.play("rotation",-1.0,true)
 				# On vérifie si l'embout est sur le port usb
 				if embout.get_overlapping_areas():
-					if randf()> 0.67:
+					chance = chance + 0.10
+					if randf()< chance:
 						connecting.play()
 						get_parent().get_parent().hide()
 						get_tree().current_scene.process_mode = Node.PROCESS_MODE_INHERIT
