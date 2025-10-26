@@ -4,6 +4,9 @@ extends Node2D
 
 var mCollegue: Collegue
 
+func _depopQuest():
+	mCollegue._dePopQuest()
+	
 func minijeu_finished():
 	mCollegue._dePopQuest()
 	get_tree().current_scene.process_mode = Node.PROCESS_MODE_INHERIT

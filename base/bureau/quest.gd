@@ -31,8 +31,9 @@ func _ActivateJeu(pScene: String, pCollegue: Collegue):
 func _StartMinijeu():
 	get_tree().current_scene.process_mode = PROCESS_MODE_DISABLED
 	var myNode = load(questScene)
-	var myNode_instance = myNode.instantiate()
+	var myNode_instance:MiniJeu = myNode.instantiate()
 	myNode_instance.z_index = 11
+	myNode_instance.mCollegue = mCollegue
 	get_tree().get_root().add_child(myNode_instance)
 
 func _on_body_entered(body: Node2D) -> void:

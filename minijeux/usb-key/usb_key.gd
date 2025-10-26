@@ -40,11 +40,12 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 				if embout.get_overlapping_areas():
 					chance = chance + 0.10
 					if randf()< chance:
+						$"../../.."._depopQuest()
 						connecting.play()
 						get_parent().get_parent().hide()
 						get_tree().current_scene.process_mode = Node.PROCESS_MODE_INHERIT
 						await  connecting.finished
-						$"../../..".minijeu_finished()
+						queue_free()
 					else :
 						Globals.stress += 0.03
 						connecting.play(0.3)

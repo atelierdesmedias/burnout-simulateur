@@ -63,7 +63,6 @@ func _dePopQuest():
 	Globals.available_quests.append(mCurrentQuest)
 	await get_tree().create_timer(5.0).timeout
 	add_to_group("collegues")	
-	print("depop")
 	
 func _on_body_entered(body: Node2D) -> void:
 	if !(body is Player):
