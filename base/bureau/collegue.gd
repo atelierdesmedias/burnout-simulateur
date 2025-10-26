@@ -21,12 +21,12 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:	
 	if(hasQuest):
-		if (Time.get_ticks_msec()-mQuestStartTime)*0.001 > 20:
+		if (Time.get_ticks_msec()-mQuestStartTime)*0.001 > mQuest.stressTime+10:
 			$Humeur.play("Red")
 			$Humeur.visible = true
 			Globals.stress += 0.02*delta
 			pass
-		elif (Time.get_ticks_msec()-mQuestStartTime)*0.001 > 10:
+		elif (Time.get_ticks_msec()-mQuestStartTime)*0.001 > mQuest.stressTime:
 			$Humeur.play("Orange")
 			$Humeur.visible = true
 			Globals.stress += 0.01*delta
@@ -61,7 +61,7 @@ func _dePopQuest():
 	$Quete.visible = false
 	$Humeur.visible = false
 	Globals.available_quests.append(mCurrentQuest)
-	await get_tree().create_timer(5.0).timeout
+	await get_tree().create_timer(4.0).timeout
 	add_to_group("collegues")	
 	
 func _on_body_entered(body: Node2D) -> void:
