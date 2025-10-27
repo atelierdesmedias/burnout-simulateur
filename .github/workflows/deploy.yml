@@ -21,6 +21,9 @@ concurrency:
 
 jobs:
   deploy:
+    strategy:
+      matrix:
+        platform: [html, windows]
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -38,24 +41,28 @@ jobs:
           godot_executable_download_url: https://github.com/godotengine/godot/releases/download/4.5-stable/Godot_v4.5-stable_linux.x86_64.zip
           godot_export_templates_download_url: https://github.com/godotengine/godot/releases/download/4.5-stable/Godot_v4.5-stable_export_templates.tpz
           relative_project_path: ./
-          relative_export_path: ./build/
+          relative_export_path: ./build/${{ matrix.platform }}/
           cache: true
+          export_preset: ${{ matrix.platform }}
       - name: List files
         run: tree
       - name: Setup Pages
+        if: matrix.platform == 'html'
         uses: actions/configure-pages@v5
       - name: Upload artifact
+        if: matrix.platform == 'html'
         uses: actions/upload-pages-artifact@v3
         with:
           path: "build/html/"
       - name: Deploy to GitHub Pages
+        if: matrix.platform == 'html'
         id: deployment
         uses: actions/deploy-pages@v4
       - uses: KikimoraGames/itch-publish@v0.0.3
         with:
           butlerApiKey: ${{secrets.BUTLER_API_KEY}}
-          gameData: ./build/html
+          gameData: ./build/${{ matrix.platform }}
           itchUsername: ${{env.ITCH_USERNAME}}
           itchGameId: ${{ env.ITCH_GAME_ID }}
-          buildChannel: html
-          buildNumber: ${{ needs.version.outputs.version_hash }}
+          buildChannel: ${{ matrix.platform }}
+          buildNumber: ${{ github.sha }}
