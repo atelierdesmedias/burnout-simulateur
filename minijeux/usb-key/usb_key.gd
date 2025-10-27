@@ -31,7 +31,7 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 				# On checke si la position est proche de zero pour retourner la clef usb avec un click simple
 				var position_delta = get_global_mouse_position().distance_to(position_click)
 				if position_delta < 5.0 :
-					chance = randf_range(0,0.333)
+					chance = randf_range(0,chance+0.1)
 					if sprite_2d.frame == 0:
 						sprite_2d.play()
 					else :
@@ -47,7 +47,7 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 						await  connecting.finished
 						queue_free()
 					else :
-						Globals.stress += 0.03
+						Globals.stress += 0.015
 						connecting.play(0.3)
 						await connecting.finished
 						disconnecting.play(0.3)

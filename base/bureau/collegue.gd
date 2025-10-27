@@ -24,12 +24,12 @@ func _process(delta: float) -> void:
 		if (Time.get_ticks_msec()-mQuestStartTime)*0.001 > mQuest.stressTime+10:
 			$Humeur.play("Red")
 			$Humeur.visible = true
-			Globals.stress += 0.02*delta
+			Globals.stress += 0.015*delta
 			pass
 		elif (Time.get_ticks_msec()-mQuestStartTime)*0.001 > mQuest.stressTime:
 			$Humeur.play("Orange")
 			$Humeur.visible = true
-			Globals.stress += 0.01*delta
+			Globals.stress += 0.008*delta
 			pass
 		else:			
 			$Humeur.visible = false

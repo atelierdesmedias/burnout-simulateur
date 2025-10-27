@@ -29,7 +29,7 @@ func _process(delta):
 	robinet.position.x += velocity * delta
 	robinet.position.x = clamp(robinet.position.x, min_x, max_x )
 	if($AudioStreamPlayer.stream_paused):
-		Globals.stress += delta*0.02
+		Globals.stress += delta*0.015
 		pass
 
 func _pick_new_velocity():
