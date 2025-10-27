@@ -14,5 +14,5 @@ func _input(event):
 		# vérifie si la touche est pressée
 		if event.pressed and event.keycode == Key.KEY_ESCAPE:
 			get_tree().quit()  # quitte le jeu
-		if event.pressed and event.keycode == Key.KEY_SPACE:
+		if event.pressed and event.keycode == Key.KEY_SPACE or event.keycode == Key.KEY_ENTER:
 			get_tree().change_scene_to_packed(starting_map)

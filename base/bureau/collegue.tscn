@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bv3hfa7e44jo0" path="res://base/bureau/textures/Speech/T_Speech.png" id="2_rj8xc"]
 [ext_resource type="Texture2D" uid="uid://da3i4hrnnjyu5" path="res://base/bureau/textures/Speech/T_Speech_Orange.png" id="3_kootm"]
 [ext_resource type="Texture2D" uid="uid://miuxtba7jtca" path="res://base/bureau/textures/Speech/T_Speech_Red.png" id="4_ynute"]
-[ext_resource type="Script" uid="uid://igejuwoishbx" path="res://base/bureau/exclamation.gd" id="5_fr1tm"]
+[ext_resource type="Script" path="res://base/bureau/exclamation.gd" id="5_fr1tm"]
 [ext_resource type="Texture2D" uid="uid://dadpg61rsm35p" path="res://base/bureau/textures/Speech/T_Speech_Coffee.png" id="5_mbljp"]
 [ext_resource type="Texture2D" uid="uid://b13iuknv6y43r" path="res://base/bureau/textures/Speech/T_Speech_USB.png" id="6_li2sx"]
 [ext_resource type="Texture2D" uid="uid://d2p8co5jfunto" path="res://base/bureau/textures/Speech/T_Speech_Car.png" id="6_llh8h"]

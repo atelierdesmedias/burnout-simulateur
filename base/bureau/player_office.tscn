@@ -149,7 +149,7 @@ script = ExtResource("1_kd7p7")
 y_sort_enabled = true
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_26may")
-animation = &"walk_right"
+animation = &"walk_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true

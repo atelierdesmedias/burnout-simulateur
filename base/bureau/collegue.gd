@@ -10,7 +10,6 @@ var mCurrentQuest
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
-	
 	$AnimatedSprite2D.play(Globals.take_random_animation())
 	if giveQuest : add_to_group("collegues")	
 	monitoring = false
@@ -67,7 +66,6 @@ func _dePopQuest():
 func _on_body_entered(body: Node2D) -> void:
 	if !(body is Player):
 		return
-
 	await get_tree().process_frame
 	monitoring = false
 	monitorable = false

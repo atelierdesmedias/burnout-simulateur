@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bovpm76u0e6rm"]
+
+[ext_resource type="Script" uid="uid://dnh0gir3e8lcn" path="res://base/bureau/bureaux.gd" id="1_8y8uc"]
+[ext_resource type="AudioStream" uid="uid://bfrv64xqgkk1m" path="res://base/bureau/modem_56k.wav" id="2_x1sqf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_65870"]
+size = Vector2(234, 409)
+
+[node name="Bureaux" type="Area2D"]
+collision_layer = 128
+collision_mask = 128
+script = ExtResource("1_8y8uc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(127, 215.5)
+shape = SubResource("RectangleShape2D_65870")
+
+[node name="Modem" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_x1sqf")
+volume_db = -20.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

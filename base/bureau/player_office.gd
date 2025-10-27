@@ -14,7 +14,6 @@ func _physics_process(delta):
 
 	velocity = input_vector * speed
 	move_and_slide()  # gère les collisions automatiquement	
-	
 	# Animations
 	if velocity.length() > 0:
 		position += velocity.normalized()*speed*delta	
@@ -34,3 +33,4 @@ func _physics_process(delta):
 
 func _process(delta: float) -> void:	
 	pass
+	

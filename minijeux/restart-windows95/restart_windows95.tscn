@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://c67rvw4cy36in"]
+[gd_scene load_steps=25 format=3 uid="uid://c67rvw4cy36in"]
 
 [ext_resource type="Script" uid="uid://c818xg4aneh5a" path="res://minijeux/restart-windows95/restart_windows95.gd" id="1_r8gdb"]
 [ext_resource type="Texture2D" uid="uid://blbfhe7kasuso" path="res://minijeux/restart-windows95/ordinateur.webp" id="2_5asav"]
@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://hwr5hr4mb6dj" path="res://minijeux/restart-windows95/dos/frame_012.jpg" id="16_73gte"]
 [ext_resource type="Texture2D" uid="uid://il6k82wd3uc2" path="res://minijeux/restart-windows95/dos/frame_016.jpg" id="20_4bjfb"]
 [ext_resource type="Texture2D" uid="uid://coae0crb1kixx" path="res://minijeux/restart-windows95/dos/frame_018.jpg" id="22_4ch56"]
-[ext_resource type="AudioStream" uid="uid://bfrv64xqgkk1m" path="res://minijeux/restart-windows95/modem_56k.wav" id="23_dqg2x"]
 [ext_resource type="Texture2D" uid="uid://cps4u4wl2bccm" path="res://minijeux/restart-windows95/dos/frame_022.jpg" id="26_m3ofh"]
 [ext_resource type="Texture2D" uid="uid://cvfoqmbwwy1bq" path="res://minijeux/restart-windows95/dos/frame_027.jpg" id="31_rhevs"]
 [ext_resource type="Texture2D" uid="uid://cef8qjqqkg1xg" path="res://minijeux/restart-windows95/dos/frame_031.jpg" id="35_nny4x"]
@@ -161,11 +160,6 @@ uv = PackedVector2Array(2, 4.5, 635.5, 1.5, 638.3401, 398.86365, 5.8928223, 398.
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 volume_db = -10.816
-autoplay = true
-
-[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("23_dqg2x")
-volume_db = -18.0
 autoplay = true
 
 [connection signal="gui_input" from="Win95Panel" to="." method="_on_win_95_panel_gui_input"]
