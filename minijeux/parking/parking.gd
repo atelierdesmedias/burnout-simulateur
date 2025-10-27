@@ -11,11 +11,6 @@ func _ready() -> void:
 	car.connect("crash", _on_crash)
 	for y in range(4):
 		for x in range(21):
-			# remove
-			#if y != 3 or x != 6:
-				#continue
-			#print(x,"x", y)
-			# after
 			if y >= 3 and x < 3:
 				continue
 			if (y == 1 or y == 2) and x > 18:
