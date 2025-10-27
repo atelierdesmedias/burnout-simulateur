@@ -20,15 +20,15 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:	
 	if(hasQuest):
-		if (Time.get_ticks_msec()-mQuestStartTime)*0.001 > mQuest.stressTime+10:
+		if (Time.get_ticks_msec()-mQuestStartTime)*0.001 > mQuest.stressTime+15:
 			$Humeur.play("Red")
 			$Humeur.visible = true
-			Globals.stress += 0.015*delta
+			Globals.stress += 0.01*delta
 			pass
 		elif (Time.get_ticks_msec()-mQuestStartTime)*0.001 > mQuest.stressTime:
 			$Humeur.play("Orange")
 			$Humeur.visible = true
-			Globals.stress += 0.008*delta
+			Globals.stress += 0.005*delta
 			pass
 		else:			
 			$Humeur.visible = false

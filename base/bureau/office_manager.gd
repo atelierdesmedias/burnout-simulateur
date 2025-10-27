@@ -13,7 +13,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	timeSinceLastQuest += delta
 	if timeSinceLastQuest > timeNextQuest || get_tree().get_nodes_in_group("collegues").size() == 4:
-		timeNextQuest = randi_range(7,15)
+		timeNextQuest = randi_range(10,15)
 		timeSinceLastQuest = 0.0
 		if !Globals.available_quests.is_empty():
 			_popQuest()	

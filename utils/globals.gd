@@ -12,10 +12,10 @@ var animations: Array[String] = [
 ]
 
 var quetes_table = [
-	QueteData.new("usb","res://minijeux/usb-key/usb_key.tscn","T_Speech_USB",true, 10),
-	QueteData.new("windows","res://minijeux/restart-windows95/restart_windows95.tscn","T_Speech_Windows",true, 15),
-	QueteData.new("cafe","res://minijeux/machine-a-cafe/machine-a-cafe.tscn","T_Speech_Coffee",false, 15),
-	QueteData.new("car","res://minijeux/parking/parking.tscn","T_Speech_Car",false, 20),
+	QueteData.new("usb","res://minijeux/usb-key/usb_key.tscn","T_Speech_USB",true, 15),
+	QueteData.new("windows","res://minijeux/restart-windows95/restart_windows95.tscn","T_Speech_Windows",true, 20),
+	QueteData.new("cafe","res://minijeux/machine-a-cafe/machine-a-cafe.tscn","T_Speech_Coffee",false, 20),
+	QueteData.new("car","res://minijeux/parking/parking.tscn","T_Speech_Car",false, 25),
 	QueteData.new("vending","res://minijeux/vending-machine/control.tscn","T_Speech_Vending",false, 15)
 ]
 
