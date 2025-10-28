@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://bjlvwo8xxqhl0"]
+[gd_scene load_steps=20 format=4 uid="uid://bjlvwo8xxqhl0"]
 
 [ext_resource type="Script" uid="uid://ca1e6qvcuqsey" path="res://base/bureau/office_manager.gd" id="1_4hjjf"]
 [ext_resource type="Texture2D" uid="uid://csoq3if53byan" path="res://base/bureau/textures/T_Map_Bureau.png" id="1_mqodo"]
@@ -9,9 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://cwqoj8hnn6y76" path="res://base/bureau/quest.tscn" id="4_65870"]
 [ext_resource type="Texture2D" uid="uid://b13bu8kklo86" path="res://base/Texture/T_TransparentSquare.png" id="5_wx7p8"]
 [ext_resource type="PackedScene" uid="uid://b20r6aoa2smdl" path="res://base/bureau/chauvesouri.tscn" id="7_65870"]
-[ext_resource type="PackedScene" uid="uid://bovpm76u0e6rm" path="res://base/bureau/bureaux.tscn" id="8_j2i6f"]
+[ext_resource type="Script" uid="uid://dnh0gir3e8lcn" path="res://base/bureau/bureaux.gd" id="8_fyjo3"]
 [ext_resource type="AudioStream" uid="uid://chks4j1sync6l" path="res://base/bureau/frigo.mp3" id="9_0ujal"]
 [ext_resource type="AudioStream" uid="uid://dkva7y5ugxle6" path="res://base/bureau/the_office_cursed.ogg" id="9_2vjsf"]
+[ext_resource type="AudioStream" uid="uid://bfrv64xqgkk1m" path="res://base/bureau/modem_56k.wav" id="9_tr7l8"]
+[ext_resource type="AudioStream" uid="uid://djbcaja3qf56c" path="res://base/bureau/claviers.wav" id="10_gem8v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2vjsf"]
 texture = ExtResource("4_0esrf")
@@ -212,7 +214,52 @@ questName = "car"
 [node name="chauvesouri" parent="TileMapLayer" instance=ExtResource("7_65870")]
 position = Vector2(363, 275)
 
-[node name="Bureaux" parent="TileMapLayer" instance=ExtResource("8_j2i6f")]
+[node name="Bureaux" type="Node2D" parent="TileMapLayer"]
+script = ExtResource("8_fyjo3")
+
+[node name="Modem" type="AudioStreamPlayer2D" parent="TileMapLayer/Bureaux"]
+position = Vector2(85, 344)
+stream = ExtResource("9_tr7l8")
+volume_db = -15.0
+autoplay = true
+max_distance = 350.0
+attenuation = 2.0
+
+[node name="clavier" type="AudioStreamPlayer2D" parent="TileMapLayer/Bureaux"]
+position = Vector2(82, 96)
+stream = ExtResource("10_gem8v")
+volume_db = -10.0
+max_distance = 250.0
+attenuation = 2.0
+
+[node name="clavier2" type="AudioStreamPlayer2D" parent="TileMapLayer/Bureaux"]
+position = Vector2(80, 167)
+stream = ExtResource("10_gem8v")
+volume_db = -10.0
+max_distance = 250.0
+attenuation = 2.0
+
+[node name="clavier3" type="AudioStreamPlayer2D" parent="TileMapLayer/Bureaux"]
+position = Vector2(78, 229)
+stream = ExtResource("10_gem8v")
+volume_db = -10.0
+max_distance = 250.0
+attenuation = 2.0
+
+[node name="clavier4" type="AudioStreamPlayer2D" parent="TileMapLayer/Bureaux"]
+position = Vector2(136, 328)
+stream = ExtResource("10_gem8v")
+volume_db = -10.0
+max_distance = 250.0
+attenuation = 2.0
+
+[node name="Modem2" type="AudioStreamPlayer2D" parent="TileMapLayer/Bureaux"]
+position = Vector2(87, 141)
+stream = ExtResource("9_tr7l8")
+volume_db = -15.0
+autoplay = true
+max_distance = 350.0
+attenuation = 2.0
 
 [node name="frigo" type="AudioStreamPlayer2D" parent="TileMapLayer"]
 position = Vector2(384, 38)
@@ -231,4 +278,5 @@ physics_quadrant_size = 8
 process_mode = 3
 stream = ExtResource("9_2vjsf")
 volume_db = 1.0
+autoplay = true
 parameters/looping = true
