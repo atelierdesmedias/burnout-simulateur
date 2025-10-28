@@ -14,6 +14,8 @@ stretch = true
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 disable_3d = true
 handle_input_locally = false
+snap_2d_transforms_to_pixel = true
+audio_listener_enable_2d = true
 size = Vector2i(1152, 648)
 size_2d_override = Vector2i(380, 214)
 size_2d_override_stretch = true

@@ -231,5 +231,4 @@ physics_quadrant_size = 8
 process_mode = 3
 stream = ExtResource("9_2vjsf")
 volume_db = 1.0
-autoplay = true
 parameters/looping = true

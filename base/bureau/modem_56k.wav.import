@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/modem_56k.wav-1451823c5165755c961f10007b9fe88
 
 [params]
 
-force/8_bit=false
+force/8_bit=true
 force/mono=false
 force/max_rate=false
 force/max_rate_hz=44100
