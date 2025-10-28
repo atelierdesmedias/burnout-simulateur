@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blbfhe7kasuso"
-path="res://.godot/imported/ordinateur.webp-20c6275d683fa1cd8352b5bdb754ef52.ctex"
+uid="uid://btxumun4532nw"
+path="res://.godot/imported/ordinateur.png-c0265f04466bba8e5d9b386b47c0334d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minijeux/restart-windows95/ordinateur.webp"
-dest_files=["res://.godot/imported/ordinateur.webp-20c6275d683fa1cd8352b5bdb754ef52.ctex"]
+source_file="res://minijeux/restart-windows95/ordinateur.png"
+dest_files=["res://.godot/imported/ordinateur.png-c0265f04466bba8e5d9b386b47c0334d.ctex"]
 
 [params]
 

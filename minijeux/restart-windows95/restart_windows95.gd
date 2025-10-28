@@ -1,11 +1,11 @@
 extends "res://minijeux/minijeu.gd"
 
-@onready var start_menu: Polygon2D = $Win95Panel/Ordinateur/Win95Polygon2D/StartMenuPolygon2D
-@onready var win95_desktop: Polygon2D  = $Win95Panel/Ordinateur/Win95Polygon2D
-@onready var win95_switching_off: Polygon2D  = $Win95Panel/Ordinateur/SwitchingOffPolygon2D
-@onready var computer_off_screen: Polygon2D = $Win95Panel/Ordinateur/ComputerOffPolygon2D
+@onready var start_menu: Sprite2D = $Win95Panel/Ordinateur/Win95/StartMenu
+@onready var win95_desktop: Sprite2D  = $Win95Panel/Ordinateur/Win95
+@onready var win95_switching_off: Sprite2D  = $Win95Panel/Ordinateur/Restart
+@onready var computer_off_screen: Sprite2D = $Win95Panel/Ordinateur/ComputerOff
 @onready var computer_starting_animation: AnimatedSprite2D = $Win95Panel/Ordinateur/DosStarting
-@onready var win95_starting: Polygon2D  = $Win95Panel/Ordinateur/Win95StartingPolygon2D
+@onready var win95_starting: Sprite2D  = $Win95Panel/Ordinateur/Windows95Starting
 @onready var startStream = preload("res://minijeux/restart-windows95/start.ogg")
 @onready var quitStream = preload("res://minijeux/restart-windows95/quit.ogg")
 @onready var errorStream = preload("res://minijeux/restart-windows95/error.ogg")
