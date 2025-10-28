@@ -13,7 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://chks4j1sync6l" path="res://base/bureau/frigo.mp3" id="9_0ujal"]
 [ext_resource type="AudioStream" uid="uid://bfrv64xqgkk1m" path="res://base/bureau/modem_56k.wav" id="9_tr7l8"]
 [ext_resource type="AudioStream" uid="uid://djbcaja3qf56c" path="res://base/bureau/claviers.wav" id="10_gem8v"]
-[ext_resource type="AudioStream" uid="uid://bhu3qsoi7m07m" path="res://base/bureau/The Office 8bits.ogg" id="14_fyjo3"]
+[ext_resource type="AudioStream" uid="uid://br2iumgjns82" path="res://base/bureau/The Office fruity v3.ogg" id="14_fyjo3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2vjsf"]
 texture = ExtResource("4_0esrf")
@@ -279,6 +279,6 @@ physics_quadrant_size = 8
 [node name="TheOfficeCursed" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("14_fyjo3")
-volume_db = -5.0
+volume_db = -8.0
 autoplay = true
 parameters/looping = true

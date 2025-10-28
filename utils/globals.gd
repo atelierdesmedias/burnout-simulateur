@@ -1,7 +1,12 @@
 extends Node
 
 var money = 0.0
-var stress = 0.0
+var stress = 0.0 :
+	set(value):
+		stress = value
+		Engine.time_scale = 1 + (stress/2)
+		AudioServer.playback_speed_scale = 1 + (stress/2)
+
 var day = 0
 var animations: Array[String] = [
 	"perso_1",
