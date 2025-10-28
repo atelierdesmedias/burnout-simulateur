@@ -4,6 +4,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	# On vient démarrer les sons de clavier à des endroits aléatoires pour un bruit plus homogène dans les bureaux.
 	randomize()
 	for clavier in claviers:
 		if clavier.stream:

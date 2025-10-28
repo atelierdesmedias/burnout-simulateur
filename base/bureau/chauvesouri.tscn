@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://b20r6aoa2smdl"]
+[gd_scene load_steps=8 format=3 uid="uid://b20r6aoa2smdl"]
 
 [ext_resource type="Texture2D" uid="uid://ju57y40pt5j" path="res://base/bureau/textures/T_Props.png" id="1_lccds"]
 [ext_resource type="Script" uid="uid://ce1mn2oo16phx" path="res://base/bureau/chauvesouri.gd" id="1_s7vyx"]
+[ext_resource type="AudioStream" uid="uid://bh2in7mc36num" path="res://base/bureau/chauve-souris.mp3" id="3_lwxkq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s7vyx"]
 atlas = ExtResource("1_lccds")
@@ -42,6 +43,10 @@ sprite_frames = SubResource("SpriteFrames_k13jp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 39)
 shape = SubResource("RectangleShape2D_opjce")
+
+[node name="noise" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_lwxkq")
+volume_db = -18.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,5 +1,6 @@
 extends Area2D
 
+@onready var noise: AudioStreamPlayer = $noise
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,6 +15,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if !(body is Player):
 		return	
 	$AnimatedSprite2D.play("open")
+	noise.play()
 	pass # Replace with function body.
 
 
@@ -21,4 +23,5 @@ func _on_body_exited(body: Node2D) -> void:
 	if !(body is Player):
 		return
 	$AnimatedSprite2D.play("default")
+	noise.stop()
 	pass # Replace with function body.

@@ -21,7 +21,7 @@ func check(body:RigidBody2D):
 	var dist_to_pi = abs(abs(norm_rot) - PI)
 	var min_dist = min(dist_to_0, dist_to_pi)
 
-	if local_pos.length() < 10.:
+	if local_pos.length() < 20.:
 		if body.linear_velocity.length() < 0.001:
 			if min_dist < 0.1:
 				return true
