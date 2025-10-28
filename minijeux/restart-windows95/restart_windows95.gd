@@ -13,7 +13,6 @@ extends "res://minijeux/minijeu.gd"
 
 const ErrorDialogScene = preload("res://minijeux/restart-windows95/error_dialog.tscn")
 
-var next_error_position = Vector2(100, 100)
 var is_computer_on = true
 var is_windows_started = true
 var error_dialogs = []
@@ -73,8 +72,7 @@ func _on_win_95_panel_gui_input(event: InputEvent) -> void:
 func _add_error_dialog() -> void:
 	Globals.stress += 0.015
 	var error_dialog = ErrorDialogScene.instantiate()
-	error_dialog.position = next_error_position
-	next_error_position += Vector2(20, 20)
+	error_dialog.position = Vector2(randi()%600, randi()%400)
 	add_child(error_dialog)
 	error_dialogs.append(error_dialog)
 	error_dialog.connect(
