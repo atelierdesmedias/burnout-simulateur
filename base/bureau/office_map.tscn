@@ -215,6 +215,7 @@ questName = "car"
 position = Vector2(363, 275)
 
 [node name="Bureaux" type="Node2D" parent="TileMapLayer"]
+process_mode = 1
 script = ExtResource("8_fyjo3")
 
 [node name="Modem" type="AudioStreamPlayer2D" parent="TileMapLayer/Bureaux"]
@@ -262,6 +263,7 @@ max_distance = 350.0
 attenuation = 2.0
 
 [node name="frigo" type="AudioStreamPlayer2D" parent="TileMapLayer"]
+process_mode = 1
 position = Vector2(384, 38)
 stream = ExtResource("9_0ujal")
 autoplay = true
