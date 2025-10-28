@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bhu3qsoi7m07m"
+path="res://.godot/imported/The Office 8bits.ogg-9fdfdcf7db354c53956a4654d37ec38c.oggvorbisstr"
+
+[deps]
+
+source_file="res://base/bureau/The Office 8bits.ogg"
+dest_files=["res://.godot/imported/The Office 8bits.ogg-9fdfdcf7db354c53956a4654d37ec38c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
