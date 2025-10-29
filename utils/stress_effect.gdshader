@@ -9,10 +9,11 @@ uniform float max_amplitude =
     0.002; // How much to wave (in UV units, 0.02 ~ a few pixels)
 uniform float frequency = 90.0; // Number of waves across the screen
 uniform float speed = 2.0;      // Speed of the wave
+uniform float stress_start = 0.6;
 
 void fragment() {
   // Calculate wave offset for the Y coordinate
-  float amplitude = smoothstep(0.8, 1., stress) * max_amplitude;
+  float amplitude = smoothstep(stress_start, 1., stress) * max_amplitude;
   float left = smoothstep(0.0, 0.1, SCREEN_UV.x);
   float right = smoothstep(1.0, 0.9, SCREEN_UV.x);
   float edge_fade = left * right;
@@ -23,7 +24,7 @@ void fragment() {
   // Sample the screen texture at the wavy UV
   vec3 c = texture(screen_texture, uv).rgb;
 
-  float fade = clamp((stress - 0.8) / 0.2, 0.0, 1.0);
+  float fade = clamp((stress - stress_start) / 0.2, 0.0, 1.0);
   c.g = mix(c.g, c.g * 0.5, fade);
   c.b = mix(c.b, c.b * 0.5, fade);
 
