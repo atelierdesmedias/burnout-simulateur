@@ -4,15 +4,23 @@ extends CharacterBody2D
 @export var speed := 200.0
 
 func _physics_process(delta):
-	var input_vector = Vector2.ZERO
-	input_vector.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
-	input_vector.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
+	
+	var mouse_pos = get_global_mouse_position()
+	var direction = Vector2.ZERO
+	
+	# Si le bouton gauche est maintenu
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		direction = (mouse_pos - global_position)
+		
+	else:
+		direction.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+		direction.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
+		
+		# Normalisation pour que diagonales ne soient pas plus rapides
+	if direction != Vector2.ZERO:
+		direction = direction.normalized()
 
-	# Normalisation pour que diagonales ne soient pas plus rapides
-	if input_vector != Vector2.ZERO:
-		input_vector = input_vector.normalized()
-
-	velocity = input_vector * speed
+	velocity = direction * speed
 	move_and_slide()  # gère les collisions automatiquement	
 	# Animations
 	if velocity.length() > 0:
