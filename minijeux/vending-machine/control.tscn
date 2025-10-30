@@ -1,65 +1,69 @@
 [gd_scene load_steps=23 format=3 uid="uid://cu1hpj2tp7t07"]
 
-[ext_resource type="Script" uid="uid://dbr8vemqcj8q5" path="res://minijeux/vending-machine/vending-machine.gd" id="1_5b50y"]
-[ext_resource type="Script" uid="uid://drgrgoiakjvts" path="res://minijeux/minijeu.gd" id="1_trghe"]
-[ext_resource type="FontFile" uid="uid://cigeyuoqi8sct" path="res://minijeux/vending-machine/Galaxy_dingbats-Regular.ttf" id="3_4hr0v"]
-[ext_resource type="AudioStream" uid="uid://bftt8lqx3m5xf" path="res://minijeux/vending-machine/vending_machine.wav" id="3_5b50y"]
-[ext_resource type="Texture2D" uid="uid://bp71xvkqvde8d" path="res://minijeux/vending-machine/vending machine final.png" id="3_hkba5"]
-[ext_resource type="AudioStream" uid="uid://4if6ushltgv" path="res://minijeux/vending-machine/erreur.mp3" id="4_d3eid"]
-[ext_resource type="AudioStream" uid="uid://3jx8hjbhvckh" path="res://minijeux/vending-machine/chiffres/Chiffres-0.wav" id="6_wt08n"]
-[ext_resource type="AudioStream" uid="uid://bisu4s6xmfreq" path="res://minijeux/vending-machine/chiffres/Chiffres-1.wav" id="7_45jr6"]
-[ext_resource type="AudioStream" uid="uid://cofg01lfiaadn" path="res://minijeux/vending-machine/chiffres/Chiffres-2.wav" id="8_yylxx"]
-[ext_resource type="AudioStream" uid="uid://dy682r18vhdt" path="res://minijeux/vending-machine/chiffres/Chiffres-3.wav" id="9_trghe"]
-[ext_resource type="AudioStream" uid="uid://c2devx01oke7c" path="res://minijeux/vending-machine/chiffres/Chiffres-4.wav" id="10_hkba5"]
-[ext_resource type="AudioStream" uid="uid://dyi88eua4rjd5" path="res://minijeux/vending-machine/chiffres/Chiffres-5.wav" id="11_623a3"]
-[ext_resource type="AudioStream" uid="uid://x4qxyuurp3n6" path="res://minijeux/vending-machine/chiffres/Chiffres-6.wav" id="12_awdpl"]
-[ext_resource type="AudioStream" uid="uid://tq02y7vkhabf" path="res://minijeux/vending-machine/chiffres/Chiffres-7.wav" id="13_34ya7"]
-[ext_resource type="AudioStream" uid="uid://c4s1wsgi265qu" path="res://minijeux/vending-machine/chiffres/Chiffres-8.wav" id="14_6hfdp"]
-[ext_resource type="AudioStream" uid="uid://bytxf3wkd3pjg" path="res://minijeux/vending-machine/chiffres/Chiffres-9.wav" id="15_xpyc2"]
-[ext_resource type="AudioStream" uid="uid://blui7cy1r2e0j" path="res://minijeux/vending-machine/chiffres/effacer.wav" id="16_yylxx"]
-[ext_resource type="AudioStream" uid="uid://cc1f0g6vuj1mq" path="res://minijeux/vending-machine/chiffres/valider.wav" id="17_trghe"]
+[ext_resource type="Script" uid="uid://drgrgoiakjvts" path="res://minijeux/minijeu.gd" id="1_u522r"]
+[ext_resource type="Script" uid="uid://dbr8vemqcj8q5" path="res://minijeux/vending-machine/vending-machine.gd" id="2_e46wx"]
+[ext_resource type="Texture2D" uid="uid://bp71xvkqvde8d" path="res://minijeux/vending-machine/vending machine final.png" id="3_ye4cv"]
+[ext_resource type="FontFile" uid="uid://cigeyuoqi8sct" path="res://minijeux/vending-machine/Galaxy_dingbats-Regular.ttf" id="4_w7de5"]
+[ext_resource type="AudioStream" uid="uid://bftt8lqx3m5xf" path="res://minijeux/vending-machine/vending_machine.wav" id="5_11ygu"]
+[ext_resource type="AudioStream" uid="uid://4if6ushltgv" path="res://minijeux/vending-machine/erreur.mp3" id="6_qy3p2"]
+[ext_resource type="AudioStream" uid="uid://3jx8hjbhvckh" path="res://minijeux/vending-machine/chiffres/Chiffres-0.wav" id="7_73n01"]
+[ext_resource type="AudioStream" uid="uid://bisu4s6xmfreq" path="res://minijeux/vending-machine/chiffres/Chiffres-1.wav" id="8_tkdo0"]
+[ext_resource type="AudioStream" uid="uid://cofg01lfiaadn" path="res://minijeux/vending-machine/chiffres/Chiffres-2.wav" id="9_cdjhk"]
+[ext_resource type="AudioStream" uid="uid://dy682r18vhdt" path="res://minijeux/vending-machine/chiffres/Chiffres-3.wav" id="10_q0g2f"]
+[ext_resource type="AudioStream" uid="uid://c2devx01oke7c" path="res://minijeux/vending-machine/chiffres/Chiffres-4.wav" id="11_8wux4"]
+[ext_resource type="AudioStream" uid="uid://dyi88eua4rjd5" path="res://minijeux/vending-machine/chiffres/Chiffres-5.wav" id="12_xm7um"]
+[ext_resource type="AudioStream" uid="uid://x4qxyuurp3n6" path="res://minijeux/vending-machine/chiffres/Chiffres-6.wav" id="13_54tf4"]
+[ext_resource type="AudioStream" uid="uid://tq02y7vkhabf" path="res://minijeux/vending-machine/chiffres/Chiffres-7.wav" id="14_xfpmw"]
+[ext_resource type="AudioStream" uid="uid://c4s1wsgi265qu" path="res://minijeux/vending-machine/chiffres/Chiffres-8.wav" id="15_maj0q"]
+[ext_resource type="AudioStream" uid="uid://bytxf3wkd3pjg" path="res://minijeux/vending-machine/chiffres/Chiffres-9.wav" id="16_ye0oo"]
+[ext_resource type="AudioStream" uid="uid://blui7cy1r2e0j" path="res://minijeux/vending-machine/chiffres/effacer.wav" id="17_4gs7w"]
+[ext_resource type="AudioStream" uid="uid://cc1f0g6vuj1mq" path="res://minijeux/vending-machine/chiffres/valider.wav" id="18_bv8sl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5b50y"]
 font_size = 25
 
 [sub_resource type="LabelSettings" id="LabelSettings_hkba5"]
-font = ExtResource("3_4hr0v")
-font_size = 42
+font = ExtResource("4_w7de5")
+font_size = 32
 font_color = Color(0, 0, 0, 1)
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_yylxx"]
-font = ExtResource("3_4hr0v")
-font_size = 30
+font = ExtResource("4_w7de5")
+font_size = 23
 font_color = Color(0, 0, 0, 1)
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_trghe"]
-font_size = 22
+font_size = 17
 font_color = Color(0, 0, 0, 1)
 outline_size = 1
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Vending-machine" type="Node2D"]
-script = ExtResource("1_trghe")
+script = ExtResource("1_u522r")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
-script = ExtResource("1_5b50y")
+script = ExtResource("2_e46wx")
 
 [node name="VendingMachine" type="TextureRect" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 325.0
+offset_top = 75.0
+offset_right = -577.0
+offset_bottom = -323.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_hkba5")
-expand_mode = 3
-stretch_mode = 5
+scale = Vector2(2, 2)
+texture = ExtResource("3_ye4cv")
+stretch_mode = 4
 
 [node name="Buttons_numbers" type="Control" parent="Control"]
 layout_mode = 1
@@ -72,100 +76,120 @@ grow_vertical = 2
 [node name="Button1" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5980903
-anchor_top = 0.3101852
-anchor_right = 0.6519097
-anchor_bottom = 0.39660493
+anchor_left = 0.5746528
+anchor_top = 0.35030866
+anchor_right = 0.6180556
+anchor_bottom = 0.42746913
 metadata/_edit_use_anchors_ = true
 
 [node name="Button2" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.6588542
-anchor_top = 0.3101852
-anchor_right = 0.7126736
-anchor_bottom = 0.39660493
+anchor_left = 0.6197917
+anchor_top = 0.35030866
+anchor_right = 0.66300005
+anchor_bottom = 0.42700002
+offset_right = 0.22393799
+offset_bottom = 0.3039856
 metadata/_edit_use_anchors_ = true
 
 [node name="Button3" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.71875
-anchor_top = 0.3101852
-anchor_right = 0.7725694
-anchor_bottom = 0.39660493
+anchor_left = 0.6666667
+anchor_top = 0.35030866
+anchor_right = 0.71000004
+anchor_bottom = 0.42700002
+offset_right = 0.079956055
+offset_bottom = 0.3039856
 metadata/_edit_use_anchors_ = true
 
 [node name="Button4" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5998264
-anchor_top = 0.4382716
-anchor_right = 0.6536458
-anchor_bottom = 0.52469134
+anchor_left = 0.5755208
+anchor_top = 0.44907406
+anchor_right = 0.6293403
+anchor_bottom = 0.5354938
+offset_left = -1.0
+offset_right = -13.0
+offset_bottom = -5.9999695
 metadata/_edit_use_anchors_ = true
 
 [node name="Button5" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.6605903
-anchor_top = 0.4382716
-anchor_right = 0.7144097
-anchor_bottom = 0.52469134
+anchor_left = 0.6388889
+anchor_top = 0.44753087
+anchor_right = 0.6927083
+anchor_bottom = 0.53395057
+offset_left = -19.0
+offset_right = -31.0
+offset_bottom = -5.9999695
 metadata/_edit_use_anchors_ = true
 
 [node name="Button6" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.7204861
-anchor_top = 0.4382716
-anchor_right = 0.7743056
-anchor_bottom = 0.52469134
+anchor_left = 0.6684028
+anchor_top = 0.44907406
+anchor_right = 0.712
+anchor_bottom = 0.526
+offset_right = -0.22399902
+offset_bottom = 0.15197754
 metadata/_edit_use_anchors_ = true
 
 [node name="Button7" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5980903
-anchor_top = 0.5493827
-anchor_right = 0.6519097
-anchor_bottom = 0.63580245
+anchor_left = 0.5737847
+anchor_top = 0.537037
+anchor_right = 0.61700004
+anchor_bottom = 0.614
+offset_right = 0.21594238
+offset_bottom = 0.1279602
 metadata/_edit_use_anchors_ = true
 
 [node name="Button8" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.6588542
-anchor_top = 0.5493827
-anchor_right = 0.7126736
-anchor_bottom = 0.63580245
+anchor_left = 0.6215278
+anchor_top = 0.53549385
+anchor_right = 0.665
+anchor_bottom = 0.61300004
+offset_right = -0.08001709
+offset_bottom = -0.22406006
 metadata/_edit_use_anchors_ = true
 
 [node name="Button9" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.71875
-anchor_top = 0.5493827
-anchor_right = 0.7725694
-anchor_bottom = 0.63580245
+anchor_left = 0.6675347
+anchor_top = 0.53549385
+anchor_right = 0.711
+anchor_bottom = 0.61300004
+offset_right = -0.072021484
+offset_bottom = -0.22406006
 metadata/_edit_use_anchors_ = true
 
 [node name="Button0" type="Button" parent="Control/Buttons_numbers"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.6588542
-anchor_top = 0.6558642
-anchor_right = 0.7126736
-anchor_bottom = 0.74228394
+anchor_left = 0.6206597
+anchor_top = 0.61882716
+anchor_right = 0.66400003
+anchor_bottom = 0.69600004
+offset_right = 0.07196045
+offset_bottom = -0.00793457
 metadata/_edit_use_anchors_ = true
 
 [node name="affichage" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.6006944
-anchor_top = 0.20216049
-anchor_right = 0.7640764
-anchor_bottom = 0.28990126
+anchor_left = 0.5772569
+anchor_top = 0.2685185
+anchor_right = 0.7050486
+anchor_bottom = 0.33619756
 offset_right = -0.21600342
 offset_bottom = 0.14398193
 label_settings = SubResource("LabelSettings_5b50y")
@@ -176,10 +200,10 @@ metadata/_edit_use_anchors_ = true
 [node name="postit" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.30381948
-anchor_top = 0.60493827
-anchor_right = 0.4376015
-anchor_bottom = 0.6917535
+anchor_left = 0.33854163
+anchor_top = 0.5339506
+anchor_right = 0.43027395
+anchor_bottom = 0.59131384
 offset_right = 36.056152
 offset_bottom = 23.0
 rotation = -0.4886922
@@ -191,10 +215,10 @@ metadata/_edit_use_anchors_ = true
 [node name="alphabet" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.44148612
-anchor_top = 0.023617297
-anchor_right = 0.47954166
-anchor_bottom = 0.28845686
+anchor_left = 0.45435
+anchor_top = 0.102321014
+anchor_right = 0.49240556
+anchor_bottom = 0.3671606
 offset_left = 0.40795898
 offset_top = -0.30400467
 offset_right = -0.43200684
@@ -213,10 +237,10 @@ metadata/_edit_use_anchors_ = true
 [node name="alphabetcorresp" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.4770764
-anchor_top = 0.014358035
-anchor_right = 0.4986389
-anchor_bottom = 0.29462966
+anchor_left = 0.48575702
+anchor_top = 0.08997532
+anchor_right = 0.5073195
+anchor_bottom = 0.37024695
 offset_left = 0.40795898
 offset_top = -0.30400467
 offset_right = -0.43200684
@@ -235,10 +259,10 @@ metadata/_edit_use_anchors_ = true
 [node name="alphabet2" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5317639
-anchor_top = 0.065283954
-anchor_right = 0.5793681
-anchor_bottom = 0.3301235
+anchor_left = 0.5187431
+anchor_top = 0.1331852
+anchor_right = 0.56634736
+anchor_bottom = 0.39802477
 offset_left = 0.40795898
 offset_top = -0.30400467
 offset_right = -0.43200684
@@ -257,10 +281,10 @@ metadata/_edit_use_anchors_ = true
 [node name="alphabet2corresp" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.56995845
-anchor_top = 0.073
-anchor_right = 0.5923889
-anchor_bottom = 0.3378395
+anchor_left = 0.5525973
+anchor_top = 0.14398766
+anchor_right = 0.5750277
+anchor_bottom = 0.40882722
 offset_left = 0.40795898
 offset_top = -0.30400467
 offset_right = -0.43200684
@@ -277,67 +301,67 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="drink" type="AudioStreamPlayer" parent="Control"]
-stream = ExtResource("3_5b50y")
+stream = ExtResource("5_11ygu")
 
 [node name="erreur" type="AudioStreamPlayer" parent="Control"]
-stream = ExtResource("4_d3eid")
+stream = ExtResource("6_qy3p2")
 
 [node name="Chiffres0" type="AudioStreamPlayer" parent="Control"]
-stream = ExtResource("6_wt08n")
+stream = ExtResource("7_73n01")
 
 [node name="Chiffres1" type="AudioStreamPlayer" parent="Control"]
-stream = ExtResource("7_45jr6")
+stream = ExtResource("8_tkdo0")
 
 [node name="Chiffres2" type="AudioStreamPlayer" parent="Control"]
-stream = ExtResource("8_yylxx")
+stream = ExtResource("9_cdjhk")
 
 [node name="Chiffres3" type="AudioStreamPlayer" parent="Control"]
-stream = ExtResource("9_trghe")
+stream = ExtResource("10_q0g2f")
 
 [node name="Chiffres4" type="AudioStreamPlayer" parent="Control"]
-stream = ExtResource("10_hkba5")
+stream = ExtResource("11_8wux4")
 
 [node name="Chiffres5" type="AudioStreamPlayer" parent="Control"]
-stream = ExtResource("11_623a3")
+stream = ExtResource("12_xm7um")
 
 [node name="Chiffres6" type="AudioStreamPlayer" parent="Control"]
-stream = ExtResource("12_awdpl")
+stream = ExtResource("13_54tf4")
 
 [node name="Chiffres7" type="AudioStreamPlayer" parent="Control"]
-stream = ExtResource("13_34ya7")
+stream = ExtResource("14_xfpmw")
 
 [node name="Chiffres8" type="AudioStreamPlayer" parent="Control"]
-stream = ExtResource("14_6hfdp")
+stream = ExtResource("15_maj0q")
 
 [node name="Chiffres9" type="AudioStreamPlayer" parent="Control"]
-stream = ExtResource("15_xpyc2")
+stream = ExtResource("16_ye0oo")
 
 [node name="Effacer" type="AudioStreamPlayer" parent="Control"]
-stream = ExtResource("16_yylxx")
+stream = ExtResource("17_4gs7w")
 
 [node name="Valider" type="AudioStreamPlayer" parent="Control"]
-stream = ExtResource("17_trghe")
+stream = ExtResource("18_bv8sl")
 
 [node name="ButtonNO" type="Button" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.7178819
-anchor_top = 0.66049385
-anchor_right = 0.7717014
-anchor_bottom = 0.74691355
-offset_right = 8.0
-offset_bottom = 8.0000305
+anchor_left = 0.6657986
+anchor_top = 0.61882716
+anchor_right = 0.711
+anchor_bottom = 0.693
+offset_right = -0.072021484
+offset_bottom = -0.06402588
 metadata/_edit_use_anchors_ = true
 
 [node name="ButtonYES" type="Button" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5980903
-anchor_top = 0.6589506
-anchor_right = 0.6519097
-anchor_bottom = 0.7453704
-offset_right = 8.0
-offset_bottom = 8.0
+anchor_left = 0.5711806
+anchor_top = 0.61882716
+anchor_right = 0.61905557
+anchor_bottom = 0.6956545
+offset_right = -0.15203857
+offset_bottom = 0.21588135
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Control/ButtonNO" to="Control" method="_on_button_no_pressed"]

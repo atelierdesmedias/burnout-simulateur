@@ -50,20 +50,28 @@ mouse_filter = 2
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_left = 0.87103474
+anchor_top = 0.42474073
+anchor_right = 1.3493195
+anchor_bottom = 1.2541852
+offset_left = -678.432
+offset_top = -200.232
+offset_right = -979.416
+offset_bottom = -487.71204
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(2, 2)
 mouse_filter = 2
 texture = ExtResource("2_0u8aa")
-stretch_mode = 5
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
 
 [node name="usbanchor" type="Node2D" parent="Control"]
-position = Vector2(817, 350)
+position = Vector2(747, 278)
 
 [node name="UsbKey" type="Area2D" parent="Control/usbanchor"]
-scale = Vector2(0.4, 0.378)
+scale = Vector2(0.3, 0.284)
 script = ExtResource("1_scrg4")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Control/usbanchor/UsbKey"]
@@ -87,10 +95,10 @@ stream = ExtResource("4_g27m4")
 polygon = PackedVector2Array(-155, -10.58197, -155, 18.518555, -112.5, 18.518555, -112.5, 31.746033, 27.5, 31.746033, 147.5, 23.80957, 155, 13.227539, 147.5, -2.6455078, 112.5, -31.746033, -112.5, -31.746033, -112.5, -10.58197)
 
 [node name="usbPort" parent="Control" instance=ExtResource("4_wvv4m")]
-position = Vector2(597, 132)
+position = Vector2(593, 175)
 
 [node name="usbPort2" parent="Control" instance=ExtResource("4_wvv4m")]
-position = Vector2(623, 132)
+position = Vector2(613, 175)
 
 [node name="connecting" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("8_p5q2r")
