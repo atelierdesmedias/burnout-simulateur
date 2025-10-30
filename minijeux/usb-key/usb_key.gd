@@ -10,6 +10,7 @@ var position_click
 var is_dragging : bool
 var drag_offset
 var chance = 0
+var busy : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,10 +18,12 @@ func _ready() -> void:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-		if is_dragging:
+		if is_dragging and not busy:
 			global_position = get_global_mouse_position() + drag_offset
 
 func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
+	if busy:
+		return
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT :
 			if event.pressed :
 				position_click = get_global_mouse_position()
@@ -38,6 +41,7 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 						sprite_2d.play("rotation",-1.0,true)
 				# On vérifie si l'embout est sur le port usb
 				if embout.get_overlapping_areas():
+					busy = true
 					chance = chance + 0.10
 					if randf()< chance:
 						$"../../.."._depopQuest()
@@ -51,5 +55,6 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 						connecting.play(0.3)
 						await connecting.finished
 						disconnecting.play(0.3)
+						busy = false
 				# On remet la position a zero
 				position = Vector2.ZERO
