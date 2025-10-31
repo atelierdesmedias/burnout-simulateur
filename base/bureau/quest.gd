@@ -12,12 +12,7 @@ func _ready() -> void:
 	monitoring = false
 	monitorable = false
 	$Declenche_MiniJeu.disabled = true
-	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 func _ActivateJeu(pScene: String, pCollegue: Collegue):
 	mCollegue = pCollegue

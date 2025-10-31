@@ -1,14 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://byebouf5w4atg"]
 
-[ext_resource type="Shader" path="res://utils/stress_effect.gdshader" id="1_1lgj1"]
-[ext_resource type="Script" path="res://utils/stress_effect.gd" id="1_m8y1e"]
+[ext_resource type="Shader" uid="uid://elhj2wd6myui" path="res://utils/stress_effect.gdshader" id="1_1lgj1"]
+[ext_resource type="Script" uid="uid://dnbin2p8daq0a" path="res://utils/stress_effect.gd" id="1_m8y1e"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8uh7m"]
 shader = ExtResource("1_1lgj1")
-shader_parameter/stress = 0.8010000380475
+shader_parameter/stress = 0.0
 shader_parameter/max_amplitude = 0.022
 shader_parameter/frequency = 8.29
 shader_parameter/speed = 2.0
+shader_parameter/stress_start = 0.6
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_m8y1e")

@@ -12,8 +12,3 @@ func _ready() -> void:
 			var position_aleatoire = randf() * longueur
 			clavier.seek(position_aleatoire)  # Déplacer la tête de lecture
 			clavier.play()
-	pass # Replace with function body.
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

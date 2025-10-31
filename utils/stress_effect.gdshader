@@ -4,7 +4,7 @@ uniform sampler2D screen_texture : hint_screen_texture,
                                    repeat_disable,
                                    filter_nearest;
 
-uniform float stress : hint_range(0.0, 1.) = 0.99; // How much to wave
+uniform float stress : hint_range(0.0, 1.) = 0.0;
 uniform float max_amplitude =
     0.002; // How much to wave (in UV units, 0.02 ~ a few pixels)
 uniform float frequency = 90.0; // Number of waves across the screen
