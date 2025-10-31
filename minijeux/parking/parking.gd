@@ -1,14 +1,25 @@
 extends "res://minijeux/minijeu.gd"
 
 @onready var car= $Car
+@onready var timer: Timer = $Timer
+@onready var consignes: RichTextLabel = $Timer/consignes
 
 const OtherCarScene = preload("res://minijeux/parking/other_car.tscn")
 const PlaceScene = preload("res://minijeux/parking/place.tscn")
 var places : Array[Node2D] = []
 
+var messages = [
+		"[center][color=#FFFFFF][wave amp=5 freq=50]MA VOITURE !!![/wave][/color][/center]",
+		"[center][color=#FFFFFF][wave amp=5 freq=50]!#€%&*@ !![/wave][/color][/center]",
+		"[center][color=#FFFFFF][wave amp=5 freq=50]ÇA VA TE COÛTER CHER...[/wave][/color][/center]",
+		"[center][color=#FFFFFF][wave amp=5 freq=50]QUI T'A DONNE LE PERMIS ??![/wave][/color][/center]",
+		"[center][color=#FFFFFF][wave amp=5 freq=50]APPELLE TON ASSURANCE TOUT DE SUITE ![/wave][/color][/center]"
+	]
+
 func _ready() -> void:
 	$AudioStreamPlayer.stream = load("res://minijeux/parking/crash.ogg")
 	car.connect("crash", _on_crash)
+	consignes.text = "[center][color=#FFFFFF][wave amp=5 freq=50]Gare la voiture ![/wave][/color][/center]"
 	for y in range(4):
 		for x in range(21):
 			if y >= 3 and x < 3:
@@ -49,3 +60,10 @@ func _process(delta: float) -> void:
 func _on_crash():
 	$AudioStreamPlayer.play()
 	Globals.stress += 0.005
+	timer.start()
+	consignes.text = messages[randi() % messages.size()]
+
+
+func _on_timer_timeout() -> void:
+	consignes.text = ""
+	pass # Replace with function body.

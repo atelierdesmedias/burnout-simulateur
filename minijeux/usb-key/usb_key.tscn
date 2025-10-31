@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://45lbmsbed7pa"]
+[gd_scene load_steps=15 format=3 uid="uid://45lbmsbed7pa"]
 
 [ext_resource type="Script" uid="uid://drgrgoiakjvts" path="res://minijeux/minijeu.gd" id="1_0u8aa"]
 [ext_resource type="Script" uid="uid://bsslywlfhqkcw" path="res://minijeux/usb-key/usb_key.gd" id="1_scrg4"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cleuwcwf1kf0m" path="res://minijeux/usb-key/usb_key_animation/usb_key_5.png" id="8_f0b8g"]
 [ext_resource type="AudioStream" uid="uid://b6trqevrgyi1u" path="res://minijeux/usb-key/usb connecting.mp3" id="8_p5q2r"]
 [ext_resource type="AudioStream" uid="uid://oru5qeom6fn1" path="res://minijeux/usb-key/usb disconnecting.mp3" id="9_vtjah"]
+[ext_resource type="FontFile" uid="uid://cyqofix72htmb" path="res://minijeux/Wariowareinc-BWWdn.ttf" id="13_7mpxf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wvv4m"]
 animations = [{
@@ -108,4 +109,26 @@ volume_db = 15.0
 stream = ExtResource("9_vtjah")
 volume_db = 15.0
 
+[node name="Timer" type="Timer" parent="Control"]
+wait_time = 3.0
+autostart = true
+
+[node name="consignes" type="RichTextLabel" parent="Control/Timer"]
+anchors_preset = -1
+anchor_left = 0.28645834
+anchor_top = 0.7903457
+anchor_right = 0.7140556
+anchor_bottom = 0.87980247
+offset_left = -5.0
+offset_top = 5.855957
+offset_right = 0.40795898
+offset_bottom = 5.8880005
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("13_7mpxf")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+metadata/_edit_use_anchors_ = true
+
 [connection signal="area_entered" from="Control/usbanchor/UsbKey/Embout" to="Control/usbanchor/UsbKey" method="_on_embout_area_entered"]
+[connection signal="timeout" from="Control/Timer" to="Control/usbanchor/UsbKey" method="_on_timer_timeout"]

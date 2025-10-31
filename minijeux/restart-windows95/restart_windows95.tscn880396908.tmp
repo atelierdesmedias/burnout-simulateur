@@ -151,14 +151,14 @@ autostart = true
 
 [node name="consignes" type="RichTextLabel" parent="Timer"]
 anchors_preset = -1
-anchor_left = 0.402
-anchor_top = 0.79
-anchor_right = 0.69600004
+anchor_left = 0.36458334
+anchor_top = 0.7903457
+anchor_right = 0.6541598
 anchor_bottom = 0.87980247
-offset_left = -0.104003906
-offset_top = 0.07998657
-offset_right = 0.20794678
-offset_bottom = -0.11199951
+offset_left = -5.0
+offset_top = 5.855957
+offset_right = 0.40795898
+offset_bottom = 5.8880005
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/normal_font = ExtResource("22_bjdow")

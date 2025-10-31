@@ -5,6 +5,8 @@ extends Area2D
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
 @onready var connecting: AudioStreamPlayer = $"../../connecting"
 @onready var disconnecting: AudioStreamPlayer = $"../../disconnecting"
+@onready var consignes: RichTextLabel = $"../../Timer/consignes"
+@onready var timer: Timer = $"../../Timer"
 
 var position_click
 var is_dragging : bool
@@ -14,6 +16,7 @@ var busy : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	consignes.text = "[center][color=#FFFFFF][wave amp=5 freq=50]Rentre la cle ![/wave][/color][/center]"
 	pass
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -37,8 +40,12 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 					chance = randf_range(0,chance+0.1)
 					if sprite_2d.frame == 0:
 						sprite_2d.play()
+						timer.start()
+						consignes.text = "[center][color=#FFFFFF][wave amp=5 freq=50]Tourne ![/wave][/color][/center]"
 					else :
 						sprite_2d.play("rotation",-1.0,true)
+						timer.start()
+						consignes.text = "[center][color=#FFFFFF][wave amp=5 freq=50]Et retourne, super nickel ![/wave][/color][/center]"
 				# On vérifie si l'embout est sur le port usb
 				if embout.get_overlapping_areas():
 					busy = true
@@ -54,7 +61,14 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 						Globals.stress += 0.015
 						connecting.play(0.3)
 						await connecting.finished
+						timer.start()
+						consignes.text = "[center][color=#FFFFFF][wave amp=5 freq=50]Ca veut pas rentrer, reessaye ![/wave][/color][/center]"
 						disconnecting.play(0.3)
 						busy = false
 				# On remet la position a zero
 				position = Vector2.ZERO
+
+
+func _on_timer_timeout() -> void:
+	consignes.text = ""
+	pass # Replace with function body.

@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://b14fghhi8ujl4"]
+[gd_scene load_steps=12 format=3 uid="uid://b14fghhi8ujl4"]
 
 [ext_resource type="PackedScene" uid="uid://ygpcl6tiytpv" path="res://minijeux/parking/car.tscn" id="1_8v8vh"]
 [ext_resource type="Script" uid="uid://dydpwkh4use5l" path="res://minijeux/parking/parking.gd" id="1_hh03x"]
 [ext_resource type="Texture2D" uid="uid://s5kfrtbdi7dj" path="res://minijeux/parking/parking.png" id="2_hh03x"]
+[ext_resource type="FontFile" uid="uid://cyqofix72htmb" path="res://minijeux/Wariowareinc-BWWdn.ttf" id="4_wbgxk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqjgm"]
 size = Vector2(962.75, 13.5)
@@ -70,3 +71,26 @@ shape = SubResource("RectangleShape2D_whxl3")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 volume_db = -12.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="consignes" type="RichTextLabel" parent="Timer"]
+anchors_preset = -1
+anchor_left = 0.0069444445
+anchor_top = 0.7903457
+anchor_right = 1.0057223
+anchor_bottom = 0.87980247
+offset_left = -3.0
+offset_top = 77.85596
+offset_right = 2.407959
+offset_bottom = 77.888
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("4_wbgxk")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+metadata/_edit_use_anchors_ = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

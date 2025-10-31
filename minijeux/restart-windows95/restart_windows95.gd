@@ -9,6 +9,9 @@ extends "res://minijeux/minijeu.gd"
 @onready var startStream = preload("res://minijeux/restart-windows95/start.ogg")
 @onready var quitStream = preload("res://minijeux/restart-windows95/quit.ogg")
 @onready var errorStream = preload("res://minijeux/restart-windows95/error.ogg")
+@onready var consignes: RichTextLabel = $Timer/consignes
+@onready var timer: Timer = $Timer
+var count = 1
 
 
 const ErrorDialogScene = preload("res://minijeux/restart-windows95/error_dialog.tscn")
@@ -19,13 +22,14 @@ var error_dialogs = []
 
 
 func _ready():
+	consignes.text = "[center][color=#FFFFFF][wave amp=5 freq=50]Redemarre l'ordinateur ![/wave][/color][/center]"
 	start_menu.hide()
 	win95_desktop.show()
 	win95_switching_off.hide()
 	computer_off_screen.hide()
 	computer_starting_animation.hide()
 	win95_starting.hide()
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(0.2).timeout
 	_add_error_dialog()
 
 
@@ -67,7 +71,17 @@ func _on_power_off_button_pressed() -> void:
 func _on_win_95_panel_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if is_windows_started:
+			count += 1
 			_add_error_dialog()
+			timer.start()
+			if count <= 2:
+				consignes.text = "[center][color=#FFFFFF][wave amp=5 freq=50]Oups ![/wave][/color][/center]"
+			elif count <=5 :
+				consignes.text = "[center][color=#FFFFFF][wave amp=5 freq=50]Tu vas le faire planter ![/wave][/color][/center]"
+			elif count <=8 :
+				consignes.text = "[center][color=#FFFFFF][wave amp=5 freq=50]AHHHHH ![/wave][/color][/center]"
+			else :
+				consignes.text = "[center][color=#FFFFFF][wave amp=5 freq=50]Tu le fais expres ???![/wave][/color][/center]"
 
 func _add_error_dialog() -> void:
 	Globals.stress += 0.015
@@ -84,5 +98,11 @@ func _add_error_dialog() -> void:
 
 func _on_error_dialog_closed(error_dialog):
 	error_dialogs.erase(error_dialog)
+	count -= 1
 	if error_dialogs.is_empty():
 		print("All ErrorDialogs are closed!")
+
+
+func _on_timer_timeout() -> void:
+	consignes.text = ""
+	pass # Replace with function body.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bjni1uek0xlty"]
+[gd_scene load_steps=12 format=3 uid="uid://bjni1uek0xlty"]
 
 [ext_resource type="Script" uid="uid://ck0rsckpxnmpr" path="res://minijeux/machine-a-cafe/machine_a_cafe.gd" id="1_04wlw"]
 [ext_resource type="Texture2D" uid="uid://dhe6vi30c6mp7" path="res://minijeux/machine-a-cafe/Machine.png" id="2_1o1g5"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b4ilive880ecp" path="res://minijeux/machine-a-cafe/jet eau 2.png" id="5_thjcm"]
 [ext_resource type="Texture2D" uid="uid://3frf1oqfj7nv" path="res://minijeux/machine-a-cafe/jet eau 3.png" id="6_lusrn"]
 [ext_resource type="Texture2D" uid="uid://c8lvynnyiygdc" path="res://minijeux/machine-a-cafe/Tasse.png" id="7_8ah5u"]
+[ext_resource type="FontFile" uid="uid://cyqofix72htmb" path="res://minijeux/Wariowareinc-BWWdn.ttf" id="8_nnwd3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1o1g5"]
 size = Vector2(16.5, 44.585007)
@@ -71,5 +72,31 @@ shape = SubResource("RectangleShape2D_nnwd3")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="consignes" type="RichTextLabel" parent="Timer"]
+anchors_preset = -1
+anchor_left = 0.39000002
+anchor_top = 0.78900003
+anchor_right = 0.684
+anchor_bottom = 0.878
+offset_left = 9.719971
+offset_top = -390.27203
+offset_right = 10.031982
+offset_bottom = -389.94403
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("8_nnwd3")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer2" type="Timer" parent="Timer"]
+wait_time = 0.5
+
 [connection signal="area_entered" from="Tasse/TasseArea" to="." method="_on_tasse_area_area_entered"]
 [connection signal="area_exited" from="Tasse/TasseArea" to="." method="_on_tasse_area_area_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer/Timer2" to="." method="_on_timer_2_timeout"]

@@ -7,7 +7,8 @@ extends Control
 @onready var erreur: AudioStreamPlayer = $erreur
 @onready var effacer: AudioStreamPlayer = $Effacer
 @onready var valider: AudioStreamPlayer = $Valider
-
+@onready var consignes: RichTextLabel = $"../Timer/consignes"
+@onready var timer: Timer = $"../Timer"
 
 var code = randi_range(10000, 99999)
 var code_tape : int :
@@ -21,7 +22,7 @@ func _ready() -> void:
 		var value = int(button.name.trim_prefix("Button"))
 		button.pressed.connect(_on_button_value_pressed.bind(value))
 	postit.text = str(code)
-
+	consignes.text = "[center][color=#FFFFFF][wave amp=5 freq=50]Trouve le code ![/wave][/color][/center]"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -36,10 +37,11 @@ func _on_button_value_pressed(value:int):
 
 
 func _on_button_no_pressed() -> void:
+	timer.start()
+	consignes.text = "[center][color=#FFFFFF][wave amp=5 freq=50]Depeche toi ![/wave][/color][/center]"
 	Globals.stress += 0.03
 	effacer.play()
 	code_tape = 0
-	print("test")
 	pass # Replace with function body.
 
 func update_label():
@@ -59,6 +61,8 @@ func _on_button_yes_pressed() -> void:
 		await drink.finished
 		queue_free()
 	else :
+		timer.start()
+		consignes.text = "[center][color=#FFFFFF][wave amp=5 freq=50]Essaie encore ![/wave][/color][/center]"
 		Globals.stress += 0.03
 		erreur.play(0.5)
 		code_tape = 0
@@ -68,3 +72,8 @@ func jouer_chiffre(value: int):
 	var son = get_node(nom_noeud)
 	if son:
 		son.play()
+
+
+func _on_timer_timeout() -> void:
+	consignes.text = ""
+	pass # Replace with function body.
