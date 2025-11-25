@@ -1,8 +1,8 @@
 extends "res://minijeux/minijeu.gd"
 
 @onready var car= $Car
-@onready var timer: Timer = $Timer
-@onready var consignes: RichTextLabel = $Timer/consignes
+@onready var timer: Timer = $CanvasLayer/Timer
+@onready var consignes: RichTextLabel = $CanvasLayer/Timer/consignes
 
 const OtherCarScene = preload("res://minijeux/parking/other_car.tscn")
 const PlaceScene = preload("res://minijeux/parking/place.tscn")
@@ -55,6 +55,7 @@ func _process(delta: float) -> void:
 	for place in places:
 		if place.check(car):
 			await get_tree().create_timer(0.5).timeout
+			consignes.text = ""
 			minijeu_finished()
 
 func _on_crash():

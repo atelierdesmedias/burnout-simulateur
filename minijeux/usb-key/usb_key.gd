@@ -5,8 +5,8 @@ extends Area2D
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
 @onready var connecting: AudioStreamPlayer = $"../../connecting"
 @onready var disconnecting: AudioStreamPlayer = $"../../disconnecting"
-@onready var consignes: RichTextLabel = $"../../Timer/consignes"
-@onready var timer: Timer = $"../../Timer"
+@onready var timer: Timer = $"../../../CanvasLayer/Timer"
+@onready var consignes: RichTextLabel = $"../../../CanvasLayer/Timer/consignes"
 
 var position_click
 var is_dragging : bool
@@ -51,6 +51,7 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 					busy = true
 					chance = chance + 0.10
 					if randf()< chance:
+						consignes.text = ""
 						$"../../.."._depopQuest()
 						connecting.play()
 						$"../../..".hide()

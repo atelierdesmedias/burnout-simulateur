@@ -7,8 +7,8 @@ extends Control
 @onready var erreur: AudioStreamPlayer = $erreur
 @onready var effacer: AudioStreamPlayer = $Effacer
 @onready var valider: AudioStreamPlayer = $Valider
-@onready var consignes: RichTextLabel = $"../Timer/consignes"
-@onready var timer: Timer = $"../Timer"
+@onready var timer: Timer = $"../CanvasLayer/Timer"
+@onready var consignes: RichTextLabel = $"../CanvasLayer/Timer/consignes"
 
 var code = randi_range(10000, 99999)
 var code_tape : int :
@@ -54,6 +54,7 @@ func _on_button_yes_pressed() -> void:
 	valider.play()
 	await valider.finished
 	if code == code_tape:
+		consignes.text = ""
 		$".."._depopQuest()
 		drink.play()
 		get_parent().hide()

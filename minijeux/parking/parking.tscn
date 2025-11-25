@@ -72,11 +72,13 @@ shape = SubResource("RectangleShape2D_whxl3")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 volume_db = -12.0
 
-[node name="Timer" type="Timer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Timer" type="Timer" parent="CanvasLayer"]
 wait_time = 3.0
 autostart = true
 
-[node name="consignes" type="RichTextLabel" parent="Timer"]
+[node name="consignes" type="RichTextLabel" parent="CanvasLayer/Timer"]
 anchors_preset = -1
 anchor_left = 0.0069444445
 anchor_top = 0.7903457
@@ -93,4 +95,4 @@ theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 metadata/_edit_use_anchors_ = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="CanvasLayer/Timer" to="." method="_on_timer_timeout"]

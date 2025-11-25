@@ -109,11 +109,13 @@ volume_db = 15.0
 stream = ExtResource("9_vtjah")
 volume_db = 15.0
 
-[node name="Timer" type="Timer" parent="Control"]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Timer" type="Timer" parent="CanvasLayer"]
 wait_time = 3.0
 autostart = true
 
-[node name="consignes" type="RichTextLabel" parent="Control/Timer"]
+[node name="consignes" type="RichTextLabel" parent="CanvasLayer/Timer"]
 anchors_preset = -1
 anchor_left = 0.28645834
 anchor_top = 0.7903457
@@ -131,4 +133,4 @@ bbcode_enabled = true
 metadata/_edit_use_anchors_ = true
 
 [connection signal="area_entered" from="Control/usbanchor/UsbKey/Embout" to="Control/usbanchor/UsbKey" method="_on_embout_area_entered"]
-[connection signal="timeout" from="Control/Timer" to="Control/usbanchor/UsbKey" method="_on_timer_timeout"]
+[connection signal="timeout" from="CanvasLayer/Timer" to="Control/usbanchor/UsbKey" method="_on_timer_timeout"]

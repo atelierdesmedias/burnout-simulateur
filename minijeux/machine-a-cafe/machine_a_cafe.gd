@@ -2,9 +2,9 @@ extends "res://minijeux/minijeu.gd"
 
 @onready var robinet=$Machine/Robinet
 @onready var tasse=$Tasse
-@onready var timer: Timer = $Timer
-@onready var consignes: RichTextLabel = $Timer/consignes
-@onready var timer_2: Timer = $Timer/Timer2
+@onready var timer: Timer = $CanvasLayer/Timer
+@onready var timer_2: Timer = $CanvasLayer/Timer/Timer2
+@onready var consignes: RichTextLabel = $CanvasLayer/Timer/consignes
 
 const min_x = -140
 const max_x = 0

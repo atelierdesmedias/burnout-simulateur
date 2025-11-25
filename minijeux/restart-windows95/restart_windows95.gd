@@ -9,8 +9,8 @@ extends "res://minijeux/minijeu.gd"
 @onready var startStream = preload("res://minijeux/restart-windows95/start.ogg")
 @onready var quitStream = preload("res://minijeux/restart-windows95/quit.ogg")
 @onready var errorStream = preload("res://minijeux/restart-windows95/error.ogg")
-@onready var consignes: RichTextLabel = $Timer/consignes
-@onready var timer: Timer = $Timer
+@onready var timer: Timer = $CanvasLayer/Timer
+@onready var consignes: RichTextLabel = $CanvasLayer/Timer/consignes
 var count = 1
 
 
@@ -63,10 +63,11 @@ func _on_power_off_button_pressed() -> void:
 		win95_starting.show()
 		$AudioStreamPlayer.stream = startStream
 		$AudioStreamPlayer.play()
-		await get_tree().create_timer(2.0).timeout
+		consignes.text = ""
 		win95_starting.hide()
 		win95_desktop.show()
-		$AudioStreamPlayer.connect("finished", minijeu_finished)
+		await get_tree().create_timer(2.0).timeout
+		minijeu_finished()
 
 func _on_win_95_panel_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:

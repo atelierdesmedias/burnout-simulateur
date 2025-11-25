@@ -145,11 +145,13 @@ texture = ExtResource("6_5asav")
 volume_db = -10.816
 autoplay = true
 
-[node name="Timer" type="Timer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Timer" type="Timer" parent="CanvasLayer"]
 wait_time = 3.0
 autostart = true
 
-[node name="consignes" type="RichTextLabel" parent="Timer"]
+[node name="consignes" type="RichTextLabel" parent="CanvasLayer/Timer"]
 anchors_preset = -1
 anchor_left = 0.402
 anchor_top = 0.79
@@ -170,4 +172,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="Win95Panel/Ordinateur/ComputerButton" to="." method="_on_power_off_button_pressed"]
 [connection signal="pressed" from="Win95Panel/Ordinateur/Win95/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Win95Panel/Ordinateur/Win95/StartMenu/PowerOffButton" to="." method="_on_power_off_button_pressed"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="CanvasLayer/Timer" to="." method="_on_timer_timeout"]

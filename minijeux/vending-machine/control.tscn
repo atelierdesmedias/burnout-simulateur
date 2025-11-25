@@ -365,11 +365,13 @@ offset_right = -0.15203857
 offset_bottom = 0.21588135
 metadata/_edit_use_anchors_ = true
 
-[node name="Timer" type="Timer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Timer" type="Timer" parent="CanvasLayer"]
 wait_time = 3.0
 autostart = true
 
-[node name="consignes" type="RichTextLabel" parent="Timer"]
+[node name="consignes" type="RichTextLabel" parent="CanvasLayer/Timer"]
 anchors_preset = -1
 anchor_left = 0.36458334
 anchor_top = 0.7903457
@@ -388,4 +390,4 @@ metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Control/ButtonNO" to="Control" method="_on_button_no_pressed"]
 [connection signal="pressed" from="Control/ButtonYES" to="Control" method="_on_button_yes_pressed"]
-[connection signal="timeout" from="Timer" to="Control" method="_on_timer_timeout"]
+[connection signal="timeout" from="CanvasLayer/Timer" to="Control" method="_on_timer_timeout"]
